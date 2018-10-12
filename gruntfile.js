@@ -4,6 +4,7 @@ module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
+
         sass: {
             options: {
                 implementation: sass
@@ -14,6 +15,7 @@ module.exports = function (grunt) {
                 }
             }
         },
+
         watch: {
             css: {
                 files: 'src/**/*.scss',
@@ -22,8 +24,25 @@ module.exports = function (grunt) {
                     livereload: true,
                 },
             },
+        },
+
+        browserSync: {
+            bsFiles: {
+                src : [
+                    'dist/**/*.css',
+                    '**/*.html'
+                ]
+            },
+            options: {
+                watchTask: true,
+                server: {
+                    baseDir: "./dist"
+                }
+            }
         }
     });
 
-    grunt.registerTask('default', ['sass']);
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-browser-sync');
+    grunt.registerTask('default', ['sass', 'browserSync', 'watch']);
 }
