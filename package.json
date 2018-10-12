@@ -10,7 +10,8 @@
     "grunt": "^1.0.3",
     "load-grunt-tasks": "^4.0.0",
     "node-sass": "^4.9.3",
-    "grunt-sass": "^3.0.2"
+    "grunt-sass": "^3.0.2",
+    "grunt-contrib-watch": "1.1.0"
   },
   "scripts": {},
   "repository": {

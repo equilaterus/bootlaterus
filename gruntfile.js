@@ -13,6 +13,15 @@ module.exports = function (grunt) {
                     'dist/css/bootlaterus.css': 'src/scss/bootlaterus.scss'
                 }
             }
+        },
+        watch: {
+            css: {
+                files: 'src/**/*.scss',
+                tasks: ['sass'],
+                options: {
+                    livereload: true,
+                },
+            },
         }
     });
 
