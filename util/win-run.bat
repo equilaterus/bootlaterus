@@ -1,2 +1,2 @@
 cd..
-grunt
+grunt watch
