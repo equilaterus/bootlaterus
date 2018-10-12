@@ -10,15 +10,15 @@ Equilaterus base boostrap theme
 
 ## Windows
 
-* You execute use the **bat** files that are inside *utils* folder:
+* **Option A**: Use the **bat** files that are inside *utils* folder:
 
-  1. Run **win-install.bat** to automatically setup the enviroment.
+  * Run **win-install.bat** to automatically setup the enviroment.
 
-  2. Run **win-run.bat** to build bootlaterus. It will open automatically a browser with hot reload so when you update one of the template or scss files it will show you an updated version of **bootlaterus**.
+  * Run **win-run.bat** to build bootlaterus. It will open automatically a browser with hot reload so when you update one of the template or scss files it will show you an updated version of **bootlaterus**.
 
-  3. **win-build.bat** will just generate the output css files into *dist* folder to distribute your own version of **bootlaterus**.
+  * **win-build.bat** will just generate the output css files into *dist* folder to distribute your own version of **bootlaterus**.
 
-* Execute the commands like on any other OS.
+* **Option B**: Execute the commands like on any other OS.
 
 ## Any OS
 
@@ -35,8 +35,12 @@ Equilaterus base boostrap theme
     grunt
     ```
 
-* To build run this command:
+* If you want to generate only the output files (*dist/* folder) without running the server run this command:
 
     ```
     grunt build
     ```
+
+## Important
+
+Always be sure to modify the files located at **src/** and not at **dist/**, when building files located at **dist/** will be overwritten.
