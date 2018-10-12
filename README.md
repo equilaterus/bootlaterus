@@ -2,6 +2,13 @@
 
 Equilaterus base boostrap theme
 
+## Builds
+
+| **Branch** | Build status | Version |
+| ------------- |:-------------:| -----:|
+| **Master**        | [![Build Status](https://travis-ci.org/equilaterus/bootlaterus.svg?branch=master)](https://travis-ci.org/equilaterus/Vortex) | Unavailable  |
+| **Dev-unstable**        | [![Build Status](https://travis-ci.org/equilaterus/bootlaterus.svg?branch=dev)](https://travis-ci.org/equilaterus/Vortex) | WIP  |
+
 ## How to start
 
 * [Clone the repo and open it on VS Code](https://github.com/equilaterus/wikilaterus/wiki/Cloning-a-repo-on-Github).
