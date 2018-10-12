@@ -330,5 +330,5 @@ ASALocalRun/
 .mfractor/
 
 # Custom ignores
-dist/css
+dist/
 package-lock.json
