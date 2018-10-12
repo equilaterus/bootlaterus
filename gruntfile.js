@@ -16,21 +16,37 @@ module.exports = function (grunt) {
             }
         },
 
+        copy: {
+            main: {
+                expand: true,
+                cwd: 'src/html',
+                src: '**',
+                dest: 'dist/',
+            },
+        },
+
         watch: {
             css: {
-                files: 'src/**/*.scss',
+                files: 'src/scss/*/*.scss',
                 tasks: ['sass'],
                 options: {
                     livereload: true,
                 },
             },
+            html: {
+                files: 'src/html/**/*.html',
+                tasks: ['copy'],
+                options: {
+                    livereload: true,
+                },
+            }
         },
 
         browserSync: {
             bsFiles: {
-                src : [
+                src: [
                     'dist/**/*.css',
-                    '**/*.html'
+                    'dist/**/*.html'
                 ]
             },
             options: {
@@ -42,8 +58,9 @@ module.exports = function (grunt) {
         }
     });
 
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
-    grunt.registerTask('default', ['sass', 'browserSync', 'watch']);
-    grunt.registerTask('build', ['sass']);
+    grunt.registerTask('default', ['sass', 'copy', 'browserSync', 'watch']);
+    grunt.registerTask('build', ['sass', 'copy']);
 }
