@@ -2,10 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway:700');
 
 // Layout colors
-$body-bg: rgb(217, 217, 217);
-$body-color: rgb(33, 33, 33);
+$body-bg: #f2f2f2;
+$body-color: #212529;
+$main-container-bg: #fcfcfc;
 $theme-colors: (
-  "primary": #000
+  "primary": #5f5f5f
 );
 
 // Fonts
@@ -18,3 +19,10 @@ $headings-font-weight:        700 !default;
 
 // bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Custom components
+// Layout measurements
+$main-container-padding: $grid-gutter-width;
+
+// Custom components
+@import "_custom-layout";
