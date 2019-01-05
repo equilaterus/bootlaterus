@@ -43,6 +43,7 @@
           <a class="nav-link disabled" href="#">Disabled</a>
         </li>
       </ul>
+    
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -586,6 +587,260 @@
   <h1>Pagination</h1>
   <div class="container">
     <h3>Overvew</h3>
+  <div>
+      <p> <h1>Alerts</h1></p>
+      <p><h3>Simple Alerts</h3></p>
+
+      <div class="alert alert-primary" role="alert">
+        simple primary alert
+      </div>
+      <div class="alert alert-success" role="alert">
+          simple sucess alert
+        </div>
+      <div class="alert alert-danger" role="alert">
+          simple danger alert
+        </div>
+      <div class="alert alert-warning" role="alert">
+          simple warning alert
+        </div>
+      <div class="alert alert-info" role="alert">
+          simple info alert
+        </div>
+
+      <p><h3>Custom Alerts</h3></p>
+      
+      <div class="alert alert-danger" role="alert">
+          simple danger alert with <a href="#" class="alert-link"> link</a>. Give it a click if you like.
+      </div>
+
+      <div class="alert alert-warning" role="alert">
+          simple warning alert with <a href="#" class="alert-link"> link</a> Give it a click if you <strong>like.</strong> 
+      </div>
+
+      <div class="alert alert-success" role="alert">
+          <h4 class="alert-heading">Well done!</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit doloribus inventore sint numquam voluptate suscipit iste cumque. Veniam, quo expedita facilis cumque officiis cum tenetur explicabo aperiam adipisci. Deserunt, eos?</p>
+          <hr>
+          <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+      </div>
+
+      <p> <h1>Badges</h1></p>
+      <p><h3>Bagdes scale</h3></p>
+        <div>
+          <h1> Example heading <span class="badge badge-primary">New</span></h1>
+          <h2> Example heading <span class="badge badge-secondary">New</span></h2>
+          <h3> Example heading <span class="badge badge-warning">New</span></h3>
+          <h4> Example heading <span class="badge badge-info">New</span></h4>
+          <h5> Example heading <span class="badge badge-success">New</span></h5>
+          <h6> Example heading <span class="badge badge-dark">New</span></h6>
+        </div>
+        
+        <button type="button" class="btn btn-primary">
+            Notifications <span class="badge badge-success">4</span>
+        </button>
+        <br>
+        <span class="badge badge-primary">Primary</span>
+        <span class="badge badge-secondary">Secondary</span>
+        <span class="badge badge-success">Success</span>
+        <span class="badge badge-danger">Danger</span>
+        <span class="badge badge-warning">Warning</span>
+        <span class="badge badge-info">Info</span>
+        <span class="badge badge-light">Light</span>
+        <span class="badge badge-dark">Dark</span>
+        <br>
+        <span class="badge badge-pill badge-primary">Primary</span>
+        <span class="badge badge-pill badge-secondary">Secondary</span>
+        <span class="badge badge-pill badge-success">Success</span>
+        <span class="badge badge-pill badge-danger">Danger</span>
+        <span class="badge badge-pill badge-warning">Warning</span>
+        <span class="badge badge-pill badge-info">Info</span>
+        <span class="badge badge-pill badge-light">Light</span>
+        <span class="badge badge-pill badge-dark">Dark</span>
+        <br>
+        <a href="#" class="badge badge-primary">Primary</a>
+        <a href="#" class="badge badge-secondary">Secondary</a>
+        <a href="#" class="badge badge-success">Success</a>
+        <a href="#" class="badge badge-danger">Danger</a>
+        <a href="#" class="badge badge-warning">Warning</a>
+        <a href="#" class="badge badge-info">Info</a>
+        <a href="#" class="badge badge-light">Light</a>
+        <a href="#" class="badge badge-dark">Dark</a>
+    </div>
+  <p> <h1>Breadcrumb</h1></p>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Home</li>
+      </ol>
+    </nav>
+  
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">settings</li>
+      </ol>
+    </nav>
+  
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">settings</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Data</li>
+      </ol>
+    </nav>
+  
+  <p> <h1>Buttons</h1></p>
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <a class="btn btn-primary" href="https://www.google.com" role="button">Link</a>
+
+    <button type="button" class="btn btn-outline-primary">Primary</button>
+    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+    <button type="button" class="btn btn-outline-success">Success</button>
+    <button type="button" class="btn btn-outline-danger">Danger</button>
+    <br>
+    <button type="button" class="btn btn-primary btn-lg">Large button</button>
+    <button type="button" class="btn btn-primary btn-sm">Large button</button>
+    <br>
+  
+  <p> <h1>Button Group</h1></p>
+    <div class="btn-group" role="group" aria-label="Basic example"">
+      <button type="button" class="btn btn-secondary">Left</button>
+      <button type="button" class="btn btn-secondary">Middle</button>
+      <button type="button" class="btn btn-secondary">Right</button>
+    </div>
+
+  <p><h3>Button toolbar</h3></p>
+    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+      <div class="btn-group mr-2" role="group" aria-label="First group">
+        <button type="button" class="btn btn-info">1</button>
+        <button type="button" class="btn btn-info">2</button>
+        <button type="button" class="btn btn-info">3</button>
+        <button type="button" class="btn btn-info">4</button>
+      </div>
+      <div class="btn-group mr-2" role="group" aria-label="Second group">
+        <button type="button" class="btn btn-info">5</button>
+        <button type="button" class="btn btn-info">6</button>
+        <button type="button" class="btn btn-info">7</button>
+      </div>
+      <div class="btn-group" role="group" aria-label="Third group">
+        <button type="button" class="btn btn-info">8</button>
+      </div>
+    </div>
+
+<p> <h1>Card</h1></p> 
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="http://i.imgur.com/AItCxSs.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur sequi totam inventore beatae quibusdam fugiat, cum amet rem laborum non ducimus, reprehenderit laudantium ratione, atque repellat hic facilis veritatis?</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+
+<p> <h1>List groups</h1></p> 
+  <div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Cras justo odio</li>
+      <li class="list-group-item">Dapibus ac facilisis in</li>
+      <li class="list-group-item">Vestibulum at eros</li>
+    </ul>
+  </div>
+
+<p> <h1>Header and footer</h1></p> 
+  <!--card text-center-->
+  <div class="card">
+    <div class="card-header">
+      Featured
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">title</h5>
+      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, temporibus qui nihil, quidem magnam, exercitationem ex incidunt accusantium molestias debitis tenetur ratione. Aperiam sed inventore dicta beatae veniam perspiciatis sit!</p>
+      <a href="#" class="btn btn-primary">link somewhere</a>
+    </div>
+  </div>
+
+<p><h1>Grid markup</h1></p>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">title</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">title</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+    <div class="card-header">Header</div>
+    <div class="card-body">
+      <h5 class="card-title">Primary card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+  <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+    <div class="card-header">Header</div>
+    <div class="card-body">
+      <h5 class="card-title">Secondary card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+  <!--no working-->
+<p><h1>Dropdowns</h1></p>
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dropdown button
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+
+  <p><h1>Forms</h1></p>
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">User</label>
+        <input type="text" class="form-control" id="inputUser" aria-describedby="userHelp" placeholder="Enter user">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your user with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  
+  <p><h1>Progress</h1></p>
+    <div class="progress">
+      <div class="progress-bar bg-danger" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+    </div>
+    <br>
+    <div class="progress">
+      <div class="progress-bar bg-info" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
+    </div>
+    <br>
+    <div class="progress">
+      <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">100%</div>
+    </div>
+    
+  <p><h1>pagination</h1></p>
     <nav aria-label="Page navigation example">
       <ul class="pagination">
         <li class="page-item"><a class="page-link" href="#">Previous</a></li>
