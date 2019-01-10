@@ -3,6 +3,31 @@
 // Special side-bar located at the left side of the screen
 
 .navbar-left {
-    width: 100%;
-    max-width: $navbar-left-max-width;    
+    height: 100%;
+    width: $navbar-left-max-width;
+    position: fixed;
+    background-color: theme-color($key: "primary");    
 }
+.logo-container{
+    height:30%;
+    width: 250px;
+    max-width: $navbar-left-max-width;
+    position: absolute;
+    background-image: url(https://equilaterus.github.io/assets/img/equilaterus.PNG);
+    background-size: 100%;
+    background-repeat: no-repeat
+}
+
+.section-contents{
+    font-family: $headings-font-weight;
+    padding-top: 220px;
+    margin-left: -20px;
+    font-size: 15px;
+    line-height: 35px;
+}
+.button-menu{
+    width: 350px;
+    color:$body-bg;
+}
+
+
