@@ -4,7 +4,6 @@
   "description": "Equilaterus Base Bootstap Theme",
   "dependencies": {},
   "devDependencies": {
-    "gh-pages": "^2.0.1",
     "bootstrap": "^4.1.3",
     "grunt": "^1.0.3",
     "grunt-browser-sync": "^2.2.0",
@@ -17,9 +16,7 @@
     "node-sass": "^4.9.3",
     "popper.js": "^1.14.4"
   },
-  "scripts": {
-    "deploy": "gh-pages -d dist"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/equilaterus/bootlaterus.git"
@@ -29,7 +26,7 @@
     "equilaterus",
     "themes"
   ],
-  "author": "Daniel and Juan Felipe Canizares",
+  "author": "equilaterus team",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/equilaterus/bootlaterus/issues"
