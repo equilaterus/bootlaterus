@@ -5,6 +5,8 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
 
+        clean: ['dist'],
+
         sass: {
             options: {
                 implementation: sass
@@ -18,10 +20,14 @@ module.exports = function (grunt) {
 
         copy: {
             main: {
-                expand: true,
-                cwd: 'src/html',
-                src: '**',
-                dest: 'dist/',
+                files: [
+                    { expand: true, cwd: 'src/html', src: '**', dest: 'dist/' },
+                    { expand: true, src: 'LICENSE', dest: 'dist/' },
+                    { expand: true, cwd: 'node_modules/bootstrap/dist/js', src: '**', dest: 'dist/js/vendor/bootstrap' },
+                    { expand: true, cwd: 'node_modules/bootstrap/', src: 'LICENSE*', dest: 'dist/js/vendor/bootstrap' },
+                    { expand: true, cwd: 'node_modules/jquery/dist', src: '**', dest: 'dist/js/vendor/jquery' },
+                    { expand: true, cwd: 'node_modules/jquery/', src: 'LICENSE*', dest: 'dist/js/vendor/jquery' }
+                ], 
             },
         },
 
@@ -58,9 +64,10 @@ module.exports = function (grunt) {
         }
     });
 
+    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
-    grunt.registerTask('default', ['sass', 'copy', 'browserSync', 'watch']);
-    grunt.registerTask('build', ['sass', 'copy']);
+    grunt.registerTask('default', ['clean', 'sass', 'copy', 'browserSync', 'watch']);
+    grunt.registerTask('build', ['clean', 'sass', 'copy']);
 }

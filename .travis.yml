@@ -1,6 +1,23 @@
+branches:
+  except:
+    - gh-pages
 language: node_js
 node_js:
-  - "8.12.0"
+  - 8.12.0
+
 before_install: npm install -g grunt-cli
 install: npm install
-before_script: grunt build
+script: grunt build
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GH_TOKEN
+  keep-history: true
+  local-dir: dist
+  on:
+    branch: master
+
+env:
+  global:
+    secure: jK4wPLyww9H32RjTIOLSncU8eMFD95A7q0Jlw8btQFqhfj4SbvGXLS6RoMreDRC7tlcAbvVc9a6ectxzT+fg7RnuhL0dLwlwFXjLBTuvFBgyo6x6s0cu/nSAcotXB0RMrc1kHpaCuJ9MJMdvRUD8HjjbjJ+5OiYigU66xR+KZs9JfAkfHF7YPEORDl89wU7+1EQaNmZ3bxtbMFnufczNl73MgR9A7MAFhFiQM/c0xEohPk9b6M3gGWgUyXcK370gdmMwIiUc0n3KoGGBENmkU5DCqpsteHs3Bgv06fUmN70QdOSIospIgmXkd//vjI3GZcD6fEyvjpwff9BiutkbOgFU1LCjjwElwQSxZwCJNx8pPbrwh0uRYaEDKpqBpWloyqXe38qXWNIN8VLOT0z+pKwfYOBztFQLjI/7y+WtSrNZzl8WGvJwEP0qe2bJUjPrfEXzuIqtv15gWvRbp6hH6obb6A3W0mNnl4y0RbBc5FYMnqeJktHRgH3ep8gVF+M8P+DnaR3I90DaNVQ57NzuaoGdaBCManyx89lwyR+CfsxWOLUtzifonmA1z2zKzXxOcK0jGvBbsnRrO1ttwV7CgEvwBNh0Eisrk+j52pnxNOoIOnCwJqYzKlyxAtKbFByGoAPLTY+pwK+V6gonrHFgIWOlGbtgPR0z107EhFivXZ0=

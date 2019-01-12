@@ -1,20 +1,9 @@
-// Fonts imports
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway:700');
-
-// Layout colors
-$body-bg: rgb(217, 217, 217);
-$body-color: rgb(33, 33, 33);
-$theme-colors: (
-  "primary": #000
-);
-
-// Fonts
-$font-family-sans-serif:      "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:            $font-family-sans-serif !default;
-
-$headings-font-family:        "Raleway" !default;
-$headings-font-weight:        700 !default;
+// Theme variables
+@import "_variables";
 
 // bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Custom components
+@import "_custom-layout";
+@import "_navbar-left"

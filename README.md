@@ -6,8 +6,8 @@ Equilaterus base boostrap theme
 
 | **Branch** | Build status | Version |
 | ------------- |:-------------:| -----:|
-| **Master**        | [![Build Status](https://travis-ci.org/equilaterus/bootlaterus.svg?branch=master)](https://travis-ci.org/equilaterus/Vortex) | Unavailable  |
-| **Dev-unstable**        | [![Build Status](https://travis-ci.org/equilaterus/bootlaterus.svg?branch=dev)](https://travis-ci.org/equilaterus/Vortex) | WIP  |
+| **Master**        | [![Build Status](https://travis-ci.org/equilaterus/bootlaterus.svg?branch=master)](https://travis-ci.org/equilaterus/bootlaterus) | Unavailable  |
+| **Dev-unstable**        | [![Build Status](https://travis-ci.org/equilaterus/bootlaterus.svg?branch=dev)](https://travis-ci.org/equilaterus/bootlaterus) | WIP  |
 
 ## How to start
 
@@ -17,13 +17,13 @@ Equilaterus base boostrap theme
 
 ## Windows
 
-* **Option A**: Use the **bat** files that are inside *utils* folder:
+* **Option A**: Use the **ps1** files that are inside *utils* folder:
 
-  * Run **win-install.bat** to automatically setup the enviroment.
+  * Run once **win-install.ps1** to setup the enviroment. To run powershell files on Windows: *Left click > Run with Powershell*.
 
-  * Run **win-run.bat** to build bootlaterus. It will open automatically a browser with hot reload so when you update one of the template or scss files it will show you an updated version of **bootlaterus**.
+  * Run **win-run.ps1** to run bootlaterus. It will open a browser with hot reload so when you update one of the template or scss files it will show you an updated version of **bootlaterus**.
 
-  * **win-build.bat** will just generate the output css files into *dist* folder to distribute your own version of **bootlaterus**.
+  * **win-build.ps1** will just generate the output css files into *dist* folder to distribute your own version of **bootlaterus**.
 
 * **Option B**: Execute the commands like on any other OS.
 
@@ -42,7 +42,7 @@ Equilaterus base boostrap theme
     grunt
     ```
 
-* If you want to generate only the output files (*dist/* folder) without running the server run this command:
+* If you want to generate only the output files (*dist/* folder) without running the server, run this command:
 
     ```
     grunt build
