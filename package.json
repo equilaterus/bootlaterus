@@ -4,6 +4,7 @@
   "description": "Equilaterus Base Bootstap Theme",
   "dependencies": {},
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "bootstrap": "^4.1.3",
     "grunt": "^1.0.3",
     "grunt-browser-sync": "^2.2.0",
@@ -16,7 +17,9 @@
     "node-sass": "^4.9.3",
     "popper.js": "^1.14.4"
   },
-  "scripts": {},
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/equilaterus/bootlaterus.git"
@@ -31,5 +34,5 @@
   "bugs": {
     "url": "https://github.com/equilaterus/bootlaterus/issues"
   },
-  "homepage": "https://github.com/equilaterus/bootlaterus#readme"
+  "homepage": "https://equilaterus.github.io/bootlaterus"
 }
