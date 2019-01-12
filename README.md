@@ -6,8 +6,8 @@ Equilaterus base boostrap theme
 
 | **Branch** | Build status | Version |
 | ------------- |:-------------:| -----:|
-| **Master**        | [![Build Status](https://travis-ci.org/equilaterus/bootlaterus.svg?branch=master)](https://travis-ci.org/equilaterus/Vortex) | Unavailable  |
-| **Dev-unstable**        | [![Build Status](https://travis-ci.org/equilaterus/bootlaterus.svg?branch=dev)](https://travis-ci.org/equilaterus/Vortex) | WIP  |
+| **Master**        | [![Build Status](https://travis-ci.org/equilaterus/bootlaterus.svg?branch=master)](https://travis-ci.org/equilaterus/bootlaterus) | Unavailable  |
+| **Dev-unstable**        | [![Build Status](https://travis-ci.org/equilaterus/bootlaterus.svg?branch=dev)](https://travis-ci.org/equilaterus/bootlaterus) | WIP  |
 
 ## How to start
 
