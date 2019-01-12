@@ -20,12 +20,15 @@
         background-position: center;
     }
     
+    & > .navbar-brand {
+        display: block;
+        width: 100%;
+        padding: $navbar-nav-link-padding-x; 
+    } 
+
     & > .navbar-nav  {
-        font-family: $headings-font-weight;
-        font-size: 15px;
-        line-height: 35px;
-        display: flex;
-        flex-direction: column;
+        width: 100%;
+        display: block;
     }
 
     .nav-link {
