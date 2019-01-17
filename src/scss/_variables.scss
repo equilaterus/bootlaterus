@@ -26,8 +26,8 @@ $gray-500: #a8a8a8;
 $gray-600: #817e7e;
 $gray-700: #494949;
 $gray-800: #383838;
-$gray-900: #1f1f1f;
-$black:    #151515;
+$gray-900: #151515;
+$black:    #000;
 
 $blue:    #41a0eb;
 $indigo:  #8752db;
@@ -36,7 +36,7 @@ $pink:    #b85684;
 $red:     #dc3545;
 $orange:  #f18934;
 $yellow:  #e7a32a;
-$green:   #3ab356;
+$green:   #62a318;
 $teal:    #39ddac;
 $cyan:    #26a3b6;
 
@@ -45,10 +45,12 @@ $cyan:    #26a3b6;
 //
 
 $body-bg:       $gray-100;
-$body-color:    $black;
+$body-color:    $gray-900;
 $theme-colors: (
   "primary":    $blue
 );
+
+$breadcrumb-bg: $white;
 
 //
 // Custom Input colors
@@ -65,8 +67,11 @@ $custom-control-indicator-border-color:   $input-border-color;
 // Enabling shadows for all elements without it
 //
 
-$input-box-shadow:                    0 0 4px rgba($black, .2) ;
-$btn-box-shadow:                      0 0 4px rgba($black, .2);
+$default-container-box-shadow:        0 0 6px rgba($black, .15);
+$jumbotron-box-shadow:                0 0 6px rgba($black, .25);
+
+$input-box-shadow:                    0 0 6px rgba($black, .1);
+$btn-box-shadow:                      $input-box-shadow;
 $custom-select-box-shadow:            $btn-box-shadow;
 $dropdown-box-shadow:                 $input-box-shadow;
 $custom-control-indicator-box-shadow: $input-box-shadow;
