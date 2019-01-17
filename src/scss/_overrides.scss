@@ -1,0 +1,12 @@
+// Overrides
+//
+// Misc overrides for bootstrap components
+
+
+//
+// Shadows
+//
+
+.input-group-prepend, .input-group-append {
+    @include box-shadow($input-box-shadow);
+}
