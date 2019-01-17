@@ -11,6 +11,10 @@
     @include box-shadow($jumbotron-box-shadow);
 }
 
+.navbar {
+    @include box-shadow($navbar-box-shadow); 
+}
+
 .alert, .card, .breadcrumb, .list-group {
     @include box-shadow($default-container-box-shadow); 
 }
