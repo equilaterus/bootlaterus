@@ -8,5 +8,7 @@
 //
 
 .input-group-prepend, .input-group-append {
-    @include box-shadow($input-box-shadow);
+    & > .input-group-text {
+        @include box-shadow($input-box-shadow);
+    }
 }
