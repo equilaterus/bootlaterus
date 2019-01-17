@@ -4,6 +4,9 @@
 // bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+// Overrides
+@import "_overrides";
+
 // Custom components
 @import "_custom-layout";
 @import "_navbar-left"
