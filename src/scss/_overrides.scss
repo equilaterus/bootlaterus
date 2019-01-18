@@ -7,6 +7,26 @@
 // Shadows
 //
 
-.input-group-prepend, .input-group-append {
+.jumbotron {
+    @include box-shadow($jumbotron-box-shadow);
+}
+
+.navbar {
+    @include box-shadow($navbar-box-shadow); 
+}
+
+.alert, .card, .breadcrumb, .list-group {
+    @include box-shadow($default-container-box-shadow); 
+}
+
+.pagination, .navbar-toggler {
+    display: inline-flex;
     @include box-shadow($input-box-shadow);
+}
+
+.input-group-prepend, .input-group-append {
+    & > .input-group-text,
+    & > .btn {
+        @include box-shadow($input-box-shadow);
+    }
 }
