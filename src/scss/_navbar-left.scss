@@ -3,14 +3,15 @@
 // Special side-bar located at the left side of the screen
 
 .navbar-left {
-    height: 100%;
+    height: 100% !important;
     width: $navbar-left-max-width;
     position: fixed;
     padding: 0;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-
+    transform: translateX(0);
+    
     & > .logo-container {
         width: 100%;
         height: 120px;
@@ -36,13 +37,38 @@
     }
 }
 
+.navbar-left-expand {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+      $next: breakpoint-next($breakpoint, $grid-breakpoints);
+      $infix: breakpoint-infix($next, $grid-breakpoints);
+  
+      &#{$infix} {  
+        @include media-breakpoint-up($next) {
+            transform: translateX(0) !important;
+            display: flex !important;
+        }
+      }
+    }
+}
+
+.navbar-left-replacer {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        $next: breakpoint-next($breakpoint, $grid-breakpoints);
+        $infix: breakpoint-infix($next, $grid-breakpoints);
+    
+        &#{$infix} {
+          @include media-breakpoint-up($next) {
+            display: none;
+          }
+        }
+      }
+}
 
 .button-menu{
     width: 350px;
     color:$body-bg;
 }
+
 .footer-content {
     margin-top: auto
 }
-
-

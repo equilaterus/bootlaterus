@@ -1,0 +1,17 @@
+// Custom transitions
+//
+// Special transitions for customized elements
+
+.navbar-left {
+    @include custom-transition($navbar-left-transition);
+}
+
+.navbar-left.collapse {
+    &:not(.show) {
+        transform: translateX(-100%);
+    }
+}
+
+.navbar-left.collapsing {
+    transform: translateX(-100%);
+}

@@ -8,11 +8,16 @@
 //
 // Custom styles for bootlaterus overriding default values
 
-$enable-flex:         true;
-$enable-rounded:      true;
-$enable-shadows:      true;
-$enable-gradients:    true;
-$enable-transitions:  true;
+$enable-flex:               true;
+$enable-rounded:            true;
+$enable-shadows:            true;
+$enable-gradients:          true;
+
+// Do not enable both transition styles at the same time
+// It is recommended to use custom bootlaterus transitions
+// for a better lock'n'feel
+$enable-transitions:        false;
+$enable-custom-transitions: true;
 
 //
 // Color system
@@ -100,6 +105,22 @@ $headings-font-weight:        700 !default;
 
 $grid-columns:                12 !default;
 $grid-gutter-width:           30px !default;
+
+//
+// Default Transitions
+// In case that you've set $enable-transitions = true
+//
+
+$transition-base:             all .2s ease-in-out !default;
+$transition-fade:             opacity .15s linear !default;
+$transition-collapse:         height .35s ease !default;
+
+
+//
+// Custom Transitions
+// In case that you've set $enable-custom-transitions = true
+
+$navbar-left-transition:    all 0.25s ease-in-out;
 
 
 // Custom components

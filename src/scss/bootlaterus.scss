@@ -1,12 +1,14 @@
 // Theme variables
-@import "_variables";
+@import "variables";
 
 // bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 // Overrides
-@import "_overrides";
+@import "mixins";
+@import "overrides";
 
 // Custom components
-@import "_custom-layout";
-@import "_navbar-left"
+@import "custom-layout";
+@import "navbar-left";
+@import "custom-transitions";
