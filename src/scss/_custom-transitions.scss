@@ -1,6 +1,36 @@
 // Custom transitions
 //
-// Special transitions for customized elements
+// Special transitions for bootlaterus
+
+//
+// Defaults customized
+//
+
+.fade {
+    @include custom-transition($transition-fade);
+  
+    &:not(.show) {
+      opacity: 0;
+    }
+  }
+  
+  .collapse:not(.navbar-left) {
+    &:not(.show) {
+      display: none;
+    }
+  }
+  
+  .collapsing:not(.navbar-left) {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    @include custom-transition($transition-collapse);
+  }
+
+
+//
+// Custom elements
+//
 
 .navbar-left {
     @include custom-transition($navbar-left-transition);
