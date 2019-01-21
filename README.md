@@ -6,8 +6,8 @@ Equilaterus base boostrap theme
 
 | **Branch** | Build status | Version |
 | ------------- |:-------------:| -----:|
-| **Master**        | [![Build Status](https://travis-ci.org/equilaterus/bootlaterus.svg?branch=master)](https://travis-ci.org/equilaterus/bootlaterus) | Unavailable  |
-| **Dev-unstable**        | [![Build Status](https://travis-ci.org/equilaterus/bootlaterus.svg?branch=dev)](https://travis-ci.org/equilaterus/bootlaterus) | WIP  |
+| **Master**        | [![Build Status](https://travis-ci.org/equilaterus/bootlaterus.svg?branch=master)](https://travis-ci.org/equilaterus/bootlaterus) | 0.0.1-unreleased  |
+| **Dev-unstable**        | [![Build Status](https://travis-ci.org/equilaterus/bootlaterus.svg?branch=dev)](https://travis-ci.org/equilaterus/bootlaterus) | 0.0.1-unreleased  |
 
 ## How to start
 
@@ -17,9 +17,9 @@ Equilaterus base boostrap theme
 
 ## Windows
 
-* **Option A**: Use the **ps1** files that are inside *utils* folder:
+* **Option A**: Use the **ps1** files that are inside the *utils* folder:
 
-  * Run once **win-install.ps1** to setup the enviroment. To run powershell files on Windows: *Left click > Run with Powershell*.
+  * Run once **win-install.ps1** to set up the environment. To run PowerShell files on Windows: *Left click > Run with Powershell*.
 
   * Run **win-run.ps1** to run bootlaterus. It will open a browser with hot reload so when you update one of the template or scss files it will show you an updated version of **bootlaterus**.
 
