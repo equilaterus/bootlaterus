@@ -7,7 +7,7 @@
 //
 
 .fade {
-  @include custom-transition($transition-fade);
+  @include transition($transition-fade);
 
   &:not(.show) {
     opacity: 0;
@@ -24,7 +24,7 @@
   position: relative;
   height: 0;
   overflow: hidden;
-  @include custom-transition($transition-collapse);
+  @include transition($transition-collapse);
 }
 
 
@@ -33,7 +33,7 @@
 //
 
 .navbar-left {
-  @include custom-transition($navbar-left-transition);
+  @include transition($navbar-left-transition);
 }
 
 .navbar-left.collapse {

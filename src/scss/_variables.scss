@@ -12,12 +12,7 @@ $enable-flex:               true;
 $enable-rounded:            true;
 $enable-shadows:            true;
 $enable-gradients:          true;
-
-// Do not enable both transition styles at the same time
-// It is recommended to use custom bootlaterus transitions
-// for a better lock'n'feel and to avoid collisions with custom elements
-$enable-transitions:        false;
-$enable-custom-transitions: true;
+$enable-transitions:        true;
 
 //
 // Color system
