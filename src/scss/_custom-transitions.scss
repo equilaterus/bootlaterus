@@ -7,25 +7,25 @@
 //
 
 .fade {
-    @include custom-transition($transition-fade);
-  
-    &:not(.show) {
-      opacity: 0;
-    }
+  @include custom-transition($transition-fade);
+
+  &:not(.show) {
+    opacity: 0;
   }
+}
   
-  .collapse:not(.navbar-left) {
-    &:not(.show) {
-      display: none;
-    }
+.collapse:not(.navbar-left) {
+  &:not(.show) {
+    display: none;
   }
+}
   
-  .collapsing:not(.navbar-left) {
-    position: relative;
-    height: 0;
-    overflow: hidden;
-    @include custom-transition($transition-collapse);
-  }
+.collapsing:not(.navbar-left) {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  @include custom-transition($transition-collapse);
+}
 
 
 //
@@ -33,15 +33,15 @@
 //
 
 .navbar-left {
-    @include custom-transition($navbar-left-transition);
+  @include custom-transition($navbar-left-transition);
 }
 
 .navbar-left.collapse {
-    &:not(.show) {
-        transform: translateX(-100%);
-    }
+  &:not(.show) {
+      transform: translateX(-100%);
+  }
 }
 
 .navbar-left.collapsing {
-    transform: translateX(-100%);
+  transform: translateX(-100%);
 }
