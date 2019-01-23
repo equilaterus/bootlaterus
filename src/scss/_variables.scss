@@ -101,12 +101,22 @@ $headings-font-weight:        700 !default;
 $grid-columns:                12 !default;
 $grid-gutter-width:           30px !default;
 
+//
+// Transitions
+//
+
+$transition-base:             all .2s ease-in-out !default;
+$transition-fade:             opacity .15s linear !default;
+$transition-collapse:         height .35s ease !default;
+
+$navbar-left-transition:    all 0.25s ease-in-out;
+
 
 // Custom components
 //
 // Variables for custom elements of bootlaterus
 
-$main-container-bg:         #f2f2f2;
+$main-container-bg:         $body-bg;
 $main-container-padding:    $grid-gutter-width;
 
 
