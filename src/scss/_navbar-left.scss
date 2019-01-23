@@ -35,6 +35,10 @@
     .nav-link {
         padding: $navbar-nav-link-padding-x;       
     }
+
+    .footer-content {
+        margin-top: auto
+    }
 }
 
 .navbar-left-expand {
@@ -75,13 +79,4 @@
           }
         }
       }
-}
-
-.button-menu{
-    width: 350px;
-    color:$body-bg;
-}
-
-.footer-content {
-    margin-top: auto
 }
