@@ -17,7 +17,7 @@ module.exports = function (grunt) {
                 }
             }
         },
-
+        
         copy: {
             main: {
                 files: [
@@ -29,6 +29,21 @@ module.exports = function (grunt) {
                     { expand: true, cwd: 'node_modules/jquery/', src: 'LICENSE*', dest: 'dist/js/vendor/jquery' }
                 ], 
             },
+        },
+
+        cssmin: {
+            options: {
+                sourceMap: true
+            },
+            target: {
+              files: [{
+                expand: true,
+                cwd: 'dist/css',
+                src: ['*.css', '!*.min.css'],
+                dest: 'dist/css',
+                ext: '.min.css'
+              }]
+            }
         },
 
         watch: {
@@ -61,13 +76,14 @@ module.exports = function (grunt) {
                     baseDir: "./dist"
                 }
             }
-        }
+        }       
     });
 
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
-    grunt.registerTask('default', ['clean', 'sass', 'copy', 'browserSync', 'watch']);
-    grunt.registerTask('build', ['clean', 'sass', 'copy']);
+    grunt.registerTask('default', ['clean', 'sass', 'copy', 'cssmin', 'browserSync', 'watch']);
+    grunt.registerTask('build', ['clean', 'sass', 'copy', 'cssmin']);
 }
