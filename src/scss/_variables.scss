@@ -84,13 +84,13 @@ $custom-range-thumb-box-shadow:       $input-box-shadow;
 // Fonts
 //
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway:700');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Montserrat:700');
 
-$font-family-sans-serif:      "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:      "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 
-$headings-font-family:        "Raleway" !default;
+$headings-font-family:        "Montserrat" !default;
 $headings-font-weight:        700 !default;
 
 
