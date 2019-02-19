@@ -35,6 +35,10 @@
     .nav-link {
         padding: $navbar-nav-link-padding-x;       
     }
+
+    .footer-content {
+        margin-top: auto
+    }
 }
 
 .navbar-left-expand {
@@ -64,11 +68,15 @@
       }
 }
 
-.button-menu{
-    width: 350px;
-    color:$body-bg;
-}
-
-.footer-content {
-    margin-top: auto
+.margin-against-navbar-left {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        $next: breakpoint-next($breakpoint, $grid-breakpoints);
+        $infix: breakpoint-infix($next, $grid-breakpoints);
+    
+        &#{$infix} {
+          @include media-breakpoint-up($next) {
+            margin-left: $navbar-left-max-width;
+          }
+        }
+      }
 }
