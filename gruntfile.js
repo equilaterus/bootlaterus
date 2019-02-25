@@ -13,7 +13,8 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    'dist/css/bootlaterus.css': 'src/scss/bootlaterus.scss'
+                    'dist/css/bootlaterus.css': 'src/scss/base/bootlaterus.scss',
+                    'dist/css/bootlaterus-docs.css': 'src/scss/docs/bootlaterus-docs.scss'
                 }
             }
         },
