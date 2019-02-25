@@ -8,23 +8,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Custom built theme - already includes Bootstrap 4 -->
-  <link rel="stylesheet" href="../css/bootlaterus.css">
+  <link rel="stylesheet" href="../css/bootlaterus-docs.css">
 </head>
 
 <body>
   <nav class="navbar navbar-left-replacer-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">wikilaterus</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#leftNavbar" aria-controls="navbarSupportedContent"
-      aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#leftNavbar"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   </nav>
 
   <nav class="navbar navbar-left navbar-left-expand-lg navbar-dark bg-dark collapse" id="leftNavbar">
-    <div class="logo-container">
-    </div>
-
-    <a class="navbar-brand" href="#">wikilaterus</a>
+    <a class="navbar-brand" href="#">
+        <img class="img-fluid" src="https://equilaterus.github.io/wikilaterus/assets/img/logo-windmill-alpha-sm.png" alt="logo equilaterus"> <span>equilaterus</span>
+    </a>
     <ul class="navbar-nav">
       <li><a class="nav-link" href="#">Getting Started</a></li>
       <li><a class="nav-link" href="#">User Interface</a></li>
@@ -41,7 +40,152 @@
   </nav>
 
   <div id="main-container" class="margin-against-navbar-left-lg">
-    <h1>Hello</h1>
+    <div class="container">
+      <article class="post">
+
+        <header class="post-header">
+          <h1 class="post-title">ASP Core</h1>
+        </header>
+
+        <div class="post-content">
+          <h2 id="official-guides">Official guides</h2>
+
+          <ul>
+            <li>Build web APIs with <a
+                href="https://docs.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-2.1">ASP Core 2.1</a>
+              <ul>
+                <li>Tutorial VS Code - <a
+                    href="https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-vsc?view=aspnetcore-2.1">ASP
+                    Core 2.1</a></li>
+                <li>Tutorial VS - <a
+                    href="https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-2.1">ASP
+                    Core 2.1</a></li>
+              </ul>
+            </li>
+            <li>Controller action return types <a
+                href="https://docs.microsoft.com/en-us/aspnet/core/web-api/action-return-types?view=aspnetcore-2.1">ASP
+                Core 2.1</a></li>
+          </ul>
+
+          <h2 id="performance">Performance</h2>
+
+          <ul>
+            <li>A kind of - Practical intro to <a
+                href="https://www.carlrippon.com/scalable-and-performant-asp-net-core-web-apis-asynchronous-operations/">Async
+                APIs</a>
+              <ul>
+                <li>Async discussions:
+                  <ul>
+                    <li><a href="https://caleblloyd.com/software/net-core-mvc-thread-pool-vs-async/">Sync vs Async</a>
+                    </li>
+                    <li><a
+                        href="https://blogs.msdn.microsoft.com/rickandy/2011/07/19/should-my-database-calls-be-asynchronous-part-ii/">Async
+                        and IIS</a></li>
+                    <li><a
+                        href="http://www.tugberkugurlu.com/archive/my-take-on-task-base-asynchronous-programming-in-c-sharp-5-0-and-asp-net-mvc-web-applications">My
+                        take on Async - experiment</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>Use DbContextPooling to improve the performance: <a
+                href="https://neelbhatt.com/2018/02/27/use-dbcontextpooling-to-improve-the-performance-net-core-2-1-feature/">.Net
+                Core 2.1</a></li>
+          </ul>
+
+          <h2 id="other-guides">Other guides</h2>
+
+          <ul>
+            <li>Global error handling in <a href="https://code-maze.com/global-error-handling-aspnetcore/">ASP Core</a>
+            </li>
+          </ul>
+
+          <h2 id="asp-core-web-api-example">ASP Core Web API Example</h2>
+
+          <div class="language-csharp highlighter-rouge">
+            <div class="highlight">
+              <pre class="highlight"><code><span class="na">[Route("api/[controller]</span><span class="s">")]
+</span><span class="na">[ApiController]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">UsersController</span> <span class="p">:</span> <span class="n">ControllerBase</span>
+<span class="p">{</span>
+  <span class="k">protected</span> <span class="k">readonly</span> <span class="n">IUsersRepository</span> <span class="n">_repository</span><span class="p">;</span>
+
+  <span class="k">public</span> <span class="nf">UsersController</span><span class="p">(</span><span class="n">IUsersRepository</span> <span class="n">repository</span><span class="p">)</span>
+  <span class="p">{</span>
+      <span class="n">_repository</span> <span class="p">=</span> <span class="n">repository</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="p">[</span><span class="n">HttpGet</span><span class="p">]</span>
+  <span class="p">[</span><span class="nf">ProducesResponseType</span><span class="p">(</span><span class="m">200</span><span class="p">)]</span>
+  <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">ActionResult</span><span class="p">&lt;</span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;&gt;&gt;</span> <span class="nf">GetAllAsync</span><span class="p">()</span>
+  <span class="p">{</span>
+      <span class="k">return</span> <span class="k">await</span> <span class="n">_repository</span><span class="p">.</span><span class="nf">GetAll</span><span class="p">();</span>
+  <span class="p">}</span>        
+
+  <span class="p">[</span><span class="nf">HttpGet</span><span class="p">(</span><span class="s">"{username}"</span><span class="p">)]</span>
+  <span class="p">[</span><span class="nf">ProducesResponseType</span><span class="p">(</span><span class="m">200</span><span class="p">)]</span>
+  <span class="p">[</span><span class="nf">ProducesResponseType</span><span class="p">(</span><span class="m">404</span><span class="p">)]</span>
+  <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">ActionResult</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;&gt;</span> <span class="nf">GetByIdAsync</span><span class="p">(</span><span class="kt">string</span> <span class="n">username</span><span class="p">)</span>
+  <span class="p">{</span>
+      <span class="kt">var</span> <span class="n">existingUser</span> <span class="p">=</span> <span class="k">await</span> <span class="n">_repository</span><span class="p">.</span><span class="nf">GetByUsername</span><span class="p">(</span><span class="n">username</span><span class="p">);</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">existingUser</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+      <span class="p">{</span>
+          <span class="k">return</span> <span class="nf">NotFound</span><span class="p">();</span>
+      <span class="p">}</span>
+      <span class="k">return</span> <span class="n">existingUser</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="p">[</span><span class="n">HttpPost</span><span class="p">]</span>
+  <span class="p">[</span><span class="nf">ProducesResponseType</span><span class="p">(</span><span class="m">201</span><span class="p">)]</span>
+  <span class="p">[</span><span class="nf">ProducesResponseType</span><span class="p">(</span><span class="m">400</span><span class="p">)]</span>
+  <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">ActionResult</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;&gt;</span> <span class="nf">CreateUserAsync</span><span class="p">(</span><span class="n">User</span> <span class="n">user</span><span class="p">)</span>
+  <span class="p">{</span>
+      <span class="k">await</span> <span class="n">_repository</span><span class="p">.</span><span class="nf">AddUser</span><span class="p">(</span><span class="n">user</span><span class="p">);</span>
+      <span class="k">return</span> <span class="nf">CreatedAtAction</span><span class="p">(</span><span class="k">nameof</span><span class="p">(</span><span class="n">GetById</span><span class="p">),</span> <span class="k">new</span> <span class="p">{</span> <span class="n">id</span> <span class="p">=</span> <span class="n">user</span><span class="p">.</span><span class="n">Username</span> <span class="p">},</span> <span class="n">user</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="p">[</span><span class="nf">HttpPut</span><span class="p">(</span><span class="s">"{username}"</span><span class="p">)]</span>
+  <span class="p">[</span><span class="nf">ProducesResponseType</span><span class="p">(</span><span class="m">204</span><span class="p">)]</span>
+  <span class="p">[</span><span class="nf">ProducesResponseType</span><span class="p">(</span><span class="m">404</span><span class="p">)]</span>
+  <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">IActionResult</span><span class="p">&gt;</span> <span class="nf">UpdateUserAsync</span><span class="p">(</span><span class="kt">string</span> <span class="n">username</span><span class="p">,</span> <span class="n">User</span> <span class="n">user</span><span class="p">)</span>
+  <span class="p">{</span>
+      <span class="kt">var</span> <span class="n">existingUser</span> <span class="p">=</span> <span class="k">await</span> <span class="n">_repository</span><span class="p">.</span><span class="nf">GetByUsername</span><span class="p">(</span><span class="n">username</span><span class="p">);</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">existingUser</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+      <span class="p">{</span>
+          <span class="k">return</span> <span class="nf">NotFound</span><span class="p">();</span>
+      <span class="p">}</span>
+
+      <span class="n">existingUser</span><span class="p">.</span><span class="n">Nickname</span> <span class="p">=</span> <span class="n">user</span><span class="p">.</span><span class="n">Nickname</span><span class="p">;</span>
+      <span class="n">existingUser</span><span class="p">.</span><span class="n">Email</span> <span class="p">=</span> <span class="n">user</span><span class="p">.</span><span class="n">Email</span><span class="p">;</span>
+
+      <span class="n">_repository</span><span class="p">.</span><span class="nf">Update</span><span class="p">(</span><span class="n">existingUser</span><span class="p">);</span>
+      <span class="k">return</span> <span class="nf">NoContent</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="p">[</span><span class="nf">HttpDelete</span><span class="p">(</span><span class="s">"{username}"</span><span class="p">)]</span>
+  <span class="p">[</span><span class="nf">ProducesResponseType</span><span class="p">(</span><span class="m">204</span><span class="p">)]</span>
+  <span class="p">[</span><span class="nf">ProducesResponseType</span><span class="p">(</span><span class="m">404</span><span class="p">)]</span>
+  <span class="k">public</span> <span class="k">async</span> <span class="n">Task</span><span class="p">&lt;</span><span class="n">IActionResult</span><span class="p">&gt;</span> <span class="nf">DeleteUserAsync</span><span class="p">(</span><span class="kt">string</span> <span class="n">username</span><span class="p">)</span>
+  <span class="p">{</span>
+      <span class="kt">var</span> <span class="n">existingUser</span> <span class="p">=</span> <span class="k">await</span> <span class="n">_repository</span><span class="p">.</span><span class="nf">GetByUsername</span><span class="p">(</span><span class="n">username</span><span class="p">);</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">existingUser</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+      <span class="p">{</span>
+          <span class="k">return</span> <span class="nf">NotFound</span><span class="p">();</span>
+      <span class="p">}</span>
+
+      <span class="n">_repository</span><span class="p">.</span><span class="nf">Delete</span><span class="p">(</span><span class="n">existingUser</span><span class="p">);</span>
+      <span class="k">return</span> <span class="nf">NoContent</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+            </div>
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
   </div>
 
   <script src="../js/vendor/jquery/jquery.min.js"></script>
