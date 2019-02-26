@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto|Montserrat:700");
+@import url("https://fonts.googleapis.com/css?family=Roboto|Raleway:400,700");
 :root {
   --blue: #41a0eb;
   --indigo: #8752db;
@@ -294,7 +294,7 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: "Montserrat";
+  font-family: "Raleway";
   font-weight: 700;
   line-height: 1.2; }
 
@@ -7098,7 +7098,6 @@ a.text-dark:hover, a.text-dark:focus {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1); }
 
 #main-container {
-  background-color: #f2f2f2;
   padding-top: 30px;
   padding-left: 30px;
   padding-right: 30px;
@@ -7115,13 +7114,6 @@ a.text-dark:hover, a.text-dark:focus {
   align-items: flex-start;
   justify-content: flex-start;
   transform: translateX(0); }
-  .navbar-left > .logo-container {
-    width: 100%;
-    height: 120px;
-    background-image: url(https://equilaterus.github.io/assets/img/equilaterus.PNG);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center; }
   .navbar-left > .navbar-brand {
     display: block;
     width: 100%;
@@ -7132,7 +7124,8 @@ a.text-dark:hover, a.text-dark:focus {
   .navbar-left .nav-link {
     padding: 0.5rem; }
   .navbar-left .footer-content {
-    margin-top: auto; }
+    margin-top: auto;
+    width: 100%; }
 
 @media (min-width: 576px) {
   .navbar-left-expand-sm {
@@ -7445,3 +7438,45 @@ code {
 
 .highlight .il {
   color: #000; }
+
+h1 {
+  margin-bottom: 4.0rem; }
+
+.top {
+  top: 0;
+  position: relative;
+  width: 100%;
+  z-index: -1; }
+  .top-bg {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 600px;
+    width: 100%;
+    content: ''; }
+    .top-bg:after {
+      width: 100%;
+      height: 600px;
+      top: 0;
+      left: 0;
+      position: absolute;
+      background: linear-gradient(rgba(242, 242, 242, 0.8), #f2f2f2);
+      content: ''; }
+
+.navbar-left {
+  font-family: "Raleway"; }
+  .navbar-left > .navbar-brand {
+    background-color: #000;
+    display: flex;
+    justify-content: center; }
+    .navbar-left > .navbar-brand img {
+      max-width: 30px; }
+  .navbar-left .footer-content {
+    background-color: #151515; }
+    .navbar-left .footer-content a {
+      color: #c4c4c4; }
+      .navbar-left .footer-content a:hover {
+        color: #fff; }
