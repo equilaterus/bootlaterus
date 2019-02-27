@@ -28,7 +28,7 @@ h1 {
       top: 0;
       left: 0;
       position: absolute;
-      background: linear-gradient(transparentize($body-bg, 0.2), $body-bg);
+      background: linear-gradient(transparentize($body-bg, 0.14), $body-bg);
       content: '';
     }
   }
