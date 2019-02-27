@@ -4,10 +4,14 @@
 // bootstrap
 @import "bootstrap";
 
+// Mixins
+@import "mixins/code-hl";
+
 // Overrides
 @import "overrides";
 
 // Custom components
+@import "custom-type";
 @import "custom-layout";
 @import "navbar-left";
 @import "custom-transitions";

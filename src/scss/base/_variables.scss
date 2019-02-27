@@ -45,7 +45,7 @@ $cyan:    #26a3b6;
 //
 
 $body-bg:       $gray-100;
-$body-color:    $gray-900;
+$body-color:    $gray-800;
 $theme-colors: (
   "primary":    $blue
 );
@@ -93,6 +93,30 @@ $font-family-base:            $font-family-sans-serif !default;
 $headings-font-family:        "Raleway" !default;
 $headings-font-weight:        700 !default;
 
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:                ($font-size-base * 1.25) !default;
+$font-size-sm:                ($font-size-base * .875) !default;
+
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            700 !default;
+$font-weight-bolder:          bolder !default;
+
+$font-weight-base:            $font-weight-normal !default;
+$line-height-base:            1.5 !default;
+$line-height-headings:        $line-height-base * 1.2 !default;
+
+$h1-font-size:                $font-size-base * 2 !default;
+$h2-font-size:                $font-size-base * 1.25 !default;
+$h3-font-size:                $font-size-base * 1 !default;
+$h4-font-size:                $font-size-base * 0.75 !default;
+$h5-font-size:                $font-size-base * 0.5 !default;
+$h6-font-size:                $font-size-base !default;
+
+$spacer: 1rem !default;
+
+$headings-margin-bottom:      $spacer !default;
 
 //
 // Grid columns
@@ -125,3 +149,10 @@ $main-container-padding:    $grid-gutter-width;
 //
 
 $navbar-left-max-width:     250px;
+
+//
+// SyntaxHL
+//
+
+$syntaxhl-padding:          20px;           
+$syntaxhl-bg:               $white;        
