@@ -7469,17 +7469,21 @@ h1 {
       background: linear-gradient(rgba(242, 242, 242, 0.86), #f2f2f2);
       content: ''; }
 
-.navbar-left {
+.navbar {
   font-family: "Raleway"; }
-  .navbar-left > .navbar-brand {
-    background-color: #000;
-    display: flex;
-    justify-content: center; }
-    .navbar-left > .navbar-brand img {
-      max-width: 30px; }
-  .navbar-left .footer-content {
-    background-color: #151515; }
-    .navbar-left .footer-content a {
-      color: #c4c4c4; }
-      .navbar-left .footer-content a:hover {
-        color: #fff; }
+
+.navbar-brand {
+  display: flex;
+  justify-content: center; }
+  .navbar-brand img {
+    max-height: 30px; }
+
+.navbar-left > .navbar-brand {
+  background-color: #000; }
+
+.navbar-left .footer-content {
+  background-color: #151515; }
+  .navbar-left .footer-content a {
+    color: #c4c4c4; }
+    .navbar-left .footer-content a:hover {
+      color: #fff; }
