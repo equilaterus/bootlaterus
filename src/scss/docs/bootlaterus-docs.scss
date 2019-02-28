@@ -34,16 +34,22 @@ h1 {
   }
 }
 
-.navbar-left {
+.navbar {
   font-family: $headings-font-family;
+}
+
+.navbar-brand {  
+  display: flex;
+  justify-content: center;
+  img {
+    max-height: 30px;
+  }
+} 
+
+.navbar-left {
   & > .navbar-brand {
     background-color: $black;
-    display: flex;
-    justify-content: center;
-    img {
-      max-width: 30px;
-    }
-  } 
+  }
 
   .footer-content{ 
     background-color: $gray-900;
