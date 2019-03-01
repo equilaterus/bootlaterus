@@ -1,5 +1,12 @@
-h2, h3, h4, h5, h6,
-.h2, .h3, .h4, .h5, .h6 {
-    border-bottom: 1px solid $gray-400;
-    line-height: $line-height-headings;
+//
+// Custom headings
+//
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  line-height: $line-height-headings;
+}
+
+.h-border-bottom {
+  border-bottom: $headings-bottom-border;
 }
