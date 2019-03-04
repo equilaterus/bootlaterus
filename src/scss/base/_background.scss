@@ -22,7 +22,7 @@
         top: 0;
         left: 0;
         position: absolute;
-        background: linear-gradient(transparentize($body-bg, 0.14), $body-bg);
+        background: $bg-gradient;
         content: '';
       }
     }
