@@ -19,8 +19,11 @@
     @include box-shadow($default-container-box-shadow); 
 }
 
-.pagination, .navbar-toggler {
-    display: inline-flex;
+.navbar-toggler {
+    @include box-shadow($input-box-shadow);
+}
+
+.pagination li {
     @include box-shadow($input-box-shadow);
 }
 
