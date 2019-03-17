@@ -125,11 +125,11 @@ sup {
   top: -.5em; }
 
 a {
-  color: #41a0eb;
+  color: #157aca;
   text-decoration: none;
   background-color: transparent; }
   a:hover {
-    color: #157aca;
+    color: #0e5185;
     text-decoration: underline; }
 
 a:not([href]):not([tabindex]) {
@@ -2077,10 +2077,10 @@ fieldset:disabled a.btn {
 
 .btn-link {
   font-weight: 400;
-  color: #41a0eb;
+  color: #157aca;
   text-decoration: none; }
   .btn-link:hover {
-    color: #157aca;
+    color: #0e5185;
     text-decoration: underline; }
   .btn-link:focus, .btn-link.focus {
     text-decoration: underline;
@@ -3417,12 +3417,12 @@ input[type="button"].btn-block {
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #41a0eb;
+  color: #157aca;
   background-color: #fff;
   border: 1px solid #dad8d8; }
   .page-link:hover {
     z-index: 2;
-    color: #157aca;
+    color: #0e5185;
     text-decoration: none;
     background-color: #e7e6e6;
     border-color: #dad8d8; }
@@ -7088,8 +7088,10 @@ a.text-dark:hover, a.text-dark:focus {
 .alert, .card, .breadcrumb, .list-group {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.15); }
 
-.pagination, .navbar-toggler {
-  display: inline-flex;
+.navbar-toggler {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1); }
+
+.pagination li {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1); }
 
 .input-group-prepend > .input-group-text,
@@ -7250,7 +7252,7 @@ h1, h2, h3, h4, h5, h6,
       top: 0;
       left: 0;
       position: absolute;
-      background: linear-gradient(rgba(242, 242, 242, 0.86), #f2f2f2);
+      background: linear-gradient(rgba(242, 242, 242, 0.9), #f2f2f2);
       content: ''; }
 
 div.highlight {
