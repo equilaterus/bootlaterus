@@ -1,0 +1,95 @@
+// Navbar side
+//
+// Special side-bar located at the left side of the screen
+
+.navbar-side {
+    height: 100% !important;
+    width: $navbar-side-max-width;
+    position: fixed !important;
+    padding: 0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transform: translateX(0);
+
+    &-left {
+      left: 0;
+    }
+
+    &-right {
+      right: 0;
+    }
+    
+    & > .navbar-brand {
+        display: block;
+        width: 100%;
+        padding: $navbar-nav-link-padding-x;        
+    } 
+
+    & > .navbar-nav  {
+        width: 100%;
+        display: block;
+    }
+
+    .nav-link {
+        padding: $navbar-nav-link-padding-x;       
+    }
+
+    .footer-content {
+        width: 100%;
+        padding: $footer-padding;
+        margin-top: auto;
+    }
+}
+
+.navbar-side-expand {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+      $next: breakpoint-next($breakpoint, $grid-breakpoints);
+      $infix: breakpoint-infix($next, $grid-breakpoints);
+  
+      &#{$infix} {  
+        @include media-breakpoint-up($next) {
+            transform: translateX(0) !important;
+            display: flex !important;            
+        }
+      }
+    }
+}
+
+.navbar-side-replacer {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        $next: breakpoint-next($breakpoint, $grid-breakpoints);
+        $infix: breakpoint-infix($next, $grid-breakpoints);
+    
+        &#{$infix} {
+          @include media-breakpoint-up($next) {
+            display: none;
+          }
+        }
+      }
+}
+
+.m-navbar-side {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        $next: breakpoint-next($breakpoint, $grid-breakpoints);
+        $infix: breakpoint-infix($next, $grid-breakpoints);
+
+        &-left {
+          &#{$infix} {
+            @include media-breakpoint-up($next) {
+              margin-left: $navbar-side-max-width;
+            }
+          }
+        }
+
+        &-right {
+          &#{$infix} {
+            @include media-breakpoint-up($next) {
+              margin-right: $navbar-side-max-width;
+            }
+          }
+        }
+      }
+}
