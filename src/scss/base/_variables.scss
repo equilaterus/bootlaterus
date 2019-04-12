@@ -44,10 +44,16 @@ $cyan:    #26a3b6;
 // Custom Layout colors
 //
 
-$body-bg:       $gray-100;
-$body-color:    $gray-800;
+$body-bg:         $gray-100;
+$body-color:      $gray-800;
 $theme-colors: (
-  "primary":    $blue
+  "primary":          $blue,
+  "dark-alpha-low":   rgba($black, 0.9),
+  "dark-alpha-med":   rgba($black, 0.85),
+  "dark-alpha-hi":    rgba($black, 0.7),
+  "shadow-low":       rgba($black, .1),
+  "shadow-med":       rgba($black, .15),
+  "shadow-hi":        rgba($black, .2)
 );
 $bg-gradient:   linear-gradient(transparentize($body-bg, 0.1), $body-bg);
 
@@ -148,7 +154,7 @@ $transition-base:             all .2s ease-in-out !default;
 $transition-fade:             opacity .15s linear !default;
 $transition-collapse:         height .35s ease !default;
 
-$navbar-left-transition:    all 0.25s ease-in-out;
+$navbar-side-transition:    all 0.25s ease-in-out;
 
 
 // Custom components
@@ -160,10 +166,11 @@ $main-container-padding:    $grid-gutter-width;
 
 
 //
-// Left Navbar
+// Side Navbar
 //
 
-$navbar-left-max-width:     250px;
+$navbar-side-max-width:     250px;
+$footer-padding:            5px 0 5px 0;
 
 //
 // SyntaxHL

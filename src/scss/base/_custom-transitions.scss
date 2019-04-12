@@ -14,13 +14,13 @@
     }
 }
 
-.collapse:not(.navbar-left) {
+.collapse:not(.navbar-side) {
     &:not(.show) {
         display: none;
     }
 }
 
-.collapsing:not(.navbar-left) {
+.collapsing:not(.navbar-side) {
     position: relative;
     height: 0;
     overflow: hidden;
@@ -32,16 +32,27 @@
 // Custom elements
 //
 
-.navbar-left {
-    @include transition($navbar-left-transition);
+.navbar-side {
+    @include transition($navbar-side-transition);
 }
 
-.navbar-left.collapse {
+.navbar-side-left.collapse {
     &:not(.show) {
         transform: translateX(-100%);
     }
 }
 
-.navbar-left.collapsing {
-    transform: translateX(-100%);
+    .navbar-side-left.collapsing {
+        transform: translateX(-100%);
+    }
+
+    
+.navbar-side-right.collapse {
+    &:not(.show) {
+        transform: translateX(100%);
+    }
 }
+
+    .navbar-side-right.collapsing {
+        transform: translateX(100%);
+    }
