@@ -1,6 +1,6 @@
 # bootlaterus
 
-Equilaterus base boostrap theme
+Equilaterus base boostrap theme [Official Site](https://equilaterus.github.io/bootlaterus/)
 
 ## Builds
 
