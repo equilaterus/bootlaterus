@@ -3,12 +3,8 @@ module.exports = async function (grunt) {
     require('load-grunt-tasks')(grunt);
 
     // Create mappings between theme colors and templates
-    const utilities = require('./utilities');
-    
+    const utilities = require('./utilities');    
     const bootlaterusFiles = utilities.getBootlaterusFiles('./src/scss', '_themes', '_main.scss');
-
-    console.log(bootlaterusFiles);    
-    console.log('a')
     
     grunt.initConfig({
 
@@ -95,9 +91,10 @@ module.exports = async function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
-    grunt.registerTask('default', ['clean'/*, 'concat', 'sass', 'copy', 'cssmin', 'browserSync', 'watch'*/]);
+    grunt.registerTask('default', ['clean', 'concat', 'sass', 'copy', 'cssmin', 'browserSync', 'watch']);
     grunt.registerTask('build', ['clean', 'concat', 'sass', 'copy', 'cssmin']);
 }
