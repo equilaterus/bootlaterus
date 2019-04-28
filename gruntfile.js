@@ -1,11 +1,14 @@
-module.exports = function (grunt) {
+module.exports = async function (grunt) {
     const sass = require('node-sass');
     require('load-grunt-tasks')(grunt);
 
     // Create mappings between theme colors and templates
-    let bootlaterusFiles = {}
-    bootlaterusFiles['src/scss/base/bootlaterus.scss'] = ['src/scss/_themes/_default.scss', 'src/scss/base/_bootlaterus.scss'];
-    bootlaterusFiles['src/scss/docs/bootlaterus-docs.scss'] = ['src/scss/_themes/_default.scss', 'src/scss/docs/_bootlaterus-docs.scss'];
+    const utilities = require('./utilities');
+    
+    const bootlaterusFiles = utilities.getBootlaterusFiles('./src/scss', '_themes', '_main.scss');
+
+    console.log(bootlaterusFiles);    
+    console.log('a')
     
     grunt.initConfig({
 
@@ -95,6 +98,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
-    grunt.registerTask('default', ['clean', 'concat', 'sass', 'copy', 'cssmin', 'browserSync', 'watch']);
+    grunt.registerTask('default', ['clean'/*, 'concat', 'sass', 'copy', 'cssmin', 'browserSync', 'watch'*/]);
     grunt.registerTask('build', ['clean', 'concat', 'sass', 'copy', 'cssmin']);
 }
