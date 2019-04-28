@@ -1,27 +1,30 @@
 branches:
   except:
-    - gh-pages
-
+  - gh-pages
 language: node_js
 node_js:
-  - 8.12.0
+- 8.12.0
 cache:
   directories:
-    - node_modules
-
+  - node_modules
 before_install: npm install -g grunt-cli
 install: npm install
 script: grunt build
-
 deploy:
-  provider: pages
+- provider: pages
   skip-cleanup: true
-  github-token: $GH_TOKEN
+  github-token: "$GH_TOKEN"
   keep-history: true
   local-dir: dist
   on:
-    branch: master
-
+    branch: release
+- provider: npm
+  skip_cleanup: true
+  email: "equilaterus@outlook.com"
+  api_key: "$NPM_TOKEN"
+  on:
+    branch: release
 env:
   global:
     secure: jK4wPLyww9H32RjTIOLSncU8eMFD95A7q0Jlw8btQFqhfj4SbvGXLS6RoMreDRC7tlcAbvVc9a6ectxzT+fg7RnuhL0dLwlwFXjLBTuvFBgyo6x6s0cu/nSAcotXB0RMrc1kHpaCuJ9MJMdvRUD8HjjbjJ+5OiYigU66xR+KZs9JfAkfHF7YPEORDl89wU7+1EQaNmZ3bxtbMFnufczNl73MgR9A7MAFhFiQM/c0xEohPk9b6M3gGWgUyXcK370gdmMwIiUc0n3KoGGBENmkU5DCqpsteHs3Bgv06fUmN70QdOSIospIgmXkd//vjI3GZcD6fEyvjpwff9BiutkbOgFU1LCjjwElwQSxZwCJNx8pPbrwh0uRYaEDKpqBpWloyqXe38qXWNIN8VLOT0z+pKwfYOBztFQLjI/7y+WtSrNZzl8WGvJwEP0qe2bJUjPrfEXzuIqtv15gWvRbp6hH6obb6A3W0mNnl4y0RbBc5FYMnqeJktHRgH3ep8gVF+M8P+DnaR3I90DaNVQ57NzuaoGdaBCManyx89lwyR+CfsxWOLUtzifonmA1z2zKzXxOcK0jGvBbsnRrO1ttwV7CgEvwBNh0Eisrk+j52pnxNOoIOnCwJqYzKlyxAtKbFByGoAPLTY+pwK+V6gonrHFgIWOlGbtgPR0z107EhFivXZ0=
+    secure: mYq4U3hSOeAfRxZrADAwSj2fVggEQ6sfCiIAsVyozWIptN91kq0NHoVeOzwI7I097mdn+ra2472ZYJtJwfUc3wmAnzra6sGI2/ryQbiMd4vXQ/voeN7D/IXPLkXV8MvNnKT5vjHdneKULCJLKls8czP9Bqt1mf7PgvMe+peNVzAsn6FcrJgyG/Lx+WVQ0OdBaZmPl3DZ6Mi/Qaq+Cd1UZhjafBgkYN0t8j4jWskxuIQiFA9sNceWVGoAzKzay2KMtbkQnhXVl6fDbKExZ2r3gNIRqRzVD/q6V0R6cltvKnqbSwfQk1IP4JRu5KxaglZc/lePPLWuUbzr0sJpUc/s2K6HgyJnH9Ccv0aru9BNr1PDvQ00EeJk7d7x58wj3gPENqAW5sA5MBFmo5mecTcLY251+1fuAIg1MdZDlp8i2i2CUwXsqLxptZfLJkTlUn/G7lQTmGaGXTaGPhbzYNngoZDjtbkz6BHpOHBssGyo1cWtM3kjN0emBw8mHQCY2QlWQL4FBb70YF1hbm7+2VYQl1NlW5WgIwi/PO+T5cj8GQlIpHngiJciNfWXbaXf28b3Zp/xaDhzXJ38hh4WTVnh+9xIE2uJieJuUTkh/blY82XHLG515O4wUGwBVgkGvXLw2Y5kRHwu6onofoCVDgi4UoM2JQ6Np6lO6N+LowS/dOQ=
