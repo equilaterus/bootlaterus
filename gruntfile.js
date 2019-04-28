@@ -6,8 +6,7 @@ module.exports = async function (grunt) {
     const utilities = require('./utilities');    
     const bootlaterusFiles = utilities.getBootlaterusFiles('./src/scss', './prebuild/scss', '_themes', '_main.scss');
     const distFiles = utilities.getBootlaterusDistFiles('./dist/css',bootlaterusFiles);
-    
-    
+        
     grunt.initConfig({
 
         clean: ['dist', 'prebuild'],
