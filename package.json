@@ -1,6 +1,6 @@
 {
   "name": "bootlaterus",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Equilaterus Bootstap Themes",
   "dependencies": {},
   "devDependencies": {
@@ -23,7 +23,7 @@
     "url": "git+https://github.com/equilaterus/bootlaterus.git"
   },
   "keywords": [
-    "boostrap",
+    "bootstrap",
     "equilaterus",
     "themes"
   ],
