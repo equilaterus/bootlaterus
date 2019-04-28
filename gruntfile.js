@@ -4,11 +4,11 @@ module.exports = async function (grunt) {
 
     // Create mappings between theme colors and templates
     const utilities = require('./utilities');    
-    const bootlaterusFiles = utilities.getBootlaterusFiles('./src/scss', '_themes', '_main.scss');
+    const bootlaterusFiles = utilities.getBootlaterusFiles('./src/scss', './prebuild/scss', '_themes', '_main.scss');
     
     grunt.initConfig({
 
-        clean: ['dist'],
+        clean: ['dist', 'prebuild'],
 
         concat: {
             sccs: {
@@ -16,21 +16,10 @@ module.exports = async function (grunt) {
             }
         },
 
-        sass: {
-            options: {
-                implementation: sass
-            },
-            dist: {
-                files: {
-                    'dist/css/bootlaterus.css': 'src/scss/base/bootlaterus.scss',
-                    'dist/css/bootlaterus-docs.css': 'src/scss/docs/bootlaterus-docs.scss'
-                }
-            }
-        },
-        
         copy: {
             main: {
                 files: [
+                    { expand: true, cwd: 'src/scss', src: '**', dest: 'prebuild/scss' },
                     { expand: true, cwd: 'src/html', src: '**', dest: 'dist/' },
                     { expand: true, src: 'LICENSE', dest: 'dist/' },
                     { expand: true, cwd: 'node_modules/bootstrap/dist/js', src: '**', dest: 'dist/js/vendor/bootstrap' },
@@ -39,6 +28,18 @@ module.exports = async function (grunt) {
                     { expand: true, cwd: 'node_modules/jquery/', src: 'LICENSE*', dest: 'dist/js/vendor/jquery' }
                 ], 
             },
+        },
+
+        sass: {
+            options: {
+                implementation: sass
+            },
+            dist: {
+                files: {
+                    'dist/css/bootlaterus.css': 'prebuild/scss/bootlaterus/bootlaterus.scss',
+                    'dist/css/bootlaterus-docs.css': 'prebuild/scss/bootlaterus-docs/bootlaterus-docs.scss'
+                }
+            }
         },
 
         cssmin: {
@@ -95,6 +96,6 @@ module.exports = async function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
-    grunt.registerTask('default', ['clean', 'concat', 'sass', 'copy', 'cssmin', 'browserSync', 'watch']);
-    grunt.registerTask('build', ['clean', 'concat', 'sass', 'copy', 'cssmin']);
+    grunt.registerTask('default', ['clean', 'concat', 'copy', 'sass', 'cssmin', 'browserSync', 'watch']);
+    grunt.registerTask('build', ['clean', 'concat', 'copy', 'sass', 'cssmin']);
 }

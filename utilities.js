@@ -3,7 +3,7 @@ function getDirectoryContent(path) {
     return fs.readdirSync(path);
 }
 
-module.exports.getBootlaterusFiles = function getBootlaterusFiles(path, themesDirectoryName, mainFileName) {
+module.exports.getBootlaterusFiles = function getBootlaterusFiles(path, outpath, themesDirectoryName, mainFileName) {
     const directories = getDirectoryContent(path);
         
     const themesDirectory = directories.find(directory => directory === themesDirectoryName);
@@ -18,7 +18,7 @@ module.exports.getBootlaterusFiles = function getBootlaterusFiles(path, themesDi
     const bootlaterusFiles = {};
 
     bootlaterusDirectories.forEach(bootlaterusDirectory => {
-        const exportedFilePath = `${path}/${bootlaterusDirectory}/${bootlaterusDirectory}.scss`;
+        const exportedFilePath = `${outpath}/${bootlaterusDirectory}/${bootlaterusDirectory}.scss`;
         const mainFilePath = `${path}/${bootlaterusDirectory}/${mainFileName}`;
         themeFiles.forEach(themeFile => {
             const themeFilePath = `${path}/${themesDirectoryName}/${themeFile}`;
