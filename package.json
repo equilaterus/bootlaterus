@@ -1,7 +1,7 @@
 {
   "name": "bootlaterus",
   "version": "0.0.1",
-  "description": "Equilaterus Base Bootstap Theme",
+  "description": "Equilaterus Bootstap Themes",
   "dependencies": {},
   "devDependencies": {
     "bootstrap": "^4.3.1",
@@ -32,5 +32,8 @@
   "bugs": {
     "url": "https://github.com/equilaterus/bootlaterus/issues"
   },
-  "homepage": "https://equilaterus.github.io/bootlaterus"
+  "homepage": "https://equilaterus.github.io/bootlaterus",
+  "publishConfig": {
+    "access": "public"
+  }
 }
