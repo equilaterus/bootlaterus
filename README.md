@@ -1,13 +1,20 @@
 # bootlaterus
 
-Equilaterus base boostrap theme [Official Site](https://equilaterus.github.io/bootlaterus/)
+Equilaterus boostrap themes [Official Site](https://equilaterus.github.io/bootlaterus/)
 
 ## Builds
 
-| **Branch** | Build status | Version |
-| ------------- |:-------------:| -----:|
-| **Master**        | [![Build Status](https://travis-ci.org/equilaterus/bootlaterus.svg?branch=master)](https://travis-ci.org/equilaterus/bootlaterus) | 0.0.1-unreleased  |
-| **Dev-unstable**        | [![Build Status](https://travis-ci.org/equilaterus/bootlaterus.svg?branch=dev)](https://travis-ci.org/equilaterus/bootlaterus) | 0.0.1-unreleased  |
+* **Release** v0.0.1-prealpha
+
+  [![Build Status](https://travis-ci.org/equilaterus/bootlaterus.svg?branch=release)](https://travis-ci.org/equilaterus/bootlaterus/branches)
+
+* **Master** v0.0.x
+
+  [![Build Status](https://travis-ci.org/equilaterus/bootlaterus.svg?branch=master)](https://travis-ci.org/equilaterus/bootlaterus/branches)
+
+* **Dev** Unstable
+
+  [![Build Status](https://travis-ci.org/equilaterus/bootlaterus.svg?branch=dev)](https://travis-ci.org/equilaterus/bootlaterus/branches) 
 
 ## How to start
 
