@@ -1,29 +1,4 @@
-//
-// Color system
-//
-$white:    #fff;
-$gray-100: #f2f2f2;
-$gray-200: #e7e6e6;
-$gray-300: #dad8d8;
-$gray-400: #c4c4c4;
-$gray-500: #a8a8a8;
-$gray-600: #817e7e;
-$gray-700: #494949;
-$gray-800: #383838;
-$gray-900: #151515;
-$black:    #000;
-
-$blue:    #41a0eb;
-$indigo:  #8752db;
-$purple:  #634d8b;
-$pink:    #b85684;
-$red:     #dc3545;
-$orange:  #f18934;
-$yellow:  #e7a32a;
-$green:   #62a318;
-$teal:    #39ddac;
-$cyan:    #26a3b6;
-@import "../base/_bootlaterus";
+@import "../bootlaterus/_main";
 
 h1 {
   margin-bottom: 4.0rem;
