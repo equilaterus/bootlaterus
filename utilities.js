@@ -36,3 +36,16 @@ module.exports.getBootlaterusFiles = function getBootlaterusFiles(path, outpath,
     
     return bootlaterusFiles;
 }
+
+module.exports.getBootlaterusDistFiles = function getBootlaterusDistFiles(outpath, bootlaterusFiles) {
+    const prebuildFiles = Object.keys(bootlaterusFiles);
+    const distFiles = {};
+    prebuildFiles.forEach(file => {
+        const fileNameBeginPosition = file.lastIndexOf('/');
+        const fileNameEndPosition = file.lastIndexOf('.');
+        const fileName = file.substring(fileNameBeginPosition+1, fileNameEndPosition);
+        distFiles[`${outpath}/${fileName}.css`] = file;
+    });
+
+    return distFiles;
+}

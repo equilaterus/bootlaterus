@@ -5,6 +5,8 @@ module.exports = async function (grunt) {
     // Create mappings between theme colors and templates
     const utilities = require('./utilities');    
     const bootlaterusFiles = utilities.getBootlaterusFiles('./src/scss', './prebuild/scss', '_themes', '_main.scss');
+    const distFiles = utilities.getBootlaterusDistFiles('./dist/css',bootlaterusFiles);
+    
     
     grunt.initConfig({
 
@@ -35,10 +37,7 @@ module.exports = async function (grunt) {
                 implementation: sass
             },
             dist: {
-                files: {
-                    'dist/css/bootlaterus.css': 'prebuild/scss/bootlaterus/bootlaterus.scss',
-                    'dist/css/bootlaterus-docs.css': 'prebuild/scss/bootlaterus-docs/bootlaterus-docs.scss'
-                }
+                files: distFiles
             }
         },
 
