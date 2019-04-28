@@ -49,4 +49,3 @@ npm install bootlaterus --save
 * [Custom components](https://github.com/equilaterus/bootlaterus/wiki/Custom-components)
 
 * [How to build this package?](https://github.com/equilaterus/bootlaterus/wiki/How-to-build-this-package%3F)
-
