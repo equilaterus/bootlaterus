@@ -3,6 +3,13 @@ function getDirectoryContent(path) {
     return fs.readdirSync(path);
 }
 
+function generateExportedFilePath(filePath, theme) {
+    if (theme === '_default.scss')
+        return `${filePath}.scss`;
+    const themeName = theme.slice(1,-5);
+    return `${filePath}-${themeName}.scss`;
+}
+
 module.exports.getBootlaterusFiles = function getBootlaterusFiles(path, outpath, themesDirectoryName, mainFileName) {
     const directories = getDirectoryContent(path);
         
@@ -18,10 +25,11 @@ module.exports.getBootlaterusFiles = function getBootlaterusFiles(path, outpath,
     const bootlaterusFiles = {};
 
     bootlaterusDirectories.forEach(bootlaterusDirectory => {
-        const exportedFilePath = `${outpath}/${bootlaterusDirectory}/${bootlaterusDirectory}.scss`;
+        const exportedFilePathBase = `${outpath}/${bootlaterusDirectory}/${bootlaterusDirectory}`;
         const mainFilePath = `${path}/${bootlaterusDirectory}/${mainFileName}`;
         themeFiles.forEach(themeFile => {
             const themeFilePath = `${path}/${themesDirectoryName}/${themeFile}`;
+            const exportedFilePath = generateExportedFilePath(exportedFilePathBase, themeFile);
             bootlaterusFiles[exportedFilePath] = [themeFilePath, mainFilePath];
         });
     });    
