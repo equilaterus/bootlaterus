@@ -13,10 +13,8 @@
     "grunt-contrib-cssmin": "^3.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-sass": "^3.0.2",
-    "jquery": "^3.4.0",
     "load-grunt-tasks": "^4.0.0",
-    "node-sass": "^4.12.0",
-    "popper.js": "^1.14.7"
+    "node-sass": "^4.12.0"
   },
   "scripts": {},
   "repository": {

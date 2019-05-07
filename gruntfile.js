@@ -18,15 +18,16 @@ module.exports = async function (grunt) {
         },
 
         copy: {
-            main: {
+            prebuild: {
                 files: [
                     { expand: true, cwd: 'src/scss', src: '**', dest: 'prebuild/scss' },
+                ],
+            },
+            main: {
+                files: [                   
                     { expand: true, cwd: 'src/html', src: '**', dest: 'dist/' },
                     { expand: true, src: 'LICENSE', dest: 'dist/' },
-                    { expand: true, cwd: 'node_modules/bootstrap/dist/js', src: '**', dest: 'dist/js/vendor/bootstrap' },
-                    { expand: true, cwd: 'node_modules/bootstrap/', src: 'LICENSE*', dest: 'dist/js/vendor/bootstrap' },
-                    { expand: true, cwd: 'node_modules/jquery/dist', src: '**', dest: 'dist/js/vendor/jquery' },
-                    { expand: true, cwd: 'node_modules/jquery/', src: 'LICENSE*', dest: 'dist/js/vendor/jquery' }
+                    { expand: true, cwd: 'node_modules/bootstrap/', src: 'LICENSE', dest: 'dist/', rename: () => ('dist/LICENSE-BOOTSTRAP') }
                 ], 
             },
         },
@@ -94,6 +95,6 @@ module.exports = async function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
-    grunt.registerTask('default', ['clean', 'concat', 'copy', 'sass', 'cssmin', 'browserSync', 'watch']);
-    grunt.registerTask('build', ['clean', 'concat', 'copy', 'sass', 'cssmin']);
+    grunt.registerTask('default', ['clean', 'concat', 'copy:prebuild', 'copy', 'sass', 'cssmin', 'browserSync', 'watch']);
+    grunt.registerTask('build', ['clean', 'concat', 'copy:prebuild', 'copy', 'sass', 'cssmin']);
 }
