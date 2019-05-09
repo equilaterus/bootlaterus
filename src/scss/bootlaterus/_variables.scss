@@ -22,6 +22,9 @@ $body-bg:         $gray-100;
 $body-color:      $gray-800;
 $theme-colors: (
   "primary":          $blue,
+  "light-alpha-low":   rgba($white, 0.9),
+  "light-alpha-med":   rgba($white, 0.85),
+  "light-alpha-hi":    rgba($white, 0.7),
   "dark-alpha-low":   rgba($black, 0.9),
   "dark-alpha-med":   rgba($black, 0.85),
   "dark-alpha-hi":    rgba($black, 0.7),
@@ -150,5 +153,6 @@ $footer-padding:            5px 0 5px 0;
 // SyntaxHL
 //
 
-$syntaxhl-padding:          20px;           
+$syntaxhl-padding:          5px;
+$syntaxhl-margin:           20px 0 20px 0;           
 $syntaxhl-bg:               $white;        
