@@ -59,7 +59,7 @@ module.exports = async function (grunt) {
         watch: {
             css: {
                 files: 'src/scss/**/*.scss',
-                tasks: ['sass'],
+                tasks: ['copy:prebuild', 'sass', 'cssmin'],
                 options: {
                     livereload: true,
                 },
