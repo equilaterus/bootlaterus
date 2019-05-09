@@ -1,35 +1,44 @@
-module.exports = function (grunt) {
+module.exports = async function (grunt) {
     const sass = require('node-sass');
-
     require('load-grunt-tasks')(grunt);
 
+    // Create mappings between theme colors and templates
+    const utilities = require('./utilities');    
+    const bootlaterusFiles = utilities.getBootlaterusFiles('./src/scss', './prebuild/scss', '_themes', '_main.scss');
+    const distFiles = utilities.getBootlaterusDistFiles('./dist/css',bootlaterusFiles);
+        
     grunt.initConfig({
 
-        clean: ['dist'],
+        clean: ['dist', 'prebuild'],
+
+        concat: {
+            sccs: {
+                files:  bootlaterusFiles
+            }
+        },
+
+        copy: {
+            prebuild: {
+                files: [
+                    { expand: true, cwd: 'src/scss', src: '**', dest: 'prebuild/scss' },
+                ],
+            },
+            main: {
+                files: [                   
+                    { expand: true, cwd: 'src/html', src: '**', dest: 'dist/' },
+                    { expand: true, src: 'LICENSE', dest: 'dist/' },
+                    { expand: true, cwd: 'node_modules/bootstrap/', src: 'LICENSE', dest: 'dist/', rename: () => ('dist/LICENSE-BOOTSTRAP') }
+                ], 
+            },
+        },
 
         sass: {
             options: {
                 implementation: sass
             },
             dist: {
-                files: {
-                    'dist/css/bootlaterus.css': 'src/scss/base/bootlaterus.scss',
-                    'dist/css/bootlaterus-docs.css': 'src/scss/docs/bootlaterus-docs.scss'
-                }
+                files: distFiles
             }
-        },
-        
-        copy: {
-            main: {
-                files: [
-                    { expand: true, cwd: 'src/html', src: '**', dest: 'dist/' },
-                    { expand: true, src: 'LICENSE', dest: 'dist/' },
-                    { expand: true, cwd: 'node_modules/bootstrap/dist/js', src: '**', dest: 'dist/js/vendor/bootstrap' },
-                    { expand: true, cwd: 'node_modules/bootstrap/', src: 'LICENSE*', dest: 'dist/js/vendor/bootstrap' },
-                    { expand: true, cwd: 'node_modules/jquery/dist', src: '**', dest: 'dist/js/vendor/jquery' },
-                    { expand: true, cwd: 'node_modules/jquery/', src: 'LICENSE*', dest: 'dist/js/vendor/jquery' }
-                ], 
-            },
         },
 
         cssmin: {
@@ -82,9 +91,10 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
-    grunt.registerTask('default', ['clean', 'sass', 'copy', 'cssmin', 'browserSync', 'watch']);
-    grunt.registerTask('build', ['clean', 'sass', 'copy', 'cssmin']);
+    grunt.registerTask('default', ['clean', 'concat', 'copy:prebuild', 'copy', 'sass', 'cssmin', 'browserSync', 'watch']);
+    grunt.registerTask('build', ['clean', 'concat', 'copy:prebuild', 'copy', 'sass', 'cssmin']);
 }
