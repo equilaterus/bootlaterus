@@ -9,7 +9,7 @@ cache:
   - node_modules
 before_install: npm install -g grunt-cli
 install: npm install
-script: grunt build
+script: npm run build
 deploy:
   - provider: pages
     skip-cleanup: true
