@@ -14,68 +14,6 @@ $enable-shadows:      true;
 $enable-gradients:    true;
 $enable-transitions:  true;
 
-//
-// Custom Layout colors
-//
-
-$body-bg:         $gray-100;
-$body-color:      $gray-800;
-$theme-colors: (
-  "primary":          $blue,
-  "light-alpha-low":   rgba($white, 0.9),
-  "light-alpha-med":   rgba($white, 0.85),
-  "light-alpha-hi":    rgba($white, 0.7),
-  "dark-alpha-low":   rgba($black, 0.9),
-  "dark-alpha-med":   rgba($black, 0.85),
-  "dark-alpha-hi":    rgba($black, 0.7),
-  "shadow-low":       rgba($black, .1),
-  "shadow-med":       rgba($black, .15),
-  "shadow-hi":        rgba($black, .2)
-);
-$bg-gradient:   linear-gradient(transparentize($body-bg, 0.1), $body-bg);
-
-$breadcrumb-bg: $white;
-
-//
-// Custom Input colors
-//
-
-$input-color:                             $gray-700;
-$input-placeholder-color:                 $gray-400;
-$input-border-color:                      $gray-300;
-$custom-control-indicator-border-color:   $input-border-color;
-
-
-//
-// Custom shadows
-// Enabling shadows for all elements without it
-//
-
-$default-container-box-shadow:        0 0 6px rgba($black, .15);
-$jumbotron-box-shadow:                0 0 6px rgba($black, .25);
-$navbar-box-shadow:                   0 0 8px rgba($black, 0.4);
-
-$input-box-shadow:                    0 0 6px rgba($black, .1);
-$btn-box-shadow:                      $input-box-shadow;
-$custom-select-box-shadow:            $btn-box-shadow;
-$dropdown-box-shadow:                 $input-box-shadow;
-$custom-control-indicator-box-shadow: $input-box-shadow;
-$kbd-box-shadow:                      $input-box-shadow;
-$custom-range-track-box-shadow:       $input-box-shadow;
-$custom-range-thumb-box-shadow:       $input-box-shadow;
-
-
-// Links
-//
-// Style anchor elements.
-
-$link-color:                              darken($blue, 15%) !default;
-$link-decoration:                         none !default;
-$link-hover-color:                        darken($link-color, 15%) !default;
-$link-hover-decoration:                   underline !default;
-// Darken percentage for links with `.text-*` class (e.g. `.text-success`)
-$emphasized-link-hover-darken-percentage: 15% !default;
-
 
 //
 // Fonts

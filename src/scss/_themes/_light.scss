@@ -29,7 +29,7 @@ $cyan:    #26a3b6;
 // Custom Layout colors
 //
 
-$body-bg:         $gray-100;
+$body-bg:         $white;
 $body-color:      $gray-800;
 $theme-colors: (
   "primary":            $blue,
@@ -62,11 +62,11 @@ $custom-control-indicator-border-color:   $input-border-color;
 // Enabling shadows for all elements without it
 //
 
-$default-container-box-shadow:        0 0 6px rgba($black, .15);
-$jumbotron-box-shadow:                0 0 6px rgba($black, .25);
-$navbar-box-shadow:                   0 0 8px rgba($black, 0.4);
+$default-container-box-shadow:        0 0 6px rgba($black, .1);
+$jumbotron-box-shadow:                0 0 6px rgba($black, .2);
+$navbar-box-shadow:                   0 0 8px rgba($black, 0.2);
 
-$input-box-shadow:                    0 0 6px rgba($black, .1);
+$input-box-shadow:                    0 0 6px rgba($black, .05);
 $btn-box-shadow:                      $input-box-shadow;
 $custom-select-box-shadow:            $btn-box-shadow;
 $dropdown-box-shadow:                 $input-box-shadow;
