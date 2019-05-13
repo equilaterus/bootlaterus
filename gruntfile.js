@@ -32,6 +32,21 @@ module.exports = async function (grunt) {
             },
         },
 
+        concat: {
+            options: {
+                process: function(src, filepath) {
+                    return src.replace(
+                        '$BUILD_THEMES',
+                        JSON.stringify(Object.keys(distFiles))
+                      );
+                }
+            },
+            dist: {
+                src: ['src/html/samples/util.js'],
+                dest: 'dist/samples/util.js'
+            }
+        },
+
         sass: {
             options: {
                 implementation: sass
@@ -70,6 +85,13 @@ module.exports = async function (grunt) {
                 options: {
                     livereload: true,
                 },
+            },
+            js: {
+              files: 'src/html/**/*.js',
+              tasks: ['concat'],
+              options: {
+                  livereload: true,
+              }
             }
         },
 
@@ -77,7 +99,8 @@ module.exports = async function (grunt) {
             bsFiles: {
                 src: [
                     'dist/**/*.css',
-                    'dist/**/*.html'
+                    'dist/**/*.html',
+                    'dist/**/*.js',
                 ]
             },
             options: {
@@ -95,6 +118,6 @@ module.exports = async function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
-    grunt.registerTask('default', ['clean', 'concat', 'copy:prebuild', 'copy', 'sass', 'cssmin', 'browserSync', 'watch']);
-    grunt.registerTask('build', ['clean', 'concat', 'copy:prebuild', 'copy', 'sass', 'cssmin']);
+    grunt.registerTask('default', ['clean', 'concat', 'copy:prebuild', 'copy', 'concat', 'sass', 'cssmin', 'browserSync', 'watch']);
+    grunt.registerTask('build', ['clean', 'concat', 'copy:prebuild', 'copy', 'concat', 'sass', 'cssmin']);
 }
