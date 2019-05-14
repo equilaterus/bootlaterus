@@ -2,6 +2,6 @@
     @include box-shadow($default-container-box-shadow); 
     background-color: transparentize($syntaxhl-bg, 0.4);
     padding: $syntaxhl-padding;    
-    margin: 20px 0 20px 0;
+    margin: $syntaxhl-margin;
 }
   
