@@ -12,8 +12,22 @@ module.exports = async function (grunt) {
         clean: ['dist', 'prebuild'],
 
         concat: {
-            sccs: {
+            sass: {
                 files:  bootlaterusFiles
+            },
+            jsutils: {
+                options: {
+                  process: function(src, filepath) {
+                      return src.replace(
+                          '$BUILD_THEMES',
+                          JSON.stringify(Object.keys(distFiles))
+                        );
+                  }
+                },
+                dist: {
+                    src: ['src/html/samples/util.js'],
+                    dest: 'dist/samples/util.js'
+                }
             }
         },
 
@@ -30,21 +44,6 @@ module.exports = async function (grunt) {
                     { expand: true, cwd: 'node_modules/bootstrap/', src: 'LICENSE', dest: 'dist/', rename: () => ('dist/LICENSE-BOOTSTRAP') }
                 ], 
             },
-        },
-
-        concat: {
-            options: {
-                process: function(src, filepath) {
-                    return src.replace(
-                        '$BUILD_THEMES',
-                        JSON.stringify(Object.keys(distFiles))
-                      );
-                }
-            },
-            dist: {
-                src: ['src/html/samples/util.js'],
-                dest: 'dist/samples/util.js'
-            }
         },
 
         sass: {
@@ -118,6 +117,6 @@ module.exports = async function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
-    grunt.registerTask('default', ['clean', 'concat', 'copy:prebuild', 'copy', 'concat', 'sass', 'cssmin', 'browserSync', 'watch']);
-    grunt.registerTask('build', ['clean', 'concat', 'copy:prebuild', 'copy', 'concat', 'sass', 'cssmin']);
+    grunt.registerTask('default', ['clean', 'concat:sass', 'copy:prebuild', 'copy', 'concat:jsutils', 'sass', 'cssmin', 'browserSync', 'watch']);
+    grunt.registerTask('build', ['clean', 'concat:sass', 'copy:prebuild', 'copy', 'concat:jsutils', 'sass', 'cssmin']);
 }
