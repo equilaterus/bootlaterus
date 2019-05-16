@@ -6,7 +6,7 @@ module.exports = async function (grunt) {
     const utilities = require('./utilities');    
     const bootlaterusFiles = utilities.getBootlaterusFiles('./src/scss', './prebuild/scss', '_themes', '_main.scss');
     const distFiles = utilities.getBootlaterusDistFiles('./dist/css',bootlaterusFiles);
-        
+    
     grunt.initConfig({
 
         clean: ['dist', 'prebuild'],
@@ -20,14 +20,13 @@ module.exports = async function (grunt) {
                   process: function(src, filepath) {
                       return src.replace(
                           '$BUILD_THEMES',
-                          JSON.stringify(Object.keys(distFiles))
+                          utilities.getDistRelativePath(distFiles)
                         );
                   }
                 },
-                dist: {
-                    src: ['src/html/samples/util.js'],
-                    dest: 'dist/samples/util.js'
-                }
+                src: ['src/html/samples/util.js'],
+                dest: 'dist/samples/util.js'
+                
             }
         },
 
@@ -39,7 +38,7 @@ module.exports = async function (grunt) {
             },
             main: {
                 files: [                   
-                    { expand: true, cwd: 'src/html', src: '**', dest: 'dist/' },
+                    { expand: true, cwd: 'src/html', src: '**/*.html', dest: 'dist/' },
                     { expand: true, src: 'LICENSE', dest: 'dist/' },
                     { expand: true, cwd: 'node_modules/bootstrap/', src: 'LICENSE', dest: 'dist/', rename: () => ('dist/LICENSE-BOOTSTRAP') }
                 ], 

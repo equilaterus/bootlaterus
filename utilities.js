@@ -49,3 +49,9 @@ module.exports.getBootlaterusDistFiles = function getBootlaterusDistFiles(outpat
 
     return distFiles;
 }
+
+module.exports.getDistRelativePath = function getDistRelativePath(distFiles) {
+    return JSON.stringify(
+        Object.keys(distFiles).map((path) => path.replace('./dist', '..'))
+      );
+}
