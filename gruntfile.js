@@ -20,7 +20,7 @@ module.exports = async function (grunt) {
                   process: function(src, filepath) {
                       return src.replace(
                           '$BUILD_THEMES',
-                          utilities.getDistRelativePath(distFiles)
+                          utilities.getThemesMetadata(distFiles)
                         );
                   }
                 },
