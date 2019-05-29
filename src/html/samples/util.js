@@ -6,6 +6,11 @@
 
 const bootlaterusUtils = {};
 
+bootlaterusUtils.ChangeTheme = function (path) {
+  var cssLink = $('link[href*=".css"]');
+  cssLink.replaceWith(`<link href="${path}" type="text/css" rel="stylesheet">`);
+}
+
 bootlaterusUtils.GetUI = function() {
   const themes = $BUILD_THEMES;
   const themesHtml = Object.entries(themes).reduce((str, current) => {
@@ -29,6 +34,12 @@ bootlaterusUtils.CreateThemeSelector = function() {
   $('#theme-selector').html(this.GetUI());
 }
 
+
+
 $(function() {
   bootlaterusUtils.CreateThemeSelector();
+
+  $('a[data-theme-path]').click(function() {
+    bootlaterusUtils.ChangeTheme($(this).data('theme-path'));
+  })
 });
