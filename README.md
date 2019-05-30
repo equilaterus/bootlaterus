@@ -1,6 +1,21 @@
-# bootlaterus
+# Bootlaterus
 
-Equilaterus boostrap themes [Official Site](https://equilaterus.github.io/bootlaterus/)
+> Find Bootlaterus showcase and starter guide at the [**Official Site**](https://equilaterus.github.io/bootlaterus/)
+
+Bootlaterus **includes Bootstrap v4** and has **extended components** that don't require additional Javascript to work.
+
+Build a great responsive UI with a **Compatible** and **Easy to use** *Bootstrap Superset*.
+
+
+## Features
+
+* Includes CSS components and helpers from *Bootstrap v4* so you'll work on a familiar and compatible environment.
+* [Custom CSS components](https://github.com/equilaterus/bootlaterus/wiki/Custom-components) to create *Side Navbars*, *Backgrounds* and *Helpers* to make even easier to use *Bootstrap*. 
+* Bootlaterus doesn't require additional JS files to work, so it is **100% compatible** with *Bootstrap Default jQuery implementation* but also with ports like [React-Bootstrap](https://react-bootstrap.github.io/), [ReactStrap](https://reactstrap.github.io/), [ng-bootstrap](https://ng-bootstrap.github.io/#/home), [bootstrap+vuejs](https://bootstrap-vue.js.org/) and almost any JS implementation of Bootstrap Components.
+* Multiple themes including color and font variations.
+* Custom templates for general use applications like stores or social networks and also for Wiki-like pages, GitHub Pages or documentation-sites.
+* All our build scripts and infrastructure is open source so you can use it to create your own themes.
+
 
 ## Builds
 
@@ -18,10 +33,11 @@ Equilaterus boostrap themes [Official Site](https://equilaterus.github.io/bootla
 
 ## Docs
 
-* Official Page: [Quickstart](https://equilaterus.github.io/bootlaterus/)
+* Bootlaterus:
+  * [Official Page](https://equilaterus.github.io/bootlaterus/) 
+  * [Wiki](https://github.com/equilaterus/bootlaterus/wiki)
 
-* [bootlaterus wiki](https://github.com/equilaterus/bootlaterus/wiki)
-
-* [Official bootstrap docs](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
+* Bootstrap: 
+  * [Official Docs](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
 
 

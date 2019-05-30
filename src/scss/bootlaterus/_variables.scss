@@ -8,11 +8,11 @@
 //
 // Custom styles for bootlaterus overriding default values
 
-$enable-flex:         true;
-$enable-rounded:      true;
-$enable-shadows:      true;
-$enable-gradients:    true;
-$enable-transitions:  true;
+$enable-flex:         true !default;
+$enable-rounded:      true !default;
+$enable-shadows:      true !default;
+$enable-gradients:    true !default;
+$enable-transitions:  true !default;
 
 
 //
@@ -62,28 +62,50 @@ $transition-base:             all .2s ease-in-out !default;
 $transition-fade:             opacity .15s linear !default;
 $transition-collapse:         height .35s ease !default;
 
-$navbar-side-transition:    all 0.25s ease-in-out;
+$navbar-side-transition:    all 0.25s ease-in-out !default;
 
 
 // Custom components
 //
 // Variables for custom elements of bootlaterus
 
-$main-container-bg:         $body-bg;
-$main-container-padding:    $grid-gutter-width;
+$main-container-bg:         $body-bg !default;
+$main-container-padding:    $grid-gutter-width !default;
+$bg-gradient:               linear-gradient(transparentize($body-bg, 0.1), $body-bg) !default;
+
+
+//
+// Custom shadows
+// Enabling shadows for all elements without it
+//
+
+$default-container-box-shadow:        0 0 6px rgba($black, .15);
+$jumbotron-box-shadow:                0 0 6px rgba($black, .25);
+$navbar-box-shadow:                   0 0 8px rgba($black, 0.4);
+
+$input-box-shadow:                    0 0 6px rgba($black, .1);
+$btn-box-shadow:                      $input-box-shadow;
+$custom-select-box-shadow:            $btn-box-shadow;
+$dropdown-box-shadow:                 $input-box-shadow;
+$custom-control-indicator-box-shadow: $input-box-shadow;
+$kbd-box-shadow:                      $input-box-shadow;
+$custom-range-track-box-shadow:       $input-box-shadow;
+$custom-range-thumb-box-shadow:       $input-box-shadow;
+
+$interactable-box-shadow:             0 0 18px rgba($black, .25);
 
 
 //
 // Side Navbar
 //
 
-$navbar-side-max-width:     250px;
-$footer-padding:            5px 0 5px 0;
+$navbar-side-max-width:     250px !default;
+$footer-padding:            5px 0 5px 0 !default;
 
 //
 // SyntaxHL
 //
 
-$syntaxhl-padding:          5px;
-$syntaxhl-margin:           20px 0 20px 0;           
-$syntaxhl-bg:               $white;        
+$syntaxhl-padding:          5px !default;
+$syntaxhl-margin:           20px 0 20px 0 !default;           
+$syntaxhl-bg:               $white !default;        

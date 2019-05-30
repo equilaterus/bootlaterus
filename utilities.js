@@ -49,3 +49,23 @@ module.exports.getBootlaterusDistFiles = function getBootlaterusDistFiles(outpat
 
     return distFiles;
 }
+
+module.exports.getDistRelativePath = function getDistRelativePath(distFiles) {
+    return Object.keys(distFiles).map((path) => path.replace('./dist', '..'));
+}
+
+module.exports.getReadableThemeName = function getReadableThemeName(path) {
+  return path.substring(path.lastIndexOf('/') + 1, path.lastIndexOf('.'))
+          .replace(/-/g, ' ')
+          .replace('cfonts', '+ fonts');
+}
+
+module.exports.getThemesMetadata = function getThemesMetadata(distFiles) {
+  const paths = this.getDistRelativePath(distFiles);
+  return JSON.stringify(
+      paths.reduce((result, current) => {
+        result[this.getReadableThemeName(current)] = current;
+        return result;
+      }, {})
+    );
+}
