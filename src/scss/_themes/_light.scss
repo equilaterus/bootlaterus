@@ -1,3 +1,5 @@
+$enable-shadows:  false;
+
 //
 // Color system
 //
@@ -43,48 +45,5 @@ $theme-colors: (
   "shadow-med":         rgba($black, .15),
   "shadow-hi":          rgba($black, .2)
 );
-$bg-gradient:   linear-gradient(transparentize($body-bg, 0.1), $body-bg);
 
 $breadcrumb-bg: $white;
-
-//
-// Custom Input colors
-//
-
-$input-color:                             $gray-700;
-$input-placeholder-color:                 $gray-400;
-$input-border-color:                      $gray-300;
-$custom-control-indicator-border-color:   $input-border-color;
-
-
-//
-// Custom shadows
-// Enabling shadows for all elements without it
-//
-
-$default-container-box-shadow:        0 0 6px rgba($black, .1);
-$jumbotron-box-shadow:                0 0 6px rgba($black, .2);
-$navbar-box-shadow:                   0 0 8px rgba($black, 0.2);
-
-$input-box-shadow:                    0 0 6px rgba($black, .05);
-$btn-box-shadow:                      $input-box-shadow;
-$custom-select-box-shadow:            $btn-box-shadow;
-$dropdown-box-shadow:                 $input-box-shadow;
-$custom-control-indicator-box-shadow: $input-box-shadow;
-$kbd-box-shadow:                      $input-box-shadow;
-$custom-range-track-box-shadow:       $input-box-shadow;
-$custom-range-thumb-box-shadow:       $input-box-shadow;
-
-$interactable-box-shadow:             0 0 18px rgba($black, .2);
-
-
-// Links
-//
-// Style anchor elements.
-
-$link-color:                              darken($blue, 15%) !default;
-$link-decoration:                         none !default;
-$link-hover-color:                        darken($link-color, 15%) !default;
-$link-hover-decoration:                   underline !default;
-// Darken percentage for links with `.text-*` class (e.g. `.text-success`)
-$emphasized-link-hover-darken-percentage: 15% !default;
