@@ -1,23 +1,25 @@
 {
   "name": "bootlaterus",
-  "version": "0.0.2",
-  "description": "Equilaterus Bootstap Themes",
+  "version": "0.1.0",
+  "description": "Extended Bootstrap themes",
   "dependencies": {},
   "devDependencies": {
     "bootstrap": "^4.3.1",
     "grunt": "^1.0.4",
     "grunt-browser-sync": "^2.2.0",
     "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^3.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-sass": "^3.0.2",
-    "jquery": "^3.4.0",
     "load-grunt-tasks": "^4.0.0",
-    "node-sass": "^4.12.0",
-    "popper.js": "^1.14.7"
+    "node-sass": "^4.12.0"
   },
-  "scripts": {},
+  "scripts": {
+    "start": "grunt",
+    "build": "grunt build"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/equilaterus/bootlaterus.git"

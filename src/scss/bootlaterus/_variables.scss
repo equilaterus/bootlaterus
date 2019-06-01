@@ -1,0 +1,124 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+
+// Bootstrap overrides
+//
+// Custom styles for bootlaterus overriding default values
+
+$enable-flex:         true !default;
+$enable-rounded:      true !default;
+$enable-shadows:      true !default;
+$enable-gradients:    true !default;
+$enable-transitions:  true !default;
+
+
+//
+// Fonts
+//
+
+$headings-font-weight:        700 !default;
+
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:                ($font-size-base * 1.25) !default;
+$font-size-sm:                ($font-size-base * .875) !default;
+
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            700 !default;
+$font-weight-bolder:          bolder !default;
+
+$font-weight-base:            $font-weight-normal !default;
+$line-height-base:            1.5 !default;
+$line-height-headings:        $line-height-base * 1.2 !default;
+
+$h1-font-size:                $font-size-base * 2 !default;
+$h2-font-size:                $font-size-base * 1.25 !default;
+$h3-font-size:                $font-size-base * 1 !default;
+$h4-font-size:                $font-size-base * 0.75 !default;
+$h5-font-size:                $font-size-base * 0.5 !default;
+$h6-font-size:                $font-size-base !default;
+
+$spacer: 1rem !default;
+
+$headings-margin-bottom:      $spacer !default;
+$headings-bottom-border:      1px solid $gray-400;
+
+//
+// Grid columns
+//
+
+$grid-columns:                12 !default;
+$grid-gutter-width:           30px !default;
+
+//
+// Transitions
+//
+
+$transition-base:             all .2s ease-in-out !default;
+$transition-fade:             opacity .15s linear !default;
+$transition-collapse:         height .35s ease !default;
+
+$navbar-side-transition:    all 0.25s ease-in-out !default;
+
+
+// Custom components
+//
+// Variables for custom elements of bootlaterus
+
+$main-container-bg:         $body-bg !default;
+$main-container-padding:    $grid-gutter-width !default;
+$bg-gradient:               linear-gradient(transparentize($body-bg, 0.1), $body-bg) !default;
+
+
+//
+// Custom shadows
+// Enabling shadows for all elements without it
+//
+
+$default-container-box-shadow:        0 0 6px rgba($black, .15) !default;
+$jumbotron-box-shadow:                0 0 6px rgba($black, .25) !default;
+$navbar-box-shadow:                   0 0 8px rgba($black, 0.4) !default;
+
+$input-box-shadow:                    0 0 6px rgba($black, .1) !default;
+$btn-box-shadow:                      $input-box-shadow !default;
+$custom-select-box-shadow:            $btn-box-shadow !default;
+$dropdown-box-shadow:                 $input-box-shadow !default;
+$custom-control-indicator-box-shadow: $input-box-shadow !default;
+$kbd-box-shadow:                      $input-box-shadow !default;
+$custom-range-track-box-shadow:       $input-box-shadow !default;
+$custom-range-thumb-box-shadow:       $input-box-shadow !default;
+
+$interactable-box-shadow:             0 0 18px rgba($black, .25) !default;
+
+
+//
+// Side Navbar
+//
+
+$navbar-side-max-width:       250px !default;
+$navbar-side-replacer-height: 56px !default;
+$footer-padding:              5px 0 5px 0 !default;
+
+//
+// SyntaxHL
+//
+
+$syntaxhl-padding:          5px !default;
+$syntaxhl-margin:           20px 0 20px 0 !default;           
+$syntaxhl-bg:               $white !default; 
+
+//
+// Aspect ratios
+//
+
+$aspect-ratios: (
+  "16-10": 62.5%,
+  "16-9": 56.25%,
+  "4-3": 75%,
+  "3-2": 66.66%,
+  "8-5": 62.5%
+) !default;

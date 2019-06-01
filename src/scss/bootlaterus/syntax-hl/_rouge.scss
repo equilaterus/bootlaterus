@@ -1,6 +1,10 @@
 div.highlight {
     @include highlight-block();
   }
+
+  pre.highlight {
+    margin-bottom: 0;
+  }
   
   code {
     font-family: 'Consolas','Bitstream Vera Sans Mono','Courier', monospace;

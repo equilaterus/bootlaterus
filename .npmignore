@@ -331,6 +331,7 @@ ASALocalRun/
 
 # Custom ignores
 # do not ignore dist/
+prebuild/
 .git/
 util/
 package-lock.json

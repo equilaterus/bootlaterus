@@ -1,0 +1,4 @@
+.interactable:hover {
+  @include box-shadow($interactable-box-shadow);
+  @include transition($transition-base);
+}

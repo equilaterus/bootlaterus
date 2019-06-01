@@ -1,0 +1,19 @@
+// Carousel extended
+//
+// To work with background images and fixed aspect-ratios
+
+.carousel {  
+  @each $aspect-ratio, $value in $aspect-ratios {
+    &-#{$aspect-ratio} {
+      .carousel-content {
+        @include aspect-ratio($value);
+        background-color: $black;
+        background-position: center center;
+        background-repeat: none;
+        background-size: cover;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

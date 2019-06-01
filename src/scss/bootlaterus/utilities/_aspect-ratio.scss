@@ -1,0 +1,11 @@
+// Aspect Ratio
+//
+// Utilities to manage containers Aspect Ratio
+
+.ar {
+  @each $aspect-ratio, $value in $aspect-ratios {
+    &-#{$aspect-ratio} {
+      @include aspect-ratio($value);
+    }
+  }
+}
