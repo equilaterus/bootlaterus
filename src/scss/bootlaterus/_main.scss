@@ -6,9 +6,13 @@
 
 // Mixins
 @import "mixins/code-hl";
+@import "mixins/aspect-ratio";
 
 // Overrides
 @import "overrides";
+
+// Utilities
+@import "utilities/aspect-ratio";
 
 // Custom components
 @import "custom-type";
@@ -17,6 +21,7 @@
 @import "navbar-side";
 @import "background";
 @import "interactable";
+@import "carousel-extended";
 
 // Linguist
 @import "syntax-hl/rouge";
