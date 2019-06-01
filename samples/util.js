@@ -12,7 +12,7 @@ bootlaterusUtils.ChangeTheme = function (path) {
 }
 
 bootlaterusUtils.GetUI = function() {
-  const themes = {"bootlaterus + fonts":"../css/bootlaterus-cfonts.css","bootlaterus":"../css/bootlaterus.css","bootlaterus light":"../css/bootlaterus-light.css","bootlaterus docs + fonts":"../css/bootlaterus-docs-cfonts.css","bootlaterus docs":"../css/bootlaterus-docs.css","bootlaterus docs light":"../css/bootlaterus-docs-light.css"};
+  const themes = {"bootlaterus + fonts":"../css/bootlaterus-cfonts.css","bootlaterus":"../css/bootlaterus.css","bootlaterus light":"../css/bootlaterus-light.css","bootlaterus light_+ fonts":"../css/bootlaterus-light_cfonts.css","bootlaterus docs + fonts":"../css/bootlaterus-docs-cfonts.css","bootlaterus docs":"../css/bootlaterus-docs.css","bootlaterus docs light":"../css/bootlaterus-docs-light.css","bootlaterus docs light_+ fonts":"../css/bootlaterus-docs-light_cfonts.css"};
   const themesHtml = Object.entries(themes).reduce((str, current) => {
     const [key, value] = current;
     str += `<a class="dropdown-item" href="#" data-theme-path="${value}">${key}</a>`;

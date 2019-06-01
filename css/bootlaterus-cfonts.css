@@ -8134,6 +8134,21 @@ a.text-shadow-hi:hover, a.text-shadow-hi:focus {
 .input-group-append > .btn {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1); }
 
+.ar-16-10 {
+  padding-top: 62.5%; }
+
+.ar-16-9 {
+  padding-top: 56.25%; }
+
+.ar-4-3 {
+  padding-top: 75%; }
+
+.ar-3-2 {
+  padding-top: 66.66%; }
+
+.ar-8-5 {
+  padding-top: 62.5%; }
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   line-height: 1.8; }
@@ -8186,10 +8201,11 @@ h1, h2, h3, h4, h5, h6,
   transform: translateX(100%); }
 
 .navbar-side {
-  height: 100% !important;
+  height: calc(100vh - 56px) !important;
   width: 250px;
-  position: fixed !important;
   padding: 0;
+  position: fixed !important;
+  top: 56px;
   flex-direction: column;
   flex-wrap: nowrap;
   overflow-y: auto;
@@ -8201,7 +8217,6 @@ h1, h2, h3, h4, h5, h6,
   .navbar-side-right {
     right: 0; }
   .navbar-side > .navbar-brand {
-    display: block;
     width: 100%;
     padding: 0.5rem; }
   .navbar-side > .navbar-nav {
@@ -8216,46 +8231,54 @@ h1, h2, h3, h4, h5, h6,
 
 @media (min-width: 576px) {
   .navbar-side-expand-sm {
+    height: 100vh !important;
     transform: translateX(0) !important;
-    display: flex !important; } }
+    display: flex !important;
+    top: 0; } }
 
 @media (min-width: 768px) {
   .navbar-side-expand-md {
+    height: 100vh !important;
     transform: translateX(0) !important;
-    display: flex !important; } }
+    display: flex !important;
+    top: 0; } }
 
 @media (min-width: 992px) {
   .navbar-side-expand-lg {
+    height: 100vh !important;
     transform: translateX(0) !important;
-    display: flex !important; } }
+    display: flex !important;
+    top: 0; } }
 
 @media (min-width: 1200px) {
   .navbar-side-expand-xl {
+    height: 100vh !important;
     transform: translateX(0) !important;
-    display: flex !important; } }
+    display: flex !important;
+    top: 0; } }
 
 .navbar-side-expand {
+  height: 100vh !important;
   transform: translateX(0) !important;
-  display: flex !important; }
-
-@media (min-width: 576px) {
-  .navbar-side-replacer-sm {
-    display: none; } }
-
-@media (min-width: 768px) {
-  .navbar-side-replacer-md {
-    display: none; } }
-
-@media (min-width: 992px) {
-  .navbar-side-replacer-lg {
-    display: none; } }
-
-@media (min-width: 1200px) {
-  .navbar-side-replacer-xl {
-    display: none; } }
+  display: flex !important;
+  top: 0; }
 
 .navbar-side-replacer {
-  display: none; }
+  height: 56px; }
+  @media (min-width: 576px) {
+    .navbar-side-replacer-sm {
+      display: none; } }
+  @media (min-width: 768px) {
+    .navbar-side-replacer-md {
+      display: none; } }
+  @media (min-width: 992px) {
+    .navbar-side-replacer-lg {
+      display: none; } }
+  @media (min-width: 1200px) {
+    .navbar-side-replacer-xl {
+      display: none; } }
+  .navbar-side-replacer {
+    display: none; }
 
 @media (min-width: 576px) {
   .m-navbar-side-left-sm {
@@ -8326,6 +8349,51 @@ h1, h2, h3, h4, h5, h6,
   @media (prefers-reduced-motion: reduce) {
     .interactable:hover {
       transition: none; } }
+
+.carousel-16-10 .carousel-content {
+  padding-top: 62.5%;
+  background-color: #000;
+  background-position: center center;
+  background-repeat: none;
+  background-size: cover;
+  width: 100%;
+  height: auto; }
+
+.carousel-16-9 .carousel-content {
+  padding-top: 56.25%;
+  background-color: #000;
+  background-position: center center;
+  background-repeat: none;
+  background-size: cover;
+  width: 100%;
+  height: auto; }
+
+.carousel-4-3 .carousel-content {
+  padding-top: 75%;
+  background-color: #000;
+  background-position: center center;
+  background-repeat: none;
+  background-size: cover;
+  width: 100%;
+  height: auto; }
+
+.carousel-3-2 .carousel-content {
+  padding-top: 66.66%;
+  background-color: #000;
+  background-position: center center;
+  background-repeat: none;
+  background-size: cover;
+  width: 100%;
+  height: auto; }
+
+.carousel-8-5 .carousel-content {
+  padding-top: 62.5%;
+  background-color: #000;
+  background-position: center center;
+  background-repeat: none;
+  background-size: cover;
+  width: 100%;
+  height: auto; }
 
 div.highlight {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
