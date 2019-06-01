@@ -1,7 +1,7 @@
 {
   "name": "bootlaterus",
-  "version": "0.0.2",
-  "description": "Equilaterus Bootstap Themes",
+  "version": "0.1.0",
+  "description": "Extended Bootstrap themes",
   "dependencies": {},
   "devDependencies": {
     "bootstrap": "^4.3.1",
