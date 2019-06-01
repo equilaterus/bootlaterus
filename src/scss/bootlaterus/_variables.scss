@@ -79,20 +79,20 @@ $bg-gradient:               linear-gradient(transparentize($body-bg, 0.1), $body
 // Enabling shadows for all elements without it
 //
 
-$default-container-box-shadow:        0 0 6px rgba($black, .15);
-$jumbotron-box-shadow:                0 0 6px rgba($black, .25);
-$navbar-box-shadow:                   0 0 8px rgba($black, 0.4);
+$default-container-box-shadow:        0 0 6px rgba($black, .15) !default;
+$jumbotron-box-shadow:                0 0 6px rgba($black, .25) !default;
+$navbar-box-shadow:                   0 0 8px rgba($black, 0.4) !default;
 
-$input-box-shadow:                    0 0 6px rgba($black, .1);
-$btn-box-shadow:                      $input-box-shadow;
-$custom-select-box-shadow:            $btn-box-shadow;
-$dropdown-box-shadow:                 $input-box-shadow;
-$custom-control-indicator-box-shadow: $input-box-shadow;
-$kbd-box-shadow:                      $input-box-shadow;
-$custom-range-track-box-shadow:       $input-box-shadow;
-$custom-range-thumb-box-shadow:       $input-box-shadow;
+$input-box-shadow:                    0 0 6px rgba($black, .1) !default;
+$btn-box-shadow:                      $input-box-shadow !default;
+$custom-select-box-shadow:            $btn-box-shadow !default;
+$dropdown-box-shadow:                 $input-box-shadow !default;
+$custom-control-indicator-box-shadow: $input-box-shadow !default;
+$kbd-box-shadow:                      $input-box-shadow !default;
+$custom-range-track-box-shadow:       $input-box-shadow !default;
+$custom-range-thumb-box-shadow:       $input-box-shadow !default;
 
-$interactable-box-shadow:             0 0 18px rgba($black, .25);
+$interactable-box-shadow:             0 0 18px rgba($black, .25) !default;
 
 
 //
