@@ -31,7 +31,7 @@ Build a great responsive UI with a **Compatible** and **Easy to use** *Bootstrap
 
   [![Build Status](https://travis-ci.org/equilaterus/bootlaterus.svg?branch=dev)](https://travis-ci.org/equilaterus/bootlaterus/branches) 
 
-## Docs
+## More info
 
 * Bootlaterus:
   * [Official Page](https://equilaterus.github.io/bootlaterus/) 
