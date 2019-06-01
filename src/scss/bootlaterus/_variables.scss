@@ -109,4 +109,16 @@ $footer-padding:              5px 0 5px 0 !default;
 
 $syntaxhl-padding:          5px !default;
 $syntaxhl-margin:           20px 0 20px 0 !default;           
-$syntaxhl-bg:               $white !default;        
+$syntaxhl-bg:               $white !default; 
+
+//
+// Aspect ratios
+//
+
+$aspect-ratios: (
+  "16-10": 62.5%,
+  "16-9": 56.25%,
+  "4-3": 75%,
+  "3-2": 66.66%,
+  "8-5": 62.5%
+) !default;
