@@ -24,6 +24,8 @@ $green:   #62a318;
 $teal:    #39ddac;
 $cyan:    #26a3b6;
 
+$primary:   $blue;
+
 
 //
 // Custom Layout colors
@@ -32,7 +34,7 @@ $cyan:    #26a3b6;
 $body-bg:         $white;
 $body-color:      $gray-800;
 $theme-colors: (
-  "primary":            $blue,
+  "primary":            $primary,
   "light-alpha-low":    rgba($white, 0.9),
   "light-alpha-med":    rgba($white, 0.85),
   "light-alpha-hi":     rgba($white, 0.7),
