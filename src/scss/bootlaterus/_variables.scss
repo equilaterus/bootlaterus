@@ -64,6 +64,47 @@ $transition-collapse:         height .35s ease !default;
 
 $navbar-side-transition:    all 0.25s ease-in-out !default;
 
+//
+// Components
+//
+
+$component-active-color:      $white !default;
+$component-active-bg:         $primary !default;
+
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+$dropdown-color:                    $body-color !default;
+$dropdown-bg:                       $white !default;
+$dropdown-border-color:             rgba($white, .15) !default;
+
+$dropdown-link-color:               $gray-900 !default;
+$dropdown-link-hover-color:         darken($gray-900, 5%) !default;
+$dropdown-link-hover-bg:            $gray-100 !default;
+
+$dropdown-link-active-color:        $component-active-color !default;
+$dropdown-link-active-bg:           $component-active-bg !default;
+$dropdown-link-disabled-color:      $gray-600 !default;
+$dropdown-header-color:             $gray-600 !default;
+
+$dropdown-divider-bg:               $gray-200 !default;
+
+// Dark Dropdown
+$dropdown-dark-color:                    $gray-400 !default;
+$dropdown-dark-bg:                       rgba($black, .2) !default;
+$dropdown-dark-border-color:             rgba($black, .15) !default;
+
+$dropdown-dark-link-color:               $gray-400 !default;
+$dropdown-dark-link-hover-color:         $gray-300 !default;
+$dropdown-dark-link-hover-bg:            rgba($black, .4)!default;
+
+$dropdown-dark-link-active-color:        $component-active-color !default;
+$dropdown-dark-link-active-bg:           $component-active-bg !default;
+$dropdown-dark-link-disabled-color:      $gray-600 !default;
+$dropdown-dark-header-color:             $gray-600 !default;
+
+$dropdown-dark-divider-bg:               rgba($black, .4)!default;
 
 // Custom components
 //
