@@ -6,7 +6,7 @@ function getDirectoryContent(path) {
 function generateExportedFilePath(filePath, theme) {
     if (theme === '_default.scss')
         return `${filePath}.scss`;
-    const themeName = theme.slice(1,-5);
+    const themeName = theme.slice(1,-5).replace(/_/g, '-');
     return `${filePath}-${themeName}.scss`;
 }
 
@@ -56,7 +56,7 @@ module.exports.getDistRelativePath = function getDistRelativePath(distFiles) {
 
 module.exports.getReadableThemeName = function getReadableThemeName(path) {
   return path.substring(path.lastIndexOf('/') + 1, path.lastIndexOf('.'))
-          .replace(/-/g, ' ')
+          .replace(/-|_/g, ' ')
           .replace('cfonts', '+ fonts');
 }
 
