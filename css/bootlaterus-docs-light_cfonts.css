@@ -8211,7 +8211,8 @@ h1, h2, h3, h4, h5, h6,
   overflow-y: auto;
   align-items: flex-start;
   justify-content: flex-start;
-  transform: translateX(0); }
+  transform: translateX(0);
+  z-index: 900; }
   .navbar-side-left {
     left: 0; }
   .navbar-side-right {
