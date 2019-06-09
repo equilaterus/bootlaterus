@@ -56,7 +56,7 @@ module.exports.getDistRelativePath = function getDistRelativePath(distFiles) {
 
 module.exports.getReadableThemeName = function getReadableThemeName(path) {
   return path.substring(path.lastIndexOf('/') + 1, path.lastIndexOf('.'))
-          .replace(/-/g, ' ')
+          .replace(/-|_/g, ' ')
           .replace('cfonts', '+ fonts');
 }
 
