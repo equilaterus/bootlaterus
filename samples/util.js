@@ -12,7 +12,7 @@ bootlaterusUtils.ChangeTheme = function (path) {
 }
 
 bootlaterusUtils.GetUI = function() {
-  const themes = {"bootlaterus + fonts":"../css/bootlaterus-cfonts.css","bootlaterus default bootstrap":"../css/bootlaterus-default-bootstrap.css","bootlaterus":"../css/bootlaterus.css","bootlaterus light":"../css/bootlaterus-light.css","bootlaterus light + fonts":"../css/bootlaterus-light-cfonts.css","bootlaterus docs + fonts":"../css/bootlaterus-docs-cfonts.css","bootlaterus docs default bootstrap":"../css/bootlaterus-docs-default-bootstrap.css","bootlaterus docs":"../css/bootlaterus-docs.css","bootlaterus docs light":"../css/bootlaterus-docs-light.css","bootlaterus docs light + fonts":"../css/bootlaterus-docs-light-cfonts.css"};
+  const themes = {"bootlaterus":"../css/bootlaterus.css","bootlaterus + fonts":"../css/bootlaterus-cfonts.css","bootlaterus default bootstrap":"../css/bootlaterus-default-bootstrap.css","bootlaterus docs":"../css/bootlaterus-docs.css","bootlaterus docs + fonts":"../css/bootlaterus-docs-cfonts.css","bootlaterus docs default bootstrap":"../css/bootlaterus-docs-default-bootstrap.css","bootlaterus docs light":"../css/bootlaterus-docs-light.css","bootlaterus docs light + fonts":"../css/bootlaterus-docs-light-cfonts.css","bootlaterus light":"../css/bootlaterus-light.css","bootlaterus light + fonts":"../css/bootlaterus-light-cfonts.css"};
   const themesHtml = Object.entries(themes).reduce((str, current) => {
     const [key, value] = current;
     str += `<a class="dropdown-item" href="#" data-theme-path="${value}">${key}</a>`;
