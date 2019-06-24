@@ -10,7 +10,7 @@ Build a great responsive UI with a **Compatible** and **Easy to use** *Bootstrap
 ## Features
 
 * Includes CSS components and helpers from *Bootstrap v4* so you'll work on a familiar and compatible environment.
-* [Custom CSS components](https://github.com/equilaterus/bootlaterus/wiki/Custom-components) to create *Side Navbars*, *Carousels that work with images of different size*, *Backgrounds* and *Utilities* making even easier to use *Bootstrap*. 
+* [Custom CSS components](https://github.com/equilaterus/bootlaterus/wiki/Custom-components) to create *Side Navbars*, *Carousels that work with images of different sizes*, *Backgrounds* and *Utilities* making even easier to use *Bootstrap*. 
 * Bootlaterus doesn't require additional JS files to work, so it is **100% compatible** with *Bootstrap Default jQuery implementation* but also with ports like [React-Bootstrap](https://react-bootstrap.github.io/), [ReactStrap](https://reactstrap.github.io/), [ng-bootstrap](https://ng-bootstrap.github.io/#/home), [bootstrap+vuejs](https://bootstrap-vue.js.org/) and almost any JS implementation of Bootstrap Components.
 * Multiple themes including color and font variations. [See all available variations here](https://github.com/equilaterus/bootlaterus/wiki/Theme-variations)
 * Custom templates for general use applications like stores or social networks and also for Wiki-like pages, GitHub Pages or documentation-sites.
@@ -40,4 +40,7 @@ Build a great responsive UI with a **Compatible** and **Easy to use** *Bootstrap
 * Bootstrap: 
   * [Official Docs](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
 
+* Easily integrate Bootlaterus (or vanilla Bootstrap) into your **GitHub Pages** with [bootlaterus.gh-pages](https://github.com/equilaterus/bootlaterus.gh-pages)
+
+This project is being developed and maintained by [Equilaterus](https://equilaterus.github.io/).
 
