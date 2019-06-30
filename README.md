@@ -40,7 +40,7 @@ Build a great responsive UI with a **Compatible** and **Easy to use** *Bootstrap
 * Bootstrap: 
   * [Official Docs](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
 
-*  **GitHub Pages**: Easily integrate Bootlaterus (or vanilla Bootstrap) with [bootlaterus.gh-pages](https://github.com/equilaterus/bootlaterus.gh-pages)
+*  **GitHub Pages**: Easily integrate Bootlaterus (or vanilla Bootstrap) with [pages.github.com](https://pages.github.com) using [bootlaterus.gh-pages](https://github.com/equilaterus/bootlaterus.gh-pages)
 
 This project is being developed and maintained by [Equilaterus](https://equilaterus.github.io/).
 
