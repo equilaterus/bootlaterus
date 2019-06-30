@@ -8156,12 +8156,6 @@ h1, h2, h3, h4, h5, h6,
 .h-border-bottom {
   border-bottom: 1px solid #c4c4c4; }
 
-#main-container {
-  padding-top: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 30px; }
-
 .fade {
   transition: opacity 0.15s linear; }
   @media (prefers-reduced-motion: reduce) {
@@ -8642,3 +8636,6 @@ code {
 
 .highlight .il {
   color: #000; }
+
+.highlight .nt {
+  color: blue; }

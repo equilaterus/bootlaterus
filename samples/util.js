@@ -7,7 +7,7 @@
 const bootlaterusUtils = {};
 
 bootlaterusUtils.ChangeTheme = function (path) {
-  var cssLink = $('link[href*=".css"]');
+  let cssLink = $('link[href*=".css"]');
   cssLink.replaceWith(`<link href="${path}" type="text/css" rel="stylesheet">`);
 }
 
@@ -29,15 +29,14 @@ bootlaterusUtils.GetUI = function() {
           </li>`;
 }
 
-bootlaterusUtils.CreateThemeSelector = function() {
-  console.log(this.GetUI());
-  $('#theme-selector').html(this.GetUI());
+bootlaterusUtils.CreateThemeSelector = function(selector) {
+  $(selector).html(this.GetUI());
 }
 
 
 
 $(function() {
-  bootlaterusUtils.CreateThemeSelector();
+  bootlaterusUtils.CreateThemeSelector('#theme-selector');
 
   $('a[data-theme-path]').click(function() {
     bootlaterusUtils.ChangeTheme($(this).data('theme-path'));
