@@ -61,11 +61,17 @@ module.exports.getReadableThemeName = function getReadableThemeName(path) {
 }
 
 module.exports.getThemesMetadata = function getThemesMetadata(distFiles) {
-  const paths = this.getDistRelativePath(distFiles);
+  
+  const paths = this.getDistRelativePath(distFiles).reduce((result, current) => {
+    result[this.getReadableThemeName(current)] = current;
+    return result;
+  }, {});
+
+  const result = {}
+  Object.keys(paths).sort().forEach(function(key) {
+    result[key] = paths[key];
+  });
   return JSON.stringify(
-      paths.reduce((result, current) => {
-        result[this.getReadableThemeName(current)] = current;
-        return result;
-      }, {})
-    );
+    result
+  );
 }
