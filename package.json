@@ -1,7 +1,7 @@
 {
   "name": "bootlaterus",
-  "version": "0.1.4",
-  "description": "Extended Bootstrap themes",
+  "version": "0.1.5",
+  "description": "A Compatible and Easy to use Bootstrap Superset",
   "dependencies": {},
   "devDependencies": {
     "bootstrap": "^4.3.1",
