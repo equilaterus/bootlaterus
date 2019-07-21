@@ -12,17 +12,24 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark h-font sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Bootlaterus</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-          <li class="nav-item">
+  <!-- Define your side navbar replacer for small screens (lower than -lg in this case) -->  
+  <nav class="navbar sticky-top navbar-side-replacer-lg navbar-dark bg-dark-alpha-3">
+    <a class="navbar-brand" href="#">
+      <span>Bootlaterus</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sideNavbar"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+    
+  <!-- Define your side navbar with a breaking point (-lg in this case) -->
+  <nav class="navbar navbar-side navbar-side-left navbar-side-expand-lg navbar-dark bg-dark-alpha-2 h-font collapse" id="sideNavbar">
+    <a class="navbar-brand d-none d-lg-flex d-xl-flex bg-shadow-3" href="#">
+      <span>Bootlaterus</span>
+    </a>
+    <ul class="navbar-nav">
+        <li class="nav-item">
             <a href="https://github.com/equilaterus/bootlaterus" class="nav-link" target="_blank"
               rel="noopener noreferrer">
               Github Repo
@@ -34,114 +41,124 @@
               NPM Release
             </a>
           </li>
-        </ul>
-      </div>
+    </ul>
+
+    <div class="footer-content navbar-nav bg-shadow-low">
+      <a class="nav-link" href="#">equilaterus 2019</a>
     </div>
   </nav>
-  <div class="container mt-5">
 
-    <div class="row">
-      <div class="col-md-6">
-        <h2 class="h-border-bottom">Components</h2>
+  <!-- Define your background -->
+  <div class="background">
+      <div class="background-content" style="background-image: url(https://images.unsplash.com/photo-1544198365-f5d60b6d8190?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);"></div>
+  </div>
 
-        <p>All templates include <b>bootstrap v4</b> components and some additional ones:</p>
+  <!-- Your main container with margin when side bar is visible -->
+  <div class="mt-5 m-navbar-side-left-lg">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2 class="h-border-bottom">Components</h2>
 
-        <ul>
-          <li>Side Navbar.</li>
-          <li>Full page backgrounds with color filters.</li>
-        </ul>
+          <p>All templates include <b>bootstrap v4</b> components and some additional ones:</p>
 
-        <h2 class="h-border-bottom">Templates</h2>
+          <ul>
+            <li>Side Navbar.</li>
+            <li>Full page backgrounds with color filters.</li>
+          </ul>
 
-        <h3>Base Template</h3>
+          <h2 class="h-border-bottom">Templates</h2>
 
-        <p>A general <b>bootstrap</b> theme optimized for general use.</p>
+          <h3>Base Template</h3>
 
-        <p>
-          <a href="samples/base-template.html" class="btn btn-primary">
-            Open Base Template
-          </a>
-        </p>
+          <p>A general <b>bootstrap</b> theme optimized for general use.</p>
 
-        <h3>Docs/Wiki Template</h3>
+          <p>
+            <a href="samples/base-template.html" class="btn btn-primary">
+              Open Base Template
+            </a>
+          </p>
 
-        <p>A template optimized for documentation pages.</p>
+          <h3>Docs/Wiki Template</h3>
 
-        <p>
-          <a href="samples/docs-template.html" class="btn btn-primary">
-            Docs/Wiki Template
-          </a>
-        </p>
-      </div>
+          <p>A template optimized for documentation pages.</p>
 
-      <div class="col-md-6">
-        <h2 class="h-border-bottom">Quick start</h2>
-        <h3 id="cdn">CDN</h3>
-
-        <p>Add <b>Bootlaterus</b> that already includes <b>bootstrap CSS</b> (to see additional themes <a
-            href="https://github.com/equilaterus/bootlaterus/wiki/Theme-variations" target="_blank"
-            rel="noopener noreferrer">go here</a>):
-        </p>
-
-        <div class="language-xml highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/bootlaterus@latest/dist/css/bootlaterus-cfonts.min.css"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span></code></pre>
-          </div>
+          <p>
+            <a href="samples/docs-template.html" class="btn btn-primary">
+              Docs/Wiki Template
+            </a>
+          </p>
         </div>
 
-        <p>Include additional javascript libraries (JS, Popper, and jQuery):</p>
+        <div class="col-md-6">
+          <h2 class="h-border-bottom">Quick start</h2>
+          <h3 id="cdn">CDN</h3>
 
-        <div class="language-xml highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code><span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.3.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span><span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span><span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre>
+          <p>Add <b>Bootlaterus</b> that already includes <b>bootstrap CSS</b> (to see additional themes <a
+              href="https://github.com/equilaterus/bootlaterus/wiki/Theme-variations" target="_blank"
+              rel="noopener noreferrer">go here</a>):
+          </p>
+
+          <div class="language-xml highlighter-rouge">
+            <div class="highlight">
+              <pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/bootlaterus@latest/dist/css/bootlaterus-cfonts.min.css"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span></code></pre>
+            </div>
           </div>
-        </div>
 
-        <h3 id="npm">NPM</h3>
+          <p>Include additional javascript libraries (JS, Popper, and jQuery):</p>
 
-        <p>You can install bootlaterus using NPM:</p>
-
-        <div class="highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code>npm install bootlaterus --save</code></pre>
+          <div class="language-xml highlighter-rouge">
+            <div class="highlight">
+              <pre class="highlight"><code><span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.3.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span><span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span><span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre>
+            </div>
           </div>
+
+          <h3 id="npm">NPM</h3>
+
+          <p>You can install bootlaterus using NPM:</p>
+
+          <div class="highlighter-rouge">
+            <div class="highlight">
+              <pre class="highlight"><code>npm install bootlaterus --save</code></pre>
+            </div>
+          </div>
+
+
+          <h2 class="h-border-bottom">Docs</h2>
+          <ul>
+            <li>
+              <p>
+                <a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/" target="_blank"
+                  rel="noopener noreferrer">
+                  Official bootstrap docs
+                </a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="https://github.com/equilaterus/bootlaterus/wiki/Custom-components" target="_blank"
+                  rel="noopener noreferrer">
+                  Custom components
+                </a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="https://github.com/equilaterus/bootlaterus/wiki/Theme-variations" target="_blank"
+                  rel="noopener noreferrer">
+                  Theme variations
+                </a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="https://github.com/equilaterus/bootlaterus/wiki/" target="_blank" rel="noopener noreferrer">
+                  More info in our wiki
+                </a>
+              </p>
+            </li>
+          </ul>
         </div>
-
-
-        <h2 class="h-border-bottom">Docs</h2>
-        <ul>
-          <li>
-            <p>
-              <a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/" target="_blank"
-                rel="noopener noreferrer">
-                Official bootstrap docs
-              </a>
-            </p>
-          </li>
-          <li>
-            <p>
-              <a href="https://github.com/equilaterus/bootlaterus/wiki/Custom-components" target="_blank"
-                rel="noopener noreferrer">
-                Custom components
-              </a>
-            </p>
-          </li>
-          <li>
-            <p>
-              <a href="https://github.com/equilaterus/bootlaterus/wiki/Theme-variations" target="_blank"
-                rel="noopener noreferrer">
-                Theme variations
-              </a>
-            </p>
-          </li>
-          <li>
-            <p>
-              <a href="https://github.com/equilaterus/bootlaterus/wiki/" target="_blank" rel="noopener noreferrer">
-                More info in our wiki
-              </a>
-            </p>
-          </li>
-        </ul>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
