@@ -1,9 +1,15 @@
 .background {
-  top: 0;
-  position: fixed;
+  position: relative;
+  height: 100%;
   width: 100%;
-  height: 100vh;
-  z-index: -1;
+
+  &-fixed {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+  }
 
   &-content {
     background-size: cover;
@@ -12,7 +18,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     content: '';
     
