@@ -1,0 +1,7 @@
+//
+// Gradients extensions
+//
+
+@mixin create-gradient-bg($color-a, $color-b) {
+  background: $color-a linear-gradient(180deg, $color-a, $color-b) repeat-x;
+}
