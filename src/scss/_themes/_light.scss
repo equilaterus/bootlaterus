@@ -24,7 +24,8 @@ $green:   #62a318;
 $teal:    #39ddac;
 $cyan:    #26a3b6;
 
-$primary:   $blue;
+$primary:       $blue;
+$shadow-color:  $gray-600;
 
 
 //
@@ -53,8 +54,8 @@ $breadcrumb-bg: $white;
 // Enabling shadows for all elements without it
 //
 
-$default-container-box-shadow:        0 0 6px rgba($black, .1);
-$jumbotron-box-shadow:                0 0 3px rgba($black, .4);
-$navbar-box-shadow:                   0 0 8px rgba($black, 0.3);
-$input-box-shadow:                    0 0 6px rgba($black, .1);
-$interactable-box-shadow:             0 0 18px rgba($black, .2);
+$default-container-box-shadow:        0 0 6px rgba($shadow-color, .1);
+$jumbotron-box-shadow:                0 0 3px rgba($shadow-color, .4);
+$navbar-box-shadow:                   0 0 8px rgba($shadow-color, 0.3);
+$input-box-shadow:                    0 0 6px rgba($shadow-color, .1);
+$interactable-box-shadow:             0 0 18px rgba($shadow-color, .2);
