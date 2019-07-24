@@ -14,14 +14,14 @@ $gray-900: #151515;
 $black:    #000;
 
 $blue:    #41a0eb;
-$indigo:  #8752db;
+$indigo:  #9a77d3;
 $purple:  #634d8b;
 $pink:    #b85684;
-$red:     #dc3545;
+$red:     #ca3c4a;
 $orange:  #f18934;
 $yellow:  #e7a32a;
 $green:   #62a318;
-$teal:    #39ddac;
+$teal:    #66caac;
 $cyan:    #26a3b6;
 
 $primary:   $blue;
@@ -45,7 +45,9 @@ $theme-colors: (
   "dark-alpha-3":       rgba($black, 0.9),
   "shadow-1":           rgba($black, .1),
   "shadow-2":           rgba($black, .15),
-  "shadow-3":           rgba($black, .2)
+  "shadow-3":           rgba($black, .2),
+  "indigo": $indigo,
+  "teal": $cyan
 );
 
 $breadcrumb-bg: $white;
