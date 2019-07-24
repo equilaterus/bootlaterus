@@ -96,7 +96,7 @@ module.exports = async function (grunt) {
         browserSync: {          
             bsFiles: {
                 src: [
-                    'dist/**/*.css',
+                    //'dist/**/*.css',
                     'dist/**/*.html',
                     'dist/**/*.js',
                 ]
@@ -104,7 +104,6 @@ module.exports = async function (grunt) {
             options: {
                 watchTask: true,
                 injectChanges: false,
-                reloadThrottle: 5000,
                 server: {
                     baseDir: "./dist"
                 }
