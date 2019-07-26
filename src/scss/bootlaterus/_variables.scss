@@ -8,11 +8,11 @@
 //
 // Custom styles for bootlaterus overriding default values
 
-$enable-flex:         true !default;
-$enable-rounded:      true !default;
-$enable-shadows:      true !default;
-$enable-gradients:    true !default;
-$enable-transitions:  true !default;
+$enable-flex:         true  !default;
+$enable-rounded:      true  !default;
+$enable-shadows:      true  !default;
+$enable-gradients:    false !default;
+$enable-transitions:  true  !default;
 
 
 //
@@ -120,11 +120,11 @@ $bg-gradient:               linear-gradient(transparentize($body-bg, 0.1), $body
 // Enabling shadows for all elements without it
 //
 
-$default-container-box-shadow:        0 0 6px rgba($black, .15) !default;
-$jumbotron-box-shadow:                0 0 6px rgba($black, .25) !default;
-$navbar-box-shadow:                   0 0 8px rgba($black, 0.4) !default;
+$default-container-box-shadow:        0 0 8px rgba($shadow-color, .15) !default;
+$jumbotron-box-shadow:                0 0 8px rgba($shadow-color, .25) !default;
+$navbar-box-shadow:                   0 0 8px rgba($shadow-color, 0.4) !default;
 
-$input-box-shadow:                    0 0 6px rgba($black, .1) !default;
+$input-box-shadow:                    0 0 3px rgba($shadow-color, .25) !default;
 $btn-box-shadow:                      $input-box-shadow !default;
 $custom-select-box-shadow:            $btn-box-shadow !default;
 $dropdown-box-shadow:                 $input-box-shadow !default;
@@ -133,7 +133,7 @@ $kbd-box-shadow:                      $input-box-shadow !default;
 $custom-range-track-box-shadow:       $input-box-shadow !default;
 $custom-range-thumb-box-shadow:       $input-box-shadow !default;
 
-$interactable-box-shadow:             0 0 18px rgba($black, .25) !default;
+$interactable-box-shadow:             0 0 18px rgba($shadow-color, .25) !default;
 
 
 //

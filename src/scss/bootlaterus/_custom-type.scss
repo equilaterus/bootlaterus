@@ -10,3 +10,22 @@ h1, h2, h3, h4, h5, h6,
 .h-border-bottom {
   border-bottom: $headings-bottom-border;
 }
+
+
+//
+// Custom font styles
+//
+
+.h-font {
+  font-family: $headings-font-family;
+} 
+
+.text-small {
+  font-size: $font-size-sm;
+}
+
+.text-small-contents {
+  & * {
+    font-size: $font-size-sm;
+  }
+}

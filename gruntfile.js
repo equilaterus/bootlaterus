@@ -70,7 +70,7 @@ module.exports = async function (grunt) {
         },
 
         watch: {
-            css: {
+            scss: {
                 files: 'src/scss/**/*.scss',
                 tasks: ['concat:sass', 'copy:prebuild', 'sass', 'cssmin'],
                 options: {
@@ -93,16 +93,17 @@ module.exports = async function (grunt) {
             }
         },
 
-        browserSync: {
+        browserSync: {          
             bsFiles: {
                 src: [
-                    'dist/**/*.css',
+                    //'dist/**/*.css',
                     'dist/**/*.html',
                     'dist/**/*.js',
                 ]
             },
             options: {
                 watchTask: true,
+                injectChanges: false,
                 server: {
                     baseDir: "./dist"
                 }

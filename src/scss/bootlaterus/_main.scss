@@ -7,6 +7,7 @@
 // Mixins
 @import "mixins/code-hl";
 @import "mixins/aspect-ratio";
+@import "mixins/gradients-extended";
 
 // Overrides
 @import "overrides";
@@ -17,6 +18,7 @@
 // Custom components
 @import "custom-type";
 @import "custom-transitions";
+@import "color-filters";
 @import "navbar-side";
 @import "background";
 @import "interactable";

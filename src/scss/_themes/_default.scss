@@ -14,17 +14,19 @@ $gray-900: #151515;
 $black:    #000;
 
 $blue:    #41a0eb;
-$indigo:  #8752db;
+$indigo:  #8e69ca;
 $purple:  #634d8b;
 $pink:    #b85684;
-$red:     #dc3545;
+$red:     #ca3c4a;
 $orange:  #f18934;
 $yellow:  #e7a32a;
 $green:   #62a318;
-$teal:    #39ddac;
+$teal:    #66caac;
 $cyan:    #26a3b6;
 
 $primary:   $blue;
+
+$shadow-color: $black;
 
 
 //
@@ -35,15 +37,17 @@ $body-bg:         $gray-100;
 $body-color:      $gray-800;
 $theme-colors: (
   "primary":            $primary,
-  "light-alpha-low":    rgba($white, 0.9),
-  "light-alpha-med":    rgba($white, 0.85),
-  "light-alpha-hi":     rgba($white, 0.7),
-  "dark-alpha-low":     rgba($black, 0.9),
-  "dark-alpha-med":     rgba($black, 0.85),
-  "dark-alpha-hi":      rgba($black, 0.7),
-  "shadow-low":         rgba($black, .1),
-  "shadow-med":         rgba($black, .15),
-  "shadow-hi":          rgba($black, .2)
+  "light-alpha-1":      rgba($white, 0.7),
+  "light-alpha-2":      rgba($white, 0.85),
+  "light-alpha-3":      rgba($white, 0.9),
+  "dark-alpha-1":       rgba($black, 0.7),
+  "dark-alpha-2":       rgba($black, 0.85),
+  "dark-alpha-3":       rgba($black, 0.9),
+  "shadow-1":           rgba($black, .1),
+  "shadow-2":           rgba($black, .15),
+  "shadow-3":           rgba($black, .2),
+  "indigo": $indigo,
+  "teal": $cyan
 );
 
 $breadcrumb-bg: $white;
