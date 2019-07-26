@@ -23,7 +23,7 @@ bootlaterusUtils.GetUI = function() {
             <a class="nav-link dropdown-toggle" href="#" id="theme-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Choose Theme
             </a>
-            <div class="dropdown-menu" aria-labelledby="theme-dropdown">
+            <div class="dropdown-menu text-small-contents" aria-labelledby="theme-dropdown">
               ${themesHtml}
             </div>
           </li>`;
