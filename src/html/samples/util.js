@@ -11,11 +11,11 @@ bootlaterusUtils.ChangeTheme = function (path) {
   cssLink.replaceWith(`<link href="${path}" type="text/css" rel="stylesheet">`);
 }
 
-bootlaterusUtils.GetUI = function() {
+bootlaterusUtils.GetUI = function(isRootPath) {
   const themes = $BUILD_THEMES;
   const themesHtml = Object.entries(themes).reduce((str, current) => {
     const [key, value] = current;
-    str += `<a class="dropdown-item" href="#" data-theme-path="${value}">${key}</a>`;
+    str += `<a class="dropdown-item" href="#" data-theme-path="${isRootPath ? value.replace('../', '') : value}">${key}</a>`;
     return str;
   }, '');
 
@@ -29,14 +29,15 @@ bootlaterusUtils.GetUI = function() {
           </li>`;
 }
 
-bootlaterusUtils.CreateThemeSelector = function(selector) {
-  $(selector).html(this.GetUI());
+bootlaterusUtils.CreateThemeSelector = function(selector, isRootPath) {
+  $(selector).html(this.GetUI(isRootPath));
 }
 
 
 
 $(function() {
-  bootlaterusUtils.CreateThemeSelector('#theme-selector');
+  const isRootPath = $('#theme-selector').data('is-root');
+  bootlaterusUtils.CreateThemeSelector('#theme-selector', isRootPath);
 
   $('a[data-theme-path]').click(function() {
     bootlaterusUtils.ChangeTheme($(this).data('theme-path'));
