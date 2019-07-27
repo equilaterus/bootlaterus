@@ -1,4 +1,8 @@
 // Default Bootstrap variables
+// Updated for Bootlaterus
+// Changes marked with comments stating with !Bootlaterus
+
+// !Bootlaterus: importing functions files
 @import "../../../node_modules/bootstrap/scss/functions";
 
 // Variables
@@ -20,6 +24,23 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
 
+$grays: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
+);
+
 $blue:    #007bff !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
@@ -31,6 +52,8 @@ $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
+// !Bootlaterus: removed color map
+
 $primary:       $blue !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
@@ -39,7 +62,9 @@ $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
-$shadow-color:  $black !default;
+
+// !Bootlaterus: adding custom colors
+$shadow-color:       $black !default;
 
 $light-alpha-1:      rgba($white, 0.7);
 $light-alpha-2:      rgba($white, 0.85);
@@ -51,57 +76,9 @@ $shadow-1:           rgba($black, .1);
 $shadow-2:           rgba($black, .15);
 $shadow-3:           rgba($black, .2);
 
-//
-// Color maps
-//
-
-$colors: (
-  "blue":       $blue,
-  "indigo":     $indigo,
-  "purple":     $purple,
-  "pink":       $pink,
-  "red":        $red,
-  "orange":     $orange,
-  "yellow":     $yellow,
-  "green":      $green,
-  "teal":       $teal,
-  "cyan":       $cyan,
-  "white":      $white,
-  "gray":       $gray-600,
-  "gray-dark":  $gray-800
-);
-
-$theme-colors: map-merge(
-  (
-    "light-alpha-1":      $light-alpha-1,
-    "light-alpha-2":      $light-alpha-2,
-    "light-alpha-3":      $light-alpha-3,
-    "dark-alpha-1":       $dark-alpha-1,
-    "dark-alpha-2":       $dark-alpha-2,
-    "dark-alpha-3":       $dark-alpha-3,
-    "shadow-1":           $shadow-1,
-    "shadow-2":           $shadow-2,
-    "shadow-3":           $shadow-3
-  ),
-  // Add colors!
-  $colors
-);
-
-// Add defaults
-$theme-colors: map-merge(
-  (
-    "primary":    $primary,
-    "secondary":  $secondary,
-    "success":    $success,
-    "info":       $info,
-    "warning":    $warning,
-    "danger":     $danger,
-    "light":      $light,
-    "dark":       $dark
-  ),
-  $theme-colors
-);
-
+// !Bootlaterus: removed theme maps
+// !Bootlaterus: imported Bootlaterus color maps
+@import '../bootlaterus/variables-color-maps';
 
 // Set a specific jump point for requesting color jumps
 $theme-color-interval:      8% !default;
