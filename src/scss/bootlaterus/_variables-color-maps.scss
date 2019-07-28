@@ -18,33 +18,26 @@ $colors: (
   "gray-dark":  $gray-800
 );
 
-$theme-colors: map-merge(
-  (
-    "light-alpha-1":      $light-alpha-1,
-    "light-alpha-2":      $light-alpha-2,
-    "light-alpha-3":      $light-alpha-3,
-    "dark-alpha-1":       $dark-alpha-1,
-    "dark-alpha-2":       $dark-alpha-2,
-    "dark-alpha-3":       $dark-alpha-3,
-    "shadow-1":           $shadow-1,
-    "shadow-2":           $shadow-2,
-    "shadow-3":           $shadow-3
-  ),
-  // Add colors!
-  $colors
-);
-
 // Add defaults
-$theme-colors: map-merge(
-  (
-    "primary":    $primary,
-    "secondary":  $secondary,
-    "success":    $success,
-    "info":       $info,
-    "warning":    $warning,
-    "danger":     $danger,
-    "light":      $light,
-    "dark":       $dark
-  ),
-  $theme-colors
+$theme-colors: (
+  "primary":            $primary,
+  "secondary":          $secondary,
+  "success":            $success,
+  "info":               $info,
+  "warning":            $warning,
+  "danger":             $danger,
+  "light":              $light,
+  "dark":               $dark,
+
+  "primary-alt":        $primary-alt,
+  "secondary-alt":      $secondary-alt,
+  "light-alpha-1":      $light-alpha-1,
+  "light-alpha-2":      $light-alpha-2,
+  "light-alpha-3":      $light-alpha-3,
+  "dark-alpha-1":       $dark-alpha-1,
+  "dark-alpha-2":       $dark-alpha-2,
+  "dark-alpha-3":       $dark-alpha-3,
+  "shadow-1":           $shadow-1,
+  "shadow-2":           $shadow-2,
+  "shadow-3":           $shadow-3
 );
