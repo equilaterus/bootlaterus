@@ -1,0 +1,50 @@
+//
+// Color maps
+//
+
+$colors: (
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+);
+
+$theme-colors: map-merge(
+  (
+    "light-alpha-1":      $light-alpha-1,
+    "light-alpha-2":      $light-alpha-2,
+    "light-alpha-3":      $light-alpha-3,
+    "dark-alpha-1":       $dark-alpha-1,
+    "dark-alpha-2":       $dark-alpha-2,
+    "dark-alpha-3":       $dark-alpha-3,
+    "shadow-1":           $shadow-1,
+    "shadow-2":           $shadow-2,
+    "shadow-3":           $shadow-3
+  ),
+  // Add colors!
+  $colors
+);
+
+// Add defaults
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+  ),
+  $theme-colors
+);
