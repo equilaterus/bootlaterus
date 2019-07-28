@@ -1,0 +1,7 @@
+@each $color, $value in $other-colors {
+  @include text-emphasis-variant(".text-#{$color}", $value);
+}
+
+@each $color, $value in $other-colors {
+  @include bg-variant(".bg-#{$color}", $value);
+}
