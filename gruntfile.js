@@ -72,31 +72,22 @@ module.exports = async function (grunt) {
         watch: {
             scss: {
                 files: 'src/scss/**/*.scss',
-                tasks: ['concat:sass', 'copy:prebuild', 'sass', 'cssmin'],
-                options: {
-                    livereload: true,
-                },
+                tasks: ['concat:sass', 'copy:prebuild', 'sass', 'cssmin']
             },
             html: {
                 files: 'src/html/**/*.html',
-                tasks: ['copy'],
-                options: {
-                    livereload: true,
-                },
+                tasks: ['copy']
             },
             js: {
               files: 'src/html/**/*.js',
-              tasks: ['concat'],
-              options: {
-                  livereload: true,
-              }
+              tasks: ['concat']
             }
         },
 
         browserSync: {          
             bsFiles: {
                 src: [
-                    //'dist/**/*.css',
+                    'dist/**/*.min.css',
                     'dist/**/*.html',
                     'dist/**/*.js',
                 ]
