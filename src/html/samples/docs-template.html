@@ -69,6 +69,38 @@
         Bootlaterus Examples
       </h1>
 
+      <h2>Sytax-hl compatible with GitHub Pages</h2>
+
+      <p>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="k">class</span> <span class="nc">Foo</span> 
+<span class="p">{</span>    
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="k">private</span> <span class="kt">int</span> <span class="n">_counter</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="kt">bool</span> <span class="nf">SomeMethod</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">name</span> <span class="p">==</span> <span class="n">Name</span><span class="p">)</span>
+            <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+        
+        <span class="c1">// Do some advanced stuff with a meaningful comment</span>
+        <span class="c1">// Note that code is separated by an extra line from upper condition.</span>
+        <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">character</span> <span class="k">in</span> <span class="n">name</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">character</span> <span class="p">==</span> <span class="sc">'X'</span><span class="p">)</span>
+                <span class="k">continue</span><span class="p">;</span>
+
+            <span class="c1">// Do more stuff</span>
+            <span class="p">...</span>
+            <span class="p">...</span>
+            <span class="p">...</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="p">...;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+      </p>
+
       <h2>
         Bootlaterus Extended Carousel
       </h2>
