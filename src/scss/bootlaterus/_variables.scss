@@ -129,11 +129,11 @@ $box-shadow-sm:               0 .125rem .25rem rgba($shadow-color, .075) !defaul
 $box-shadow:                  0 .5rem 1rem rgba($shadow-color, .15) !default;
 $box-shadow-lg:               0 1rem 3rem rgba($shadow-color, .175) !default;
 
-$default-container-box-shadow:        0 0 8px rgba($shadow-color, .15) !default;
-$jumbotron-box-shadow:                0 0 8px rgba($shadow-color, .25) !default;
-$navbar-box-shadow:                   0 0 8px rgba($shadow-color, 0.4) !default;
+$default-container-box-shadow:        0 0 .3rem rgba($shadow-color, .15) !default;
+$jumbotron-box-shadow:                0 0 .3rem rgba($shadow-color, .25) !default;
+$navbar-box-shadow:                   0 0 .3rem rgba($shadow-color, 0.4) !default;
 
-$input-box-shadow:                    0 0 3px rgba($shadow-color, .25) !default;
+$input-box-shadow:                    0 0 .3rem rgba($shadow-color, .1) !default;
 $btn-box-shadow:                      $input-box-shadow !default;
 $custom-select-box-shadow:            $btn-box-shadow !default;
 $dropdown-box-shadow:                 $input-box-shadow !default;
@@ -142,7 +142,7 @@ $kbd-box-shadow:                      $input-box-shadow !default;
 $custom-range-track-box-shadow:       $input-box-shadow !default;
 $custom-range-thumb-box-shadow:       $input-box-shadow !default;
 
-$interactable-box-shadow:             0 0 18px rgba($shadow-color, .25) !default;
+$interactable-box-shadow:             0 0 1rem rgba($shadow-color, .25) !default;
 
 
 //
