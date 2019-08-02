@@ -1,5 +1,27 @@
-.color-filter {
-  width: 100%;
-  height: 100%;
+.color-filter-indigo-teal {
   @include create-gradient-bg($indigo, $teal, 0.6);
+}
+
+.color-filter-pink-blue {
+  @include create-gradient-bg($pink, $blue, 0.5);
+}
+
+.color-filter-red-orange {
+  @include create-gradient-bg($red, $orange, 0.4);
+}
+
+.color-filter-cyan-blue {
+  @include create-gradient-bg($cyan, $blue, 0.4);
+}
+
+.color-filter-green-yellow {
+  @include create-gradient-bg($green, $yellow, 0.4);
+}
+
+.color-filter-green-teal {
+  @include create-gradient-bg($green, $teal, 0.4);
+}
+
+.color-filter-radial {
+  @include create-radial-gradient-bg ($pink, $black, 0.5 , 1);
 }
