@@ -17,3 +17,7 @@
 .color-filter-green-yellow {
   @include create-gradient-bg($green, $yellow, 0.4);
 }
+
+.color-filter-green-teal {
+  @include create-gradient-bg($green, $teal, 0.4);
+}
