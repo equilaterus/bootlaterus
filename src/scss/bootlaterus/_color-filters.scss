@@ -9,3 +9,7 @@
 .color-filter-red-orange {
   @include create-gradient-bg($red, $orange, 0.4);
 }
+
+.color-filter-cyan-blue {
+  @include create-gradient-bg($cyan, $blue, 0.4);
+}
