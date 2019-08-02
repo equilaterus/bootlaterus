@@ -13,3 +13,7 @@
 .color-filter-cyan-blue {
   @include create-gradient-bg($cyan, $blue, 0.4);
 }
+
+.color-filter-green-yellow {
+  @include create-gradient-bg($green, $yellow, 0.4);
+}
