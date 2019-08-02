@@ -21,3 +21,7 @@
 .color-filter-green-teal {
   @include create-gradient-bg($green, $teal, 0.4);
 }
+
+.color-filter-radial {
+  @include create-radial-gradient-bg ($pink, $black, 0.5 , 1);
+}
