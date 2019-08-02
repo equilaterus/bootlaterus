@@ -1,3 +1,7 @@
 .color-filter-indigo-teal {
   @include create-gradient-bg($indigo, $teal, 0.6);
 }
+
+.color-filter-pink-blue {
+  @include create-gradient-bg($pink, $blue, 0.5);
+}
