@@ -1,5 +1,3 @@
-.color-filter {
-  width: 100%;
-  height: 100%;
+.color-filter-indigo-teal {
   @include create-gradient-bg($indigo, $teal, 0.6);
 }
