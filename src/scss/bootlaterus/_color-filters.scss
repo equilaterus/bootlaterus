@@ -1,3 +1,16 @@
+.cfa:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cfa-indigo-teal:after {
+  @include create-gradient-bg($indigo, $teal, 0.6);
+}
+
 .color-filter-indigo-teal {
   @include create-gradient-bg($indigo, $teal, 0.6);
 }
