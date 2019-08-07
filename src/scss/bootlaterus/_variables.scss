@@ -97,12 +97,12 @@ $dropdown-divider-bg:               $gray-200 !default;
 
 // Dark Dropdown
 $dropdown-dark-color:                    $gray-400 !default;
-$dropdown-dark-bg:                       rgba($black, .2) !default;
-$dropdown-dark-border-color:             rgba($black, .15) !default;
+$dropdown-dark-bg:                       $gray-900 !default;
+$dropdown-dark-border-color:             $gray-900 !default;
 
 $dropdown-dark-link-color:               $gray-400 !default;
 $dropdown-dark-link-hover-color:         $gray-300 !default;
-$dropdown-dark-link-hover-bg:            rgba($black, .4)!default;
+$dropdown-dark-link-hover-bg:            $dark !default;
 
 $dropdown-dark-link-active-color:        $component-active-color !default;
 $dropdown-dark-link-active-bg:           $component-active-bg !default;
