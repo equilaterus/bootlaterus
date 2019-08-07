@@ -4,37 +4,54 @@
   height: 100%;
   position: absolute;
   top: 0;
-  left: 0;
-}
-
-.cfa-indigo-teal:after {
-  @include create-gradient-bg($indigo, $teal, 0.6);
+  left: 0;  
 }
 
 .color-filter-indigo-teal {
   @include create-gradient-bg($indigo, $teal, 0.6);
 }
+  .cfa-indigo-teal:after {
+    @include create-gradient-bg-animated($indigo, $teal, 0.2);
+  }
 
 .color-filter-pink-blue {
   @include create-gradient-bg($pink, $blue, 0.5);
 }
+  .cfa-pink-blue:after {
+    @include create-gradient-bg-animated($pink, $blue, 0.2);
+  }
 
 .color-filter-red-orange {
   @include create-gradient-bg($red, $orange, 0.4);
 }
+  .cfa-red-orange:after {
+    @include create-gradient-bg-animated($red, $orange, 0.2);
+  }
 
 .color-filter-cyan-blue {
   @include create-gradient-bg($cyan, $blue, 0.4);
 }
+  .cfa-cyan-blue:after {
+    @include create-gradient-bg-animated($cyan, $blue, 0.2);
+  }
 
 .color-filter-green-yellow {
   @include create-gradient-bg($green, $yellow, 0.4);
 }
+  .cfa-green-yellow:after {
+    @include create-gradient-bg-animated($green, $yellow, 0.2);
+  }
 
 .color-filter-green-teal {
-  @include create-gradient-bg($green, $teal, 0.4);
+  @include create-gradient-bg($green, $teal, 0.2);
 }
+  .cfa-green-teal:after {
+    @include create-gradient-bg-animated($green, $teal, 0.2);
+  }
 
 .color-filter-radial {
-  @include create-radial-gradient-bg ($pink, $black, 0.5 , 1);
+  @include create-radial-gradient-bg($pink, $black, 0.5 , 1);
 }
+  .cfa-radial:after {
+    @include create-radial-gradient-bg($pink, $black, 0.5 , 1);
+  }
