@@ -22,6 +22,6 @@
     @include create-radial-gradient-bg($value, $black, $gradiant-radial-alpha-from, $gradiant-radial-alpha-to);
   }
     .cfa-radial-#{$color}:after {
-      @include create-radial-gradient-bg($value, $black, $gradiant-radial-alpha-from, $gradiant-radial-alpha-to);
+      @include create-radial-gradient-bg($value, $black, $gradiant-radial-alpha-from-after, $gradiant-radial-alpha-to-after);
     }
 }
