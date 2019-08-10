@@ -53,11 +53,11 @@ $other-colors: map-merge(
 );
 
 $custom-gradients: (
-  "indigo-teal":          $indigo, $teal, 
-  "pink-blue":            $pink, $blue,
-  "red-orange":           $red, $orange,
-  "cyan-blue":            $cyan, $blue,
-  "green-yellow":         $green, $yellow,
-  "green-teal":           $green, $teal
+  "indigo-teal":          ($indigo, $teal), 
+  "pink-blue":            ($pink, $blue),
+  "red-orange":           ($red, $orange),
+  "cyan-blue":            ($cyan, $blue),
+  "green-yellow":         ($green, $yellow),
+  "green-teal":           ($green, $teal)
 );
 
