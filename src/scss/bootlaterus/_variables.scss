@@ -121,6 +121,10 @@ $main-container-padding:    $grid-gutter-width !default;
 $bg-gradient:               linear-gradient(transparentize($body-bg, 0.1), $body-bg) !default;
 
 
+// Gradient Transparency
+$gradient-alpha:            0.4;
+$gradient-after-alpha:      0.2;
+
 //
 // Custom shadows
 // Enabling shadows for all elements without it
