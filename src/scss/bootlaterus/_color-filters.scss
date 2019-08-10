@@ -17,10 +17,11 @@
 }
 
 
-
-.color-filter-radial {
-  @include create-radial-gradient-bg($pink, $black, 0.5 , 1);
-}
-  .cfa-radial:after {
-    @include create-radial-gradient-bg($pink, $black, 0.5 , 1);
+@each $color, $value in $colors{
+  .color-filter-radial-#{$color} {
+    @include create-radial-gradient-bg($value, $black, $gradiant-radial-alpha-from, $gradiant-radial-alpha-to);
   }
+    .cfa-radial-#{$color}:after {
+      @include create-radial-gradient-bg($value, $black, $gradiant-radial-alpha-from, $gradiant-radial-alpha-to);
+    }
+}
