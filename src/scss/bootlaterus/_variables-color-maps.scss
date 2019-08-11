@@ -37,14 +37,27 @@ $theme-colors: (
 // They generate additional background and text colors
 // but cannot be used within all components (as buttons).
 // This reduces output file size.
-$other-colors: (
-  "light-alpha-1":      $light-alpha-1,
-  "light-alpha-2":      $light-alpha-2,
-  "light-alpha-3":      $light-alpha-3,
-  "dark-alpha-1":       $dark-alpha-1,
-  "dark-alpha-2":       $dark-alpha-2,
-  "dark-alpha-3":       $dark-alpha-3,
-  "shadow-1":           $shadow-1,
-  "shadow-2":           $shadow-2,
-  "shadow-3":           $shadow-3
+$other-colors: map-merge(
+  (
+    "light-alpha-1":      $light-alpha-1,
+    "light-alpha-2":      $light-alpha-2,
+    "light-alpha-3":      $light-alpha-3,
+    "dark-alpha-1":       $dark-alpha-1,
+    "dark-alpha-2":       $dark-alpha-2,
+    "dark-alpha-3":       $dark-alpha-3,
+    "shadow-1":           $shadow-1,
+    "shadow-2":           $shadow-2,
+    "shadow-3":           $shadow-3
+  ),
+  $colors
 );
+
+$custom-gradients: (
+  "indigo-teal":          ($indigo, $teal), 
+  "pink-blue":            ($pink, $blue),
+  "red-orange":           ($red, $orange),
+  "cyan-blue":            ($cyan, $blue),
+  "green-yellow":         ($green, $yellow),
+  "green-teal":           ($green, $teal)
+);
+

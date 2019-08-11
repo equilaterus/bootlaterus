@@ -66,6 +66,7 @@ $grid-gutter-width:           30px !default;
 $transition-base:             all .2s ease-in-out !default;
 $transition-fade:             opacity .15s linear !default;
 $transition-collapse:         height .35s ease !default;
+$transition-bg-position:      background-position 0.2s ease-in-out !default;
 
 $navbar-side-transition:    all 0.25s ease-in-out !default;
 
@@ -97,12 +98,12 @@ $dropdown-divider-bg:               $gray-200 !default;
 
 // Dark Dropdown
 $dropdown-dark-color:                    $gray-400 !default;
-$dropdown-dark-bg:                       rgba($black, .2) !default;
-$dropdown-dark-border-color:             rgba($black, .15) !default;
+$dropdown-dark-bg:                       $gray-900 !default;
+$dropdown-dark-border-color:             $gray-900 !default;
 
 $dropdown-dark-link-color:               $gray-400 !default;
 $dropdown-dark-link-hover-color:         $gray-300 !default;
-$dropdown-dark-link-hover-bg:            rgba($black, .4)!default;
+$dropdown-dark-link-hover-bg:            $dark !default;
 
 $dropdown-dark-link-active-color:        $component-active-color !default;
 $dropdown-dark-link-active-bg:           $component-active-bg !default;
@@ -119,6 +120,17 @@ $main-container-bg:         $body-bg !default;
 $main-container-padding:    $grid-gutter-width !default;
 $bg-gradient:               linear-gradient(transparentize($body-bg, 0.1), $body-bg) !default;
 
+
+// Gradient Alpha
+$gradient-alpha:            0.4;
+$gradient-after-alpha:      0.2;
+
+//  Gradient Radial Alpha
+
+$gradiant-radial-alpha-from:        0.5;
+$gradiant-radial-alpha-to:          1;
+$gradiant-radial-alpha-from-after:  0.2;
+$gradiant-radial-alpha-to-after:    1;
 
 //
 // Custom shadows
@@ -143,6 +155,7 @@ $custom-range-track-box-shadow:       $input-box-shadow !default;
 $custom-range-thumb-box-shadow:       $input-box-shadow !default;
 
 $interactable-box-shadow:             0 0 1rem rgba($shadow-color, .25) !default;
+$text-shadow:                         0 0 .2rem rgba($shadow-color, .9) !default;
 
 
 //

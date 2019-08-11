@@ -11,20 +11,20 @@ before_install: npm install -g grunt-cli
 install: npm install
 script: npm run build
 deploy:
-  - provider: pages
-    skip-cleanup: true
-    github-token: $GH_TOKEN
-    keep-history: true
-    local-dir: dist
-    on:
-      branch: master
-  - provider: npm
-    skip_cleanup: true
-    email: "equilaterus@outlook.com"
-    api_key: $NPM_TOKEN
-    on:
-      branch: release
+- provider: pages
+  skip-cleanup: true
+  github-token: "$GH_TOKEN"
+  keep-history: true
+  local-dir: dist
+  on:
+    branch: master
+- provider: npm
+  skip_cleanup: true
+  email: equilaterus@outlook.com
+  api_key: "$NPM_TOKEN"
+  on:
+    branch: release
 env:
   global:
-    - secure: jK4wPLyww9H32RjTIOLSncU8eMFD95A7q0Jlw8btQFqhfj4SbvGXLS6RoMreDRC7tlcAbvVc9a6ectxzT+fg7RnuhL0dLwlwFXjLBTuvFBgyo6x6s0cu/nSAcotXB0RMrc1kHpaCuJ9MJMdvRUD8HjjbjJ+5OiYigU66xR+KZs9JfAkfHF7YPEORDl89wU7+1EQaNmZ3bxtbMFnufczNl73MgR9A7MAFhFiQM/c0xEohPk9b6M3gGWgUyXcK370gdmMwIiUc0n3KoGGBENmkU5DCqpsteHs3Bgv06fUmN70QdOSIospIgmXkd//vjI3GZcD6fEyvjpwff9BiutkbOgFU1LCjjwElwQSxZwCJNx8pPbrwh0uRYaEDKpqBpWloyqXe38qXWNIN8VLOT0z+pKwfYOBztFQLjI/7y+WtSrNZzl8WGvJwEP0qe2bJUjPrfEXzuIqtv15gWvRbp6hH6obb6A3W0mNnl4y0RbBc5FYMnqeJktHRgH3ep8gVF+M8P+DnaR3I90DaNVQ57NzuaoGdaBCManyx89lwyR+CfsxWOLUtzifonmA1z2zKzXxOcK0jGvBbsnRrO1ttwV7CgEvwBNh0Eisrk+j52pnxNOoIOnCwJqYzKlyxAtKbFByGoAPLTY+pwK+V6gonrHFgIWOlGbtgPR0z107EhFivXZ0=
-    - secure: mYq4U3hSOeAfRxZrADAwSj2fVggEQ6sfCiIAsVyozWIptN91kq0NHoVeOzwI7I097mdn+ra2472ZYJtJwfUc3wmAnzra6sGI2/ryQbiMd4vXQ/voeN7D/IXPLkXV8MvNnKT5vjHdneKULCJLKls8czP9Bqt1mf7PgvMe+peNVzAsn6FcrJgyG/Lx+WVQ0OdBaZmPl3DZ6Mi/Qaq+Cd1UZhjafBgkYN0t8j4jWskxuIQiFA9sNceWVGoAzKzay2KMtbkQnhXVl6fDbKExZ2r3gNIRqRzVD/q6V0R6cltvKnqbSwfQk1IP4JRu5KxaglZc/lePPLWuUbzr0sJpUc/s2K6HgyJnH9Ccv0aru9BNr1PDvQ00EeJk7d7x58wj3gPENqAW5sA5MBFmo5mecTcLY251+1fuAIg1MdZDlp8i2i2CUwXsqLxptZfLJkTlUn/G7lQTmGaGXTaGPhbzYNngoZDjtbkz6BHpOHBssGyo1cWtM3kjN0emBw8mHQCY2QlWQL4FBb70YF1hbm7+2VYQl1NlW5WgIwi/PO+T5cj8GQlIpHngiJciNfWXbaXf28b3Zp/xaDhzXJ38hh4WTVnh+9xIE2uJieJuUTkh/blY82XHLG515O4wUGwBVgkGvXLw2Y5kRHwu6onofoCVDgi4UoM2JQ6Np6lO6N+LowS/dOQ=
+  - secure: jK4wPLyww9H32RjTIOLSncU8eMFD95A7q0Jlw8btQFqhfj4SbvGXLS6RoMreDRC7tlcAbvVc9a6ectxzT+fg7RnuhL0dLwlwFXjLBTuvFBgyo6x6s0cu/nSAcotXB0RMrc1kHpaCuJ9MJMdvRUD8HjjbjJ+5OiYigU66xR+KZs9JfAkfHF7YPEORDl89wU7+1EQaNmZ3bxtbMFnufczNl73MgR9A7MAFhFiQM/c0xEohPk9b6M3gGWgUyXcK370gdmMwIiUc0n3KoGGBENmkU5DCqpsteHs3Bgv06fUmN70QdOSIospIgmXkd//vjI3GZcD6fEyvjpwff9BiutkbOgFU1LCjjwElwQSxZwCJNx8pPbrwh0uRYaEDKpqBpWloyqXe38qXWNIN8VLOT0z+pKwfYOBztFQLjI/7y+WtSrNZzl8WGvJwEP0qe2bJUjPrfEXzuIqtv15gWvRbp6hH6obb6A3W0mNnl4y0RbBc5FYMnqeJktHRgH3ep8gVF+M8P+DnaR3I90DaNVQ57NzuaoGdaBCManyx89lwyR+CfsxWOLUtzifonmA1z2zKzXxOcK0jGvBbsnRrO1ttwV7CgEvwBNh0Eisrk+j52pnxNOoIOnCwJqYzKlyxAtKbFByGoAPLTY+pwK+V6gonrHFgIWOlGbtgPR0z107EhFivXZ0=
+  - secure: NHbdra4d4E4S7RVcQ/HMgRkSJ1mRbJlZCsNGBBezX5KqsbduEsiHcF5jt7sVWUbHPaChPgR/9EfTU8+wP+eEPzRK5+KOo+TThbxPUWJuPPRFcd7ksk4HrjzhxeksY4ynBb7xeu/5eGLVoLLczG5PU8VFIjfNjc8tcDsHD/d48Gs0zmyakEB4wTUE83qj0rngz7Ulk1d+upw3+7KX2gVfOWpqFAK9UsLAWz5s6M0yTsC0yDAU2jPg9aTQADyI20pVx1u36hrXJJky3F4n7cQYSmKdOcbc9/aDltoX7B+n3HpU2VhiXIbneM+KGKmkzK/V9jalWXjudS/77V50cBcdc6/dUOuoXzwWb2NyLG64ijSQdLj03ELzhhdFnixlFAULbq6+jHwTo05ziAU2vlZ1drTqP9hihmT4MNm8+eaIfMWOIy8YF2SZT0lArrVHb4qC7TV0qaXz90cRljl1cUkaRoKWPDvjvwcuxX4DW4k0IhVwWnc1qb/q4030eRK+QVMD609zpjty/yxr4uOffjSeSx4wshVEb2vMBozmJdaDxEPjuYKt/MeMMUQRHJod9Tl4Xd3efPLSuLS5NW392FsZjZTp0XR7H7QPdbGTesj6RuvnhyJBGCJWBkmjazg2pS9Dsw0UZsE63NHLrFjjU/jpXAyTKU4LebXO/1mcBbWP5tc=
