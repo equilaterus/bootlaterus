@@ -62,13 +62,12 @@
 }
 
 .navbar-side-replacer {
-    height: $navbar-side-replacer-height;
-
     @each $breakpoint in map-keys($grid-breakpoints) {
         $next: breakpoint-next($breakpoint, $grid-breakpoints);
         $infix: breakpoint-infix($next, $grid-breakpoints);
     
         &#{$infix} {
+          height: $navbar-side-replacer-height;
           @include media-breakpoint-up($next) {
             display: none;
           }
