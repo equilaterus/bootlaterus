@@ -15,6 +15,10 @@
     .cfa-#{$color}:after {
       @include create-gradient-bg-animated(nth($value, 1), nth($value, 2), $gradient-after-alpha);
     }
+    
+    .bg-#{$color}{
+      @include create-linear-gradient(nth($value,1), nth($value,2));
+    }
 }
 
 
@@ -25,4 +29,5 @@
     .cfa-radial-#{$color}:after {
       @include create-radial-gradient-bg($value, $black, $gradiant-radial-alpha-from-after, $gradiant-radial-alpha-to-after);
     }
+
 }
