@@ -4,9 +4,9 @@
 }
 
 .vh-full {
-  height: calc(100wh - #{$navbar-default-height});
+  height: calc(100vh - #{$navbar-default-height});
 }
 
 .min-vh-full {
-  min-height: calc(100wh - #{$navbar-default-height});
+  min-height: calc(100vh - #{$navbar-default-height});
 }
