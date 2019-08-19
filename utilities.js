@@ -84,3 +84,9 @@ module.exports.getThemesMetadata = function getThemesMetadata(distFiles) {
 module.exports.getFile = function getFile(basepath, filename) {
   return getFileContents(`${basepath}${filename}`);
 }
+
+module.exports.getFilenamesFromDirectory = function getFilenamesFromDirectory(path, extension) {
+  return getDirectoryContent(path)
+    .filter(p => p.includes(extension))
+    .map(p => `${path}/${p}`);
+}
