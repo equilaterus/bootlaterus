@@ -90,3 +90,13 @@ module.exports.getFilenamesFromDirectory = function getFilenamesFromDirectory(pa
     .filter(file => file.includes(extension))
     .map(file => `${path}/${file}`);
 }
+
+module.exports.getHtmlDistFiles = function getHtmlDistFiles(htmlFiles, srcpath, distpath) {
+  let distFiles = {};
+  return htmlFiles.reduce( (prev, file) => {
+    const dist = file.replace(srcpath, distpath);
+    const current = {};
+    current[dist] = file;
+    return {...prev, ...current};
+  }, distFiles);
+}
