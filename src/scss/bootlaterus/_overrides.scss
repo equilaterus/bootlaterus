@@ -33,3 +33,7 @@
         @include box-shadow($input-box-shadow);
     }
 }
+
+html {
+  scroll-behavior: smooth;
+}
