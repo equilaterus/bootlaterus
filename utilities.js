@@ -87,6 +87,6 @@ module.exports.getFile = function getFile(basepath, filename) {
 
 module.exports.getFilenamesFromDirectory = function getFilenamesFromDirectory(path, extension) {
   return getDirectoryContent(path)
-    .filter(p => p.includes(extension))
-    .map(p => `${path}/${p}`);
+    .filter(file => file.includes(extension))
+    .map(file => `${path}/${file}`);
 }
