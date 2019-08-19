@@ -12,7 +12,7 @@ function generateExportedFilePath(filePath, theme) {
 
 function getFileContents(filepath) {
   const fs = require('fs');
-  return fs.readFileSync(filepath);
+  return fs.readFileSync(filepath, 'utf-8');
 }
 
 module.exports.getBootlaterusFiles = function getBootlaterusFiles(path, outpath, themesDirectoryName, mainFileName) {
@@ -82,7 +82,9 @@ module.exports.getThemesMetadata = function getThemesMetadata(distFiles) {
 }
 
 module.exports.getFile = function getFile(basepath, filename) {
-  return getFileContents(`${basepath}${filename}`);
+  if (basepath.endsWith('/'))
+    return getFileContents(`${basepath}${filename}`);
+  return getFileContents(`${basepath}/${filename}`);
 }
 
 module.exports.getFilenamesFromDirectory = function getFilenamesFromDirectory(path, extension) {
@@ -103,4 +105,9 @@ module.exports.getHtmlDistFiles = function getHtmlDistFiles(htmlFiles, srcpath, 
 
 module.exports.getRenderTags = function getRenderTags(src) {
   return [...new Set(src.match(/<\s*Render\s*[^>]*>/g))];
+}
+
+module.exports.getSrcFromTag = function getSrcFromTag(tag) {
+  const src = tag.match(/src=".*"/)[0].match(/".*"/)[0];
+  return src.substring(1, src.length - 1);
 }
