@@ -19,7 +19,7 @@ bootlaterusUtils.GetUI = function(isRootPath) {
     return str;
   }, '');
 
-  return `<li class="nav-item dropdown">
+  return `<li class="nav-item dropdown dropdown-dark">
             <a class="nav-link dropdown-toggle" href="#" id="theme-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Choose Theme
             </a>
