@@ -10,6 +10,11 @@ function generateExportedFilePath(filePath, theme) {
     return `${filePath}-${themeName}.scss`;
 }
 
+function getFileContents(filepath) {
+  const fs = require('fs');
+  return fs.readFileSync(filepath);
+}
+
 module.exports.getBootlaterusFiles = function getBootlaterusFiles(path, outpath, themesDirectoryName, mainFileName) {
     const directories = getDirectoryContent(path);
         
@@ -74,4 +79,8 @@ module.exports.getThemesMetadata = function getThemesMetadata(distFiles) {
   return JSON.stringify(
     result
   );
+}
+
+module.exports.getFile = function getFile(basepath, filename) {
+  return getFileContents(`${basepath}${filename}`);
 }
