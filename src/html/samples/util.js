@@ -57,7 +57,7 @@ $(function() {
       scrollTop: $(target).offset().top
     }, 800, function(){
       // Update URL
-      window.location.hash = hash;
+      window.location.hash = target;
     });
   });
 });
