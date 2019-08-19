@@ -3,47 +3,12 @@
 
 <head>
   <title>Bootlaterus</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Custom built theme - already includes Bootstrap 4 -->
-  <link rel="stylesheet" href="css/bootlaterus-cfonts.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+  <Render src="fragments/head.html" />
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top navbar-default-height">
-    <div class="container">
-      <a class="navbar-brand" style="font-family: 'Pacifico'" href="#">Bootlaterus</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">                
-          <li class="nav-item">
-            <a href="downloads.html" 
-              class="nav-link">
-              Downloads
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="https://github.com/equilaterus/bootlaterus/wiki" 
-              class="nav-link" 
-              target="_blank"
-              rel="noopener noreferrer">
-              Docs
-            </a>
-          </li>
-        </ul>
+  <Render src="fragments/navbar.html" />
 
-        <ul class="navbar-nav" id="theme-selector" data-is-root="true">
-        </ul>
-      </div>
-    </div>
-  </nav>
   <div class="background" 
     style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);">
     <div class="color-filter-indigo-teal vh-full">      
@@ -171,56 +136,7 @@
     </div>
   </div>
 
-  <footer class="container">
-    <div class="row py-5 row-eq-height">
-      <div class="col">
-        <ul class="list-unstyled">
-          <li class="text-muted">Bootlaterus</li>
-          <li><a class="text-reset" href="https://equilaterus.github.io/bootlaterus/" target="_blank" rel="noopener noreferrer">Home page</a></li>
-          <li><a class="text-reset" href="https://github.com/equilaterus/bootlaterus.gh-pages" target="_blank" rel="noopener noreferrer">Integration with Github Pages</a></li>
-          <li><a class="text-reset" href="https://github.com/equilaterus/bootlaterus" target="_blank" rel="noopener noreferrer">Repository</a></li>
-        </ul>
-      </div>
-      <div class="col">
-        <ul class="list-unstyled">
-          <li class="text-muted">Downloads</li>
-          <li><a class="text-reset" href="https://www.npmjs.com/package/bootlaterus" target="_blank" rel="noopener noreferrer">NPM</a></li>
-          <li><a class="text-reset" href="https://github.com/equilaterus/bootlaterus/releases" target="_blank" rel="noopener noreferrer">Github Releases</a></li>
-          <li><a class="text-reset" href="https://cdn.jsdelivr.net/npm/bootlaterus@latest/" target="_blank" rel="noopener noreferrer">jsDelivr CDN</a></li>
-        </ul>
-      </div>
-      <div class="col">
-        <ul class="list-unstyled">
-          <li class="text-muted">Docs</li>
-          <li><a class="text-reset" href="https://github.com/equilaterus/bootlaterus/wiki" target="_blank" rel="noopener noreferrer">Wiki</a></li>
-          <li><a class="text-reset" href="https://getbootstrap.com/docs/4.3/getting-started/introduction/" target="_blank" rel="noopener noreferrer">Bootstrap Official docs</a></li>
-        </ul>
-      </div>
-      <div class="col">
-        <a class="text-reset position-absolute hv-center text-center text-decoration-none" href="https://equilaterus.github.io" target="_blank" rel="noopener noreferrer">
-          <img 
-            style="max-width: 60px"
-            class="img-fluid" 
-            src="https://equilaterus.github.io/wikilaterus/assets/img/logo-windmill-alpha-sm.png" 
-            alt="logo equilaterus" />
-          <br/>
-          Equilaterus <br/>
-          <small class="text-muted">(CC) 2018 - 2019</small>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <script src="samples/util.js"></script>
-  <script src="https://kit.fontawesome.com/d8e1ad4d89.js"></script>
+  <Render src="fragments/footer.html" />
+  <Render src="fragments/scripts.html" />
 </body>
 </html>
