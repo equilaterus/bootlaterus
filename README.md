@@ -1,4 +1,4 @@
-!(https://i.imgur.com/R9yZwGq.png)
+![](https://i.imgur.com/R9yZwGq.png)
 
 # Bootlaterus
 
