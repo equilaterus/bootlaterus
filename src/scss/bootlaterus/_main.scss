@@ -5,27 +5,21 @@
 @import "bootstrap";
 
 // Mixins
-@import "mixins/code-hl";
-@import "mixins/aspect-ratio";
-@import "mixins/gradients-extended";
+@import "mixins";
 
 // Overrides
 @import "overrides";
 
 // Utilities
-@import "utilities/aspect-ratio";
+@import "utilities";
 
 // Custom components
 @import "custom-type";
 @import "custom-transitions";
-@import "color-filters";
 @import "navbar-side";
-@import "background";
 @import "interactable";
 @import "carousel-extended";
 @import "dropdown-extended";
-@import "custom-colors";
-@import "positioning";
 
 // Linguist
 @import "syntax-hl/rouge";

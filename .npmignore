@@ -331,6 +331,8 @@ ASALocalRun/
 
 # Custom ignores
 # do not ignore dist/
+dist/samples/
+dist/index.html
 prebuild/
 .git/
 util/

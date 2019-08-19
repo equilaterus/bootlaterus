@@ -4,7 +4,8 @@
   height: 100%;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 0;  
+  transition: $transition-bg-position;
 }
 
 @each $color, $value in $custom-gradients{
@@ -13,6 +14,10 @@
   }
     .cfa-#{$color}:after {
       @include create-gradient-bg-animated(nth($value, 1), nth($value, 2), $gradient-after-alpha);
+    }
+    
+    .bg-#{$color}{
+      @include create-linear-gradient(nth($value,1), nth($value,2));
     }
 }
 
@@ -25,3 +30,10 @@
       @include create-radial-gradient-bg($value, $black, $gradiant-radial-alpha-from-after, $gradiant-radial-alpha-to-after);
     }
 }
+
+.color-filter-radial-transparent {
+  @include create-radial-gradient-bg(transparent, $black, $gradiant-radial-alpha-from, $gradiant-radial-alpha-to);
+}
+  .cfa-radial-transparent:after {
+    @include create-radial-gradient-bg(transparent, $black, $gradiant-radial-alpha-from-after, $gradiant-radial-alpha-to-after);
+  }

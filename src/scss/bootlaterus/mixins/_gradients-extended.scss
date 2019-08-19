@@ -10,9 +10,14 @@
   background: linear-gradient(45deg, rgba($color-a, $alpha), rgba($color-b,$alpha), rgba($color-b,$alpha), rgba($color-a, $alpha)) repeat-x;
   background-position: left center;
   background-size: 200% 100%;
-  transition: $transition-bg-position;
 }
 
 @mixin create-radial-gradient-bg($color-a, $color-b, $alpha-a, $alpha-b) {
   background: radial-gradient(ellipse at bottom, rgba($color-a,$alpha-a) 0%, rgba($color-b,$alpha-b) 100%);
 }
+
+@mixin create-linear-gradient($color-a, $color-b){
+  background: linear-gradient(45deg, rgba($color-a,1), rgba($color-b,1));
+}
+
+

@@ -6,6 +6,12 @@ module.exports = async function (grunt) {
     const utilities = require('./utilities');    
     const bootlaterusFiles = utilities.getBootlaterusFiles('./src/scss', './prebuild/scss', '_themes', '_main.scss');
     const distFiles = utilities.getBootlaterusDistFiles('./dist/css',bootlaterusFiles);
+
+    // Create mappings for html files
+    const srcHtmlPath = './src/html';
+    const htmlFiles = utilities.getFilenamesFromDirectory(srcHtmlPath, '.html')
+              .concat(utilities.getFilenamesFromDirectory(`${srcHtmlPath}/samples`, '.html'));
+    const htmlDistFiles = utilities.getHtmlDistFiles(htmlFiles, srcHtmlPath, './dist');    
     
     grunt.initConfig({
 
@@ -27,6 +33,20 @@ module.exports = async function (grunt) {
                 src: ['src/html/samples/util.js'],
                 dest: 'dist/samples/util.js'
                 
+            },
+            html: {
+                options: {
+                  process: function(src, filepath) {
+                    const tags = utilities.getRenderTags(src);
+                    tags.forEach(tag => {
+                      const fragmentFile = utilities.getSrcFromTag(tag);
+                      const fragmentHtml = utilities.getFile(srcHtmlPath, fragmentFile);
+                      src = src.replace(new RegExp(tag, 'g'), fragmentHtml);
+                    });
+                    return src;
+                  }
+                },
+                files: htmlDistFiles
             }
         },
 
@@ -37,8 +57,8 @@ module.exports = async function (grunt) {
                 ],
             },
             main: {
-                files: [                   
-                    { expand: true, cwd: 'src/html', src: '**/*.html', dest: 'dist/' },
+                files: [
+                    { expand: true, cwd: 'src/html/content', src: '**/*.*', dest: 'dist/content' },
                     { expand: true, src: 'LICENSE', dest: 'dist/' },
                     { expand: true, cwd: 'node_modules/bootstrap/', src: 'LICENSE', dest: 'dist/', rename: () => ('dist/LICENSE-BOOTSTRAP') }
                 ], 
@@ -76,7 +96,7 @@ module.exports = async function (grunt) {
             },
             html: {
                 files: 'src/html/**/*.html',
-                tasks: ['copy']
+                tasks: ['concat:html', 'copy']
             },
             js: {
               files: 'src/html/**/*.js',
@@ -108,6 +128,6 @@ module.exports = async function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
-    grunt.registerTask('default', ['clean', 'concat:sass', 'copy:prebuild', 'copy', 'concat:jsutils', 'sass', 'cssmin', 'browserSync', 'watch']);
-    grunt.registerTask('build', ['clean', 'concat:sass', 'copy:prebuild', 'copy', 'concat:jsutils', 'sass', 'cssmin']);
+    grunt.registerTask('default', ['clean', 'concat:sass', 'concat:html', 'copy:prebuild', 'copy', 'concat:jsutils', 'sass', 'cssmin', 'browserSync', 'watch']);
+    grunt.registerTask('build', ['clean', 'concat:sass', 'concat:html', 'copy:prebuild', 'copy', 'concat:jsutils', 'sass', 'cssmin']);
 }

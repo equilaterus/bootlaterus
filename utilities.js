@@ -10,6 +10,11 @@ function generateExportedFilePath(filePath, theme) {
     return `${filePath}-${themeName}.scss`;
 }
 
+function getFileContents(filepath) {
+  const fs = require('fs');
+  return fs.readFileSync(filepath, 'utf-8');
+}
+
 module.exports.getBootlaterusFiles = function getBootlaterusFiles(path, outpath, themesDirectoryName, mainFileName) {
     const directories = getDirectoryContent(path);
         
@@ -74,4 +79,35 @@ module.exports.getThemesMetadata = function getThemesMetadata(distFiles) {
   return JSON.stringify(
     result
   );
+}
+
+module.exports.getFile = function getFile(basepath, filename) {
+  if (basepath.endsWith('/'))
+    return getFileContents(`${basepath}${filename}`);
+  return getFileContents(`${basepath}/${filename}`);
+}
+
+module.exports.getFilenamesFromDirectory = function getFilenamesFromDirectory(path, extension) {
+  return getDirectoryContent(path)
+    .filter(file => file.includes(extension))
+    .map(file => `${path}/${file}`);
+}
+
+module.exports.getHtmlDistFiles = function getHtmlDistFiles(htmlFiles, srcpath, distpath) {
+  let distFiles = {};
+  return htmlFiles.reduce( (prev, file) => {
+    const dist = file.replace(srcpath, distpath);
+    const current = {};
+    current[dist] = file;
+    return {...prev, ...current};
+  }, distFiles);
+}
+
+module.exports.getRenderTags = function getRenderTags(src) {
+  return [...new Set(src.match(/<\s*Render\s*[^>]*>/g))];
+}
+
+module.exports.getSrcFromTag = function getSrcFromTag(tag) {
+  const src = tag.match(/src=".*"/)[0].match(/".*"/)[0];
+  return src.substring(1, src.length - 1);
 }
