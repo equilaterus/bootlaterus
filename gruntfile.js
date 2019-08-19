@@ -39,6 +39,7 @@ module.exports = async function (grunt) {
             main: {
                 files: [                   
                     { expand: true, cwd: 'src/html', src: '**/*.html', dest: 'dist/' },
+                    { expand: true, cwd: 'src/html/content', src: '**/*.*', dest: 'dist/content' },
                     { expand: true, src: 'LICENSE', dest: 'dist/' },
                     { expand: true, cwd: 'node_modules/bootstrap/', src: 'LICENSE', dest: 'dist/', rename: () => ('dist/LICENSE-BOOTSTRAP') }
                 ], 
