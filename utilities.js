@@ -100,3 +100,7 @@ module.exports.getHtmlDistFiles = function getHtmlDistFiles(htmlFiles, srcpath, 
     return {...prev, ...current};
   }, distFiles);
 }
+
+module.exports.getRenderTags = function getRenderTags(src) {
+  return [...new Set(src.match(/<\s*Render\s*[^>]*>/g))];
+}
