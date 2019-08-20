@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,400,700&display=swap");
 :root {
   --blue: #41a0eb;
   --indigo: #8e69ca;
@@ -28,7 +28,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-sans-serif: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 *,
@@ -47,7 +47,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -296,24 +296,24 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 1rem;
-  font-family: "Open Sans";
+  font-family: "Raleway";
   font-weight: 700;
   line-height: 1.2; }
 
 h1, .h1 {
-  font-size: 2rem; }
+  font-size: 2.5rem; }
 
 h2, .h2 {
-  font-size: 1.25rem; }
+  font-size: 2rem; }
 
 h3, .h3 {
-  font-size: 1rem; }
+  font-size: 1.75rem; }
 
 h4, .h4 {
-  font-size: 0.75rem; }
+  font-size: 1.5rem; }
 
 h5, .h5 {
-  font-size: 0.5rem; }
+  font-size: 1.25rem; }
 
 h6, .h6 {
   font-size: 1rem; }
@@ -4347,7 +4347,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -4432,7 +4432,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -7313,10 +7313,10 @@ a.text-secondary-alt:hover, a.text-secondary-alt:focus {
   transition: background-position 0.2s ease-in-out; }
 
 .color-filter-indigo-teal {
-  background: linear-gradient(45deg, rgba(142, 105, 202, 0.4), rgba(102, 202, 172, 0.4)) repeat-x; }
+  background: linear-gradient(45deg, rgba(142, 105, 202, 0.6), rgba(102, 202, 172, 0.6)) repeat-x; }
 
 .cfa-indigo-teal:after {
-  background: linear-gradient(45deg, rgba(142, 105, 202, 0.2), rgba(102, 202, 172, 0.2), rgba(102, 202, 172, 0.2), rgba(142, 105, 202, 0.2)) repeat-x;
+  background: linear-gradient(45deg, rgba(142, 105, 202, 0.4), rgba(102, 202, 172, 0.4), rgba(102, 202, 172, 0.4), rgba(142, 105, 202, 0.4)) repeat-x;
   background-position: left center;
   background-size: 200% 100%; }
 
@@ -7324,10 +7324,10 @@ a.text-secondary-alt:hover, a.text-secondary-alt:focus {
   background: linear-gradient(45deg, #8e69ca, #66caac); }
 
 .color-filter-pink-blue {
-  background: linear-gradient(45deg, rgba(184, 86, 132, 0.4), rgba(65, 160, 235, 0.4)) repeat-x; }
+  background: linear-gradient(45deg, rgba(184, 86, 132, 0.6), rgba(65, 160, 235, 0.6)) repeat-x; }
 
 .cfa-pink-blue:after {
-  background: linear-gradient(45deg, rgba(184, 86, 132, 0.2), rgba(65, 160, 235, 0.2), rgba(65, 160, 235, 0.2), rgba(184, 86, 132, 0.2)) repeat-x;
+  background: linear-gradient(45deg, rgba(184, 86, 132, 0.4), rgba(65, 160, 235, 0.4), rgba(65, 160, 235, 0.4), rgba(184, 86, 132, 0.4)) repeat-x;
   background-position: left center;
   background-size: 200% 100%; }
 
@@ -7335,10 +7335,10 @@ a.text-secondary-alt:hover, a.text-secondary-alt:focus {
   background: linear-gradient(45deg, #b85684, #41a0eb); }
 
 .color-filter-red-orange {
-  background: linear-gradient(45deg, rgba(202, 60, 74, 0.4), rgba(241, 137, 52, 0.4)) repeat-x; }
+  background: linear-gradient(45deg, rgba(202, 60, 74, 0.6), rgba(241, 137, 52, 0.6)) repeat-x; }
 
 .cfa-red-orange:after {
-  background: linear-gradient(45deg, rgba(202, 60, 74, 0.2), rgba(241, 137, 52, 0.2), rgba(241, 137, 52, 0.2), rgba(202, 60, 74, 0.2)) repeat-x;
+  background: linear-gradient(45deg, rgba(202, 60, 74, 0.4), rgba(241, 137, 52, 0.4), rgba(241, 137, 52, 0.4), rgba(202, 60, 74, 0.4)) repeat-x;
   background-position: left center;
   background-size: 200% 100%; }
 
@@ -7346,10 +7346,10 @@ a.text-secondary-alt:hover, a.text-secondary-alt:focus {
   background: linear-gradient(45deg, #ca3c4a, #f18934); }
 
 .color-filter-cyan-blue {
-  background: linear-gradient(45deg, rgba(38, 163, 182, 0.4), rgba(65, 160, 235, 0.4)) repeat-x; }
+  background: linear-gradient(45deg, rgba(38, 163, 182, 0.6), rgba(65, 160, 235, 0.6)) repeat-x; }
 
 .cfa-cyan-blue:after {
-  background: linear-gradient(45deg, rgba(38, 163, 182, 0.2), rgba(65, 160, 235, 0.2), rgba(65, 160, 235, 0.2), rgba(38, 163, 182, 0.2)) repeat-x;
+  background: linear-gradient(45deg, rgba(38, 163, 182, 0.4), rgba(65, 160, 235, 0.4), rgba(65, 160, 235, 0.4), rgba(38, 163, 182, 0.4)) repeat-x;
   background-position: left center;
   background-size: 200% 100%; }
 
@@ -7357,10 +7357,10 @@ a.text-secondary-alt:hover, a.text-secondary-alt:focus {
   background: linear-gradient(45deg, #26a3b6, #41a0eb); }
 
 .color-filter-green-yellow {
-  background: linear-gradient(45deg, rgba(98, 163, 24, 0.4), rgba(231, 163, 42, 0.4)) repeat-x; }
+  background: linear-gradient(45deg, rgba(98, 163, 24, 0.6), rgba(231, 163, 42, 0.6)) repeat-x; }
 
 .cfa-green-yellow:after {
-  background: linear-gradient(45deg, rgba(98, 163, 24, 0.2), rgba(231, 163, 42, 0.2), rgba(231, 163, 42, 0.2), rgba(98, 163, 24, 0.2)) repeat-x;
+  background: linear-gradient(45deg, rgba(98, 163, 24, 0.4), rgba(231, 163, 42, 0.4), rgba(231, 163, 42, 0.4), rgba(98, 163, 24, 0.4)) repeat-x;
   background-position: left center;
   background-size: 200% 100%; }
 
@@ -7368,10 +7368,10 @@ a.text-secondary-alt:hover, a.text-secondary-alt:focus {
   background: linear-gradient(45deg, #62a318, #e7a32a); }
 
 .color-filter-green-teal {
-  background: linear-gradient(45deg, rgba(98, 163, 24, 0.4), rgba(102, 202, 172, 0.4)) repeat-x; }
+  background: linear-gradient(45deg, rgba(98, 163, 24, 0.6), rgba(102, 202, 172, 0.6)) repeat-x; }
 
 .cfa-green-teal:after {
-  background: linear-gradient(45deg, rgba(98, 163, 24, 0.2), rgba(102, 202, 172, 0.2), rgba(102, 202, 172, 0.2), rgba(98, 163, 24, 0.2)) repeat-x;
+  background: linear-gradient(45deg, rgba(98, 163, 24, 0.4), rgba(102, 202, 172, 0.4), rgba(102, 202, 172, 0.4), rgba(98, 163, 24, 0.4)) repeat-x;
   background-position: left center;
   background-size: 200% 100%; }
 
@@ -7808,6 +7808,24 @@ button.bg-gray-dark:focus {
 .min-vh-full {
   min-height: calc(100vh - 3.5rem); }
 
+.vh-75 {
+  height: 75vh; }
+
+.vh-50 {
+  height: 50vh; }
+
+.vh-25 {
+  height: 25vh; }
+
+.min-vh-75 {
+  min-height: 75vh; }
+
+.min-vh-50 {
+  min-height: 50vh; }
+
+.min-vh-25 {
+  min-height: 25vh; }
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   line-height: 1.8; }
@@ -7815,8 +7833,26 @@ h1, h2, h3, h4, h5, h6,
 .h-border-bottom {
   border-bottom: 1px solid #c4c4c4; }
 
+.font-1 {
+  font-size: 2.5rem; }
+
+.font-2 {
+  font-size: 2rem; }
+
+.font-3 {
+  font-size: 1.75rem; }
+
+.font-4 {
+  font-size: 1.5rem; }
+
+.font-5 {
+  font-size: 1.25rem; }
+
+.font-6 {
+  font-size: 1rem; }
+
 .h-font {
-  font-family: "Open Sans"; }
+  font-family: "Raleway"; }
 
 .text-small {
   font-size: 0.875rem; }
@@ -8286,7 +8322,7 @@ h2, h3, h4, h5, h6,
   border-bottom: 1px solid #c4c4c4; }
 
 .navbar {
-  font-family: "Open Sans"; }
+  font-family: "Raleway"; }
 
 .navbar-brand {
   display: flex;

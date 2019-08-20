@@ -11,10 +11,26 @@
 <link rel="stylesheet" href="css/bootlaterus-cfonts.min.css">
 <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
 
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/content/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/content/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/content/favicon/favicon-16x16.png">
+<link rel="manifest" href="/content/favicon/site.webmanifest">
+<link rel="mask-icon" href="/content/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/content/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/content/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top navbar-default-height">
+  <div class="background background-fixed" 
+  style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);">
+    <div class="vh-100 bg-dark-alpha-3"></div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark-alpha-1 fixed-top">
   <div class="container">
     <a class="navbar-brand" style="font-family: 'Pacifico'" href="index.html">Bootlaterus</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -47,54 +63,34 @@
 </nav>
 
 
-  <div class="background" 
-    style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);">
-    <div class="color-filter-indigo-teal vh-full">      
+  <div class="background"
+    style="background-position: fixed; background-image: url(https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);">
+    <div class="color-filter-indigo-teal vh-100">
+      <canvas id="canvas" class="position-absolute vh-100" style="width: 100%"></canvas>
       <div class="hv-center text-white text-center text-shadow">
-        <img class="mb-3" src="content/perito.svg" style="width: 200px;"/>
+        <img class="mb-3" src="content/perito.svg" style="width: 200px;" />
         <p class="h1 font-weight-lighter mb-3" style="font-family: 'Pacifico'; font-size: 45px">Bootlaterus</p>
-        <a target="_blank" rel="noopener noreferrer" class="btn btn-primary-alt btn-lg mr-2" href="downloads.html">Downloads</a>
-        <a target="_blank" rel="noopener noreferrer" class="btn btn-secondary-alt btn-lg" href="https://github.com/equilaterus/bootlaterus/wiki">Docs</a>
+        <a target="_blank" rel="noopener noreferrer" class="btn btn-primary-alt btn-lg mr-2"
+          href="downloads.html">Downloads</a>
+        <a target="_blank" rel="noopener noreferrer" class="btn btn-secondary-alt btn-lg"
+          href="https://github.com/equilaterus/bootlaterus/wiki">Docs</a>
       </div>
-      <span class="to-bottom h-center">
-        <i class="fas fa-angle-down"></i>
-      </span>      
-    </div>        
-  </div>
-
-  <div class="bg-dark text-white">
-    <div class="container">
-      <div class="row py-5">
-        <div class="col-xl-12 text-center">
-          <p class="display-2">
-            <i class="fab fa-react"></i>
-            <i class="fab fa-angular"></i>
-            <i class="fab fa-vuejs"></i>
-          </p>
-          <p class="h2 font-weight-lighter">Works with almost any JS implementation of Bootstrap.</p>
-        </div>
-        <div class="offset-md-2 col-md-8">
-          <p class="text-muted font-weight-lighter h2">
-            Bootlaterus doesn't require additional JS files to work, so it is <strong>fully compatible</strong> with 
-          <em>Bootstrap Default jQuery implementation</em> but also with ports like 
-          <a class="text-primary-alt" target="_blank" href="https://react-bootstrap.github.io/" rel="nofollow">React-Bootstrap</a>, 
-          <a class="text-primary-alt" target="_blank" href="https://reactstrap.github.io/" rel="nofollow">ReactStrap</a>, 
-          <a class="text-primary-alt" target="_blank" href="https://ng-bootstrap.github.io/#/home" rel="nofollow">ng-bootstrap</a>, 
-          <a class="text-primary-alt" target="_blank" href="https://bootstrap-vue.js.org/" rel="nofollow">bootstrap+vuejs</a> and almost any JS implementation of Bootstrap Components.</p>        
-        </div>
-      </div>
+      <span class="to-bottom h-center display-4 text-white">
+        <a href="#start" class="text-primary-alt text-white"><i class="fas fa-angle-down"></i></a>
+      </span>
     </div>
   </div>
-  
-  <div class="bg-white">
-    <div class="container">
 
+  <div class="bg-white" id="start">
+    <div class="container py-5">
       <div class="row py-5">
         <div class="col-md-6 font-weight-lighter">
           <h1 class="font-weight-lighter">What is Bootlaterus</h1>
-          <p class="h2 font-weight-lighter">Bootlaterus is Compatible and Easy to use Bootstrap Superset.</p>
-          <p class="h2 font-weight-lighter">It includes Bootstrap v4 and has extended components that don't require additional Javascript to work.</p>
-          <p class="h2 font-weight-lighter">We provide custom templates for general use applications like stores or social networks and also for Wiki-like pages, GitHub Pages or documentation-sites.</p>
+          <p class="font-5">Bootlaterus is Compatible and Easy to use Bootstrap Superset.</p>
+          <p class="font-5">It includes Bootstrap v4 and has extended components that don't require additional
+            Javascript to work.</p>
+          <p class="font-5">We provide custom templates for general use applications like stores or social networks and
+            also for Wiki-like pages, GitHub Pages or documentation-sites.</p>
         </div>
 
         <div class="col-md-6 text-center">
@@ -106,116 +102,172 @@
           <p class="text-muted">Free to use. Forever.</p>
         </div>
       </div>
+    </div>
+  </div>
 
+  <div class="background" 
+    style="background-position: center 70%; background-image: url(https://images.unsplash.com/41/bXoAlw8gT66vBo1wcFoO_IMG_9181.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);">
+    <div class="color-filter-red-orange min-vh-50">      
+      <div class="hv-center text-white text-center text-shadow">        
+        <p class="h1 font-weight-lighter mb-3">Explore and create </p>
+      </div>
+    </div>        
+  </div>
+
+  <div class="bg-dark text-white min-vh-50">
+    <div class="container">
       <div class="row py-5">
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 interactable hover-animate-cf">
-              <a class="text-reset text-decoration-none" 
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/equilaterus/bootlaterus/wiki/Custom-components">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <div class="cfa cfa-pink-blue"><img src="https://camo.githubusercontent.com/e6998950b745c78d8dfdea8d507e1120468777ed/68747470733a2f2f696d616765732e756e73706c6173682e636f6d2f70686f746f2d313532303033383431303233332d3731343162653765366639373f69786c69623d72622d312e322e3126697869643d65794a6863484266615751694f6a45794d446439266175746f3d666f726d6174266669743d63726f7026773d3133353326713d3830"
+        <div class="col-xl-12 text-center">
+          <p class="display-2">
+            <i class="fab fa-react"></i>
+            <i class="fab fa-angular"></i>
+            <i class="fab fa-vuejs"></i>
+          </p>
+          <p class="h5 font-weight-lighter">Works with almost any JS implementation of Bootstrap.</p>
+        </div>
+        <div class="offset-md-2 col-md-8">
+          <p class="text-muted font-5">
+            Bootlaterus doesn't require additional JS files to work, so it is <strong>fully compatible</strong> with
+            <em>Bootstrap Default jQuery implementation</em> but also with ports like
+            <a class="text-primary-alt" target="_blank" href="https://react-bootstrap.github.io/"
+              rel="nofollow">React-Bootstrap</a>,
+            <a class="text-primary-alt" target="_blank" href="https://reactstrap.github.io/"
+              rel="nofollow">ReactStrap</a>,
+            <a class="text-primary-alt" target="_blank" href="https://ng-bootstrap.github.io/#/home"
+              rel="nofollow">ng-bootstrap</a>,
+            <a class="text-primary-alt" target="_blank" href="https://bootstrap-vue.js.org/"
+              rel="nofollow">bootstrap+vuejs</a> and almost any JS implementation of Bootstrap Components.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="background"
+    style="background-position: center center; background-image: url(https://images.unsplash.com/photo-1512546148165-e50d714a565a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80);"
+  >
+    <div class="color-filter-pink-blue min-vh-50">      
+      <div class="h-center text-white text-center text-shadow to-bottom">        
+        <p class="h1 font-weight-lighter mb-3">Friendly and open</p>
+      </div>
+    </div>        
+  </div>
+
+  <div class="bg-white">
+    <div class="container">
+      <div class="row py-5">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 interactable hover-animate-cf">
+            <a class="text-reset text-decoration-none d-flex flex-column h-100" target="_blank" rel="noopener noreferrer"
+              href="https://github.com/equilaterus/bootlaterus/wiki/Custom-components">
+              <div class="embed-responsive embed-responsive-16by9">
+                <div class="cfa cfa-pink-blue"><img
+                    src="https://camo.githubusercontent.com/e6998950b745c78d8dfdea8d507e1120468777ed/68747470733a2f2f696d616765732e756e73706c6173682e636f6d2f70686f746f2d313532303033383431303233332d3731343162653765366639373f69786c69623d72622d312e322e3126697869643d65794a6863484266615751694f6a45794d446439266175746f3d666f726d6174266669743d63726f7026773d3133353326713d3830"
                     class="card-img embed-responsive-item" style="object-fit: cover;" />
-                  </div>
                 </div>
-                <div class="card-body">
-                  <h2 class="card-title">Custom Components</h5>
-                  <p class="card-text">Bootlaterus includes out-of-the-box some new components to create an awesome responsive UI.</p>
-                  <p class="card-text"><small class="text-muted">See more...</small></p>
-                </div>
-              </a>
-            </div>
-          </div>
-    
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 interactable hover-animate-cf">
-              <a class="text-reset text-decoration-none " 
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/equilaterus/bootlaterus/wiki/Theme-variations">
-                <div class="embed-responsive embed-responsive-16by9">
-                  <div class="cfa cfa-pink-blue">
-                    <img src="https://camo.githubusercontent.com/d23917d37da863ed33815be602efc94069ba681a/68747470733a2f2f696d616765732e756e73706c6173682e636f6d2f70686f746f2d313439373533313535313138342d3036623235326531626565313f69786c69623d72622d312e322e3126697869643d65794a6863484266615751694f6a45794d446439266175746f3d666f726d6174266669743d63726f7026773d3132363726713d3830"
-                      class="card-img embed-responsive-item" style="object-fit: cover;" />
-                  </div>
-                </div>
-                <div class="card-body">
-                  <h2 class="card-title">Multiple themes</h5>
-                  <p class="card-text">Bootlaterus includes different theme variations.</p>
-                  <p class="card-text"><small class="text-muted">See more...</small></p>
-                </div>
-              </a>
-            </div>
-          </div>
-    
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 interactable hover-animate-cf">
-              <a class="text-reset text-decoration-none" 
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/equilaterus/bootlaterus">
-                <div class="embed-responsive embed-responsive-16by9">
-                  <div class="cfa cfa-pink-blue">
-                    <img src="https://images.unsplash.com/photo-1543946602-8496af5aaa53?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                      class="card-img embed-responsive-item" style="object-fit: cover;" />
-                  </div>
-                </div>
-                <div class="card-body">
-                  <h2 class="card-title">Full source code</h5>
-                  <p class="card-text">All our build scripts and infrastructure code is open source so you can use it to create your own themes.</p>
-                  <p class="card-text"><small class="text-muted">See more...</small></p>
-                </div>
-              </a>
-            </div>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <p class="card-title h5">Custom Components</p>
+                <p class="card-text">Bootlaterus includes out-of-the-box some new components to create an awesome
+                  responsive UI.</p>
+                <p class="card-text mt-auto"><small class="text-muted">See more...</small></p>
+              </div>
+            </a>
           </div>
         </div>
 
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 interactable hover-animate-cf">
+            <a class="text-reset text-decoration-none d-flex flex-column h-100" target="_blank" rel="noopener noreferrer"
+              href="https://github.com/equilaterus/bootlaterus/wiki/Theme-variations">
+              <div class="embed-responsive embed-responsive-16by9">
+                <div class="cfa cfa-red-orange">
+                  <img
+                    src="https://images.unsplash.com/photo-1564594022418-86b5ede646d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                    class="card-img embed-responsive-item" style="object-fit: cover;" />
+                </div>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <p class="card-title h5">Multiple themes</p>
+                <p class="card-text">Bootlaterus includes different theme variations.</p>  
+                <p class="card-text mt-auto"><small class="text-muted">See more...</small></p>                              
+              </div>              
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 interactable hover-animate-cf">
+            <a class="text-reset text-decoration-none d-flex flex-column h-100" target="_blank" rel="noopener noreferrer"
+              href="https://github.com/equilaterus/bootlaterus">
+              <div class="embed-responsive embed-responsive-16by9">
+                <div class="cfa cfa-green-yellow">
+                  <img
+                    src="https://images.unsplash.com/photo-1524989899036-b1c54afba1c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                    class="card-img embed-responsive-item" style="object-fit: cover;" />
+                </div>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <p class="card-title h5">Full source code</p>
+                <p class="card-text">All our build scripts and infrastructure code is open source so you can use it to
+                  create your own themes.</p>
+                <p class="card-text mt-auto"><small class="text-muted">See more...</small></p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
   <footer class="container">
-  <div class="row py-5 row-eq-height">
-    <div class="col">
+  <div class="row py-5 row-eq-height text-white">
+    <div class="col-sm-3 h-100">
       <ul class="list-unstyled">
         <li class="text-muted">Bootlaterus</li>
-        <li><a class="text-reset" href="https://equilaterus.github.io/bootlaterus/" target="_blank" rel="noopener noreferrer">Home page</a></li>
-        <li><a class="text-reset" href="https://github.com/equilaterus/bootlaterus.gh-pages" target="_blank" rel="noopener noreferrer">Integration with Github Pages</a></li>
-        <li><a class="text-reset" href="https://github.com/equilaterus/bootlaterus" target="_blank" rel="noopener noreferrer">Repository</a></li>
+        <li><a class="text-reset" href="https://equilaterus.github.io/bootlaterus/" target="_blank"
+            rel="noopener noreferrer">Home page</a></li>
+        <li><a class="text-reset" href="https://github.com/equilaterus/bootlaterus.gh-pages" target="_blank"
+            rel="noopener noreferrer">Integration with Github Pages</a></li>
+        <li><a class="text-reset" href="https://github.com/equilaterus/bootlaterus" target="_blank"
+            rel="noopener noreferrer">Repository</a></li>
       </ul>
     </div>
-    <div class="col">
+    <div class="col-sm-3 h-100">
       <ul class="list-unstyled">
         <li class="text-muted">Downloads</li>
-        <li><a class="text-reset" href="https://www.npmjs.com/package/bootlaterus" target="_blank" rel="noopener noreferrer">NPM</a></li>
-        <li><a class="text-reset" href="https://github.com/equilaterus/bootlaterus/releases" target="_blank" rel="noopener noreferrer">Github Releases</a></li>
-        <li><a class="text-reset" href="https://cdn.jsdelivr.net/npm/bootlaterus@latest/" target="_blank" rel="noopener noreferrer">jsDelivr CDN</a></li>
+        <li><a class="text-reset" href="https://www.npmjs.com/package/bootlaterus" target="_blank"
+            rel="noopener noreferrer">NPM</a></li>
+        <li><a class="text-reset" href="https://github.com/equilaterus/bootlaterus/releases" target="_blank"
+            rel="noopener noreferrer">Github Releases</a></li>
+        <li><a class="text-reset" href="https://cdn.jsdelivr.net/npm/bootlaterus@latest/" target="_blank"
+            rel="noopener noreferrer">jsDelivr CDN</a></li>
       </ul>
     </div>
-    <div class="col">
+    <div class="col-sm-3 h-100">
       <ul class="list-unstyled">
         <li class="text-muted">Docs</li>
-        <li><a class="text-reset" href="https://github.com/equilaterus/bootlaterus/wiki" target="_blank" rel="noopener noreferrer">Wiki</a></li>
-        <li><a class="text-reset" href="https://getbootstrap.com/docs/4.3/getting-started/introduction/" target="_blank" rel="noopener noreferrer">Bootstrap Official docs</a></li>
+        <li><a class="text-reset" href="https://github.com/equilaterus/bootlaterus/wiki" target="_blank"
+            rel="noopener noreferrer">Wiki</a></li>
+        <li><a class="text-reset" href="https://getbootstrap.com/docs/4.3/getting-started/introduction/" target="_blank"
+            rel="noopener noreferrer">Bootstrap Official docs</a></li>
       </ul>
     </div>
-    <div class="col">
-      <a class="text-reset position-absolute hv-center text-center text-decoration-none" href="https://equilaterus.github.io" target="_blank" rel="noopener noreferrer">
-        <img 
-          style="max-width: 60px"
-          class="img-fluid" 
-          src="https://equilaterus.github.io/wikilaterus/assets/img/logo-windmill-alpha-sm.png" 
+    <div class="col-sm-3 h-100">
+      <a class="text-reset text-center text-decoration-none d-flex flex-column"
+        href="https://equilaterus.github.io" target="_blank" rel="noopener noreferrer">
+        <img style="max-width: 60px" class="img-fluid mx-auto"
+          src="https://equilaterus.github.io/wikilaterus/assets/img/logo-windmill-alpha-sm.png"
           alt="logo equilaterus" />
-        <br/>
-        Equilaterus <br/>
+        <br />
+        Equilaterus <br />
         <small class="text-muted">(CC) 2018 - 2019</small>
-      </div>
+      </a>
     </div>
   </div>
 </footer>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
   integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
@@ -225,6 +277,8 @@
   crossorigin="anonymous"></script>
 <script src="samples/util.js"></script>
 <script src="https://kit.fontawesome.com/d8e1ad4d89.js"></script>
+<script src="content/scripts/particles.js"></script>
 
 </body>
+
 </html>
