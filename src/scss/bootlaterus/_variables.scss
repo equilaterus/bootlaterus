@@ -40,11 +40,11 @@ $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.5 !default;
 $line-height-headings:        $line-height-base * 1.2 !default;
 
-$h1-font-size:                $font-size-base * 2 !default;
-$h2-font-size:                $font-size-base * 1.25 !default;
-$h3-font-size:                $font-size-base * 1 !default;
-$h4-font-size:                $font-size-base * 0.75 !default;
-$h5-font-size:                $font-size-base * 0.5 !default;
+$h1-font-size:                $font-size-base * 2.5 !default;
+$h2-font-size:                $font-size-base * 2 !default;
+$h3-font-size:                $font-size-base * 1.75 !default;
+$h4-font-size:                $font-size-base * 1.5 !default;
+$h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
 
 $spacer: 1rem !default;
@@ -122,8 +122,8 @@ $bg-gradient:               linear-gradient(transparentize($body-bg, 0.1), $body
 
 
 // Gradient Alpha
-$gradient-alpha:            0.4;
-$gradient-after-alpha:      0.2;
+$gradient-alpha:            0.6;
+$gradient-after-alpha:      0.4;
 
 //  Gradient Radial Alpha
 

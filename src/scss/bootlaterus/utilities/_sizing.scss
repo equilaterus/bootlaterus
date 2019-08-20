@@ -10,3 +10,30 @@
 .min-vh-full {
   min-height: calc(100vh - #{$navbar-default-height});
 }
+
+
+.vh-75 {
+  height: 75vh;
+}
+
+.vh-50 {
+  height: 50vh;
+}
+
+.vh-25 {
+  height: 25vh;
+}
+
+
+.min-vh-75 {
+  min-height: 75vh;
+}
+
+.min-vh-50 {
+  min-height: 50vh;
+}
+
+.min-vh-25 {
+  min-height: 25vh;
+}
+

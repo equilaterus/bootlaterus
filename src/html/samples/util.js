@@ -19,7 +19,7 @@ bootlaterusUtils.GetUI = function(isRootPath) {
     return str;
   }, '');
 
-  return `<li class="nav-item dropdown">
+  return `<li class="nav-item dropdown dropdown-dark">
             <a class="nav-link dropdown-toggle" href="#" id="theme-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Choose Theme
             </a>
@@ -39,7 +39,25 @@ $(function() {
   const isRootPath = $('#theme-selector').data('is-root');
   bootlaterusUtils.CreateThemeSelector('#theme-selector', isRootPath);
 
+  // Theme change handler
   $('a[data-theme-path]').click(function() {
     bootlaterusUtils.ChangeTheme($(this).data('theme-path'));
-  })
+  });
+
+  // Smooth scroll handler
+  $('a').on('click', function(event) {
+
+    if (!this.hash) 
+      return;
+
+    event.preventDefault();
+
+    let target = this.hash;
+    $('html, body').animate({
+      scrollTop: $(target).offset().top
+    }, 800, function(){
+      // Update URL
+      window.location.hash = target;
+    });
+  });
 });
