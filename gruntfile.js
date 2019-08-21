@@ -89,6 +89,20 @@ module.exports = async function (grunt) {
             }
         },
 
+        uglify: {
+            jsfiles: {
+                files: [{
+                    expand: true,
+                    src: ['dist/**/*.js', '!dist/**/*.min.js'],
+                    dest: '.',
+                    cwd: '.',
+                    rename: function (dst, src) {
+                       return dst + '/' + src.replace('.js', '.min.js');
+                    }
+                }]
+            }
+        },
+
         watch: {
             scss: {
                 files: 'src/scss/**/*.scss',
@@ -126,8 +140,9 @@ module.exports = async function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
-    grunt.registerTask('default', ['clean', 'concat:sass', 'concat:html', 'copy:prebuild', 'copy', 'concat:jsutils', 'sass', 'cssmin', 'browserSync', 'watch']);
-    grunt.registerTask('build', ['clean', 'concat:sass', 'concat:html', 'copy:prebuild', 'copy', 'concat:jsutils', 'sass', 'cssmin']);
+    grunt.registerTask('default', ['clean', 'concat:sass', 'concat:html', 'copy:prebuild', 'copy', 'concat:jsutils', 'sass', 'cssmin', 'uglify', 'browserSync', 'watch']);
+    grunt.registerTask('build', ['clean', 'concat:sass', 'concat:html', 'copy:prebuild', 'copy', 'concat:jsutils', 'sass', 'cssmin', 'uglify']);
 }
