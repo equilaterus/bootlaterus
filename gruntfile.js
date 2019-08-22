@@ -65,6 +65,23 @@ module.exports = async function (grunt) {
             },
         },
 
+        babel: {
+            options: {
+              sourceMap: true,
+              presets: ['@babel/preset-env']
+            },
+            dist: {
+              files:[
+                  {
+                    expand: true,
+                    cwd: 'src/html',
+                    src: ['**/*.js'],
+                    dest: 'dist/'
+                    }
+                ]
+            }
+        },
+
         sass: {
             options: {
                 implementation: sass
@@ -140,9 +157,10 @@ module.exports = async function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-babel');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
-    grunt.registerTask('default', ['clean', 'concat:sass', 'concat:html', 'copy:prebuild', 'copy', 'concat:jsutils', 'sass', 'cssmin', 'uglify', 'browserSync', 'watch']);
-    grunt.registerTask('build', ['clean', 'concat:sass', 'concat:html', 'copy:prebuild', 'copy', 'concat:jsutils', 'sass', 'cssmin', 'uglify']);
+    grunt.registerTask('default', ['clean', 'concat:sass', 'concat:html', 'copy:prebuild', 'copy', 'concat:jsutils', 'sass', 'cssmin', 'babel', 'browserSync', 'watch']);
+    grunt.registerTask('build', ['clean', 'concat:sass', 'concat:html', 'copy:prebuild', 'copy', 'concat:jsutils', 'sass', 'cssmin', 'babel']);
 }
