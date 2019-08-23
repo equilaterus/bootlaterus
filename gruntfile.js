@@ -131,7 +131,7 @@ module.exports = async function (grunt) {
             },
             js: {
               files: 'src/html/**/*.js',
-              tasks: ['concat']
+              tasks: ['concat', 'babel']
             }
         },
 
