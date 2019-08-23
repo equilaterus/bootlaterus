@@ -130,14 +130,14 @@ $(function () {
 
   function createParticles() {
     for (var i = particleCount - 1; i >= 0; i--) {
-      p = new Particle();
+      let p = new Particle();
       particles.push(p);
     }
   } // end createParticles
 
   function drawParticles() {
     for (var i = particleCount - 1; i >= 0; i--) {
-      p = particles[i];
+      let p = particles[i];
       p.draw();
     }
 
@@ -146,7 +146,7 @@ $(function () {
 
   function updateParticles() {
     for (var i = particles.length - 1; i >= 0; i--) {
-      p = particles[i];
+      let p = particles[i];
       p.move();
       p.boundaryCheck();
 
@@ -170,10 +170,11 @@ $(function () {
   initParticleSystem();
   requestAnimationFrame(animateParticles);
 
+  let then = 0;
   function setDelta() {
-    this.now = (new Date()).getTime();
-    mouse.delta = (this.now - this.then) / 1000;
-    this.then = this.now;
+    let now = (new Date()).getTime();
+    mouse.delta = (now - then) / 1000;
+    then = now;
   }
   function update() {
 
