@@ -30,8 +30,14 @@ module.exports = async function (grunt) {
                         );
                   }
                 },
-                src: ['src/html/samples/util.js'],
-                dest: 'dist/samples/util.js'
+                files:[
+                    {
+                      expand: true,
+                      cwd: 'src/html',
+                      src: ['**/*.js'],
+                      dest: 'prebuild/'
+                    }
+                ]
                 
             },
             html: {
@@ -74,7 +80,7 @@ module.exports = async function (grunt) {
               files:[
                   {
                     expand: true,
-                    cwd: 'src/html',
+                    cwd: 'prebuild/',
                     src: ['**/*.js'],
                     dest: 'dist/'
                     }
