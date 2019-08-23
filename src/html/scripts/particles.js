@@ -18,7 +18,7 @@ $(function () {
 
   ctx = canvas.getContext("2d"); // settng the context to 2d rather than the 3d WEBGL
   ctx.globalCompositeOperation = "lighter";
-  console.log(ctx);
+  
   var mouse = {
     x: 0,
     y: 0,
