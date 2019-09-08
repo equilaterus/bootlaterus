@@ -25,7 +25,7 @@
 </head>
 
 <body>
-  <div class="background background-fixed" 
+  <div class="background background-fixed-full" 
   style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);">
     <div class="vh-100 bg-dark-alpha-3"></div>
   </div>
@@ -63,9 +63,9 @@
 </nav>
 
 
-  <div class="background"
-    style="background-position: fixed; background-image: url(https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);">
-    <div class="color-filter-indigo-teal vh-100">
+  <div class="background background-fixed"
+    style="background-image: url(https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);">
+    <div class="bg-cf-indigo-teal vh-100">
       <canvas id="canvas" class="position-absolute vh-100" style="width: 100%"></canvas>
       <div class="hv-center text-white text-center text-shadow">
         <img class="mb-3" src="content/perito-shadow.svg" style="width: 200px;" />
@@ -76,7 +76,7 @@
           href="https://github.com/equilaterus/bootlaterus/wiki">Docs</a>
       </div>
       <span class="to-bottom h-center display-4 text-white">
-        <a href="#start" class="text-primary-alt text-white"><i class="fas fa-angle-down"></i></a>
+        <a href="#start" class="text-light"><i class="fas fa-angle-down"></i></a>
       </span>
     </div>
   </div>
@@ -107,7 +107,7 @@
 
   <div class="background" 
     style="background-position: center 70%; background-image: url(https://images.unsplash.com/41/bXoAlw8gT66vBo1wcFoO_IMG_9181.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);">
-    <div class="color-filter-red-orange min-vh-50">      
+    <div class="bg-cf-red-orange min-vh-50">      
       <div class="hv-center text-white text-center text-shadow">        
         <p class="h1 font-weight-lighter mb-3">Explore and create </p>
       </div>
@@ -145,7 +145,7 @@
   <div class="background"
     style="background-position: center center; background-image: url(https://images.unsplash.com/photo-1512546148165-e50d714a565a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80);"
   >
-    <div class="color-filter-pink-blue min-vh-50">      
+    <div class="bg-cf-pink-blue min-vh-50">      
       <div class="h-center text-white text-center text-shadow to-bottom">        
         <p class="h1 font-weight-lighter mb-3">Friendly and open</p>
       </div>
@@ -160,7 +160,7 @@
             <a class="text-reset text-decoration-none d-flex flex-column h-100" target="_blank" rel="noopener noreferrer"
               href="https://github.com/equilaterus/bootlaterus/wiki/Custom-components">
               <div class="embed-responsive embed-responsive-16by9">
-                <div class="cfa cfa-pink-blue"><img
+                <div class="cf cf-pink-blue"><img
                     src="https://camo.githubusercontent.com/e6998950b745c78d8dfdea8d507e1120468777ed/68747470733a2f2f696d616765732e756e73706c6173682e636f6d2f70686f746f2d313532303033383431303233332d3731343162653765366639373f69786c69623d72622d312e322e3126697869643d65794a6863484266615751694f6a45794d446439266175746f3d666f726d6174266669743d63726f7026773d3133353326713d3830"
                     class="card-img embed-responsive-item" style="object-fit: cover;" />
                 </div>
@@ -180,7 +180,7 @@
             <a class="text-reset text-decoration-none d-flex flex-column h-100" target="_blank" rel="noopener noreferrer"
               href="https://github.com/equilaterus/bootlaterus/wiki/Theme-variations">
               <div class="embed-responsive embed-responsive-16by9">
-                <div class="cfa cfa-red-orange">
+                <div class="cf cf-red-orange">
                   <img
                     src="https://images.unsplash.com/photo-1564594022418-86b5ede646d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
                     class="card-img embed-responsive-item" style="object-fit: cover;" />
@@ -200,7 +200,7 @@
             <a class="text-reset text-decoration-none d-flex flex-column h-100" target="_blank" rel="noopener noreferrer"
               href="https://github.com/equilaterus/bootlaterus">
               <div class="embed-responsive embed-responsive-16by9">
-                <div class="cfa cfa-green-yellow">
+                <div class="cf cf-green-yellow">
                   <img
                     src="https://images.unsplash.com/photo-1524989899036-b1c54afba1c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
                     class="card-img embed-responsive-item" style="object-fit: cover;" />
@@ -275,9 +275,9 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
   crossorigin="anonymous"></script>
-<script src="samples/util.js"></script>
+<script src="scripts/util.js"></script>
 <script src="https://kit.fontawesome.com/d8e1ad4d89.js"></script>
-<script src="content/scripts/particles.js"></script>
+<script src="scripts/particles.js"></script>
 
 </body>
 
