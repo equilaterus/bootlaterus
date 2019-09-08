@@ -2,17 +2,17 @@
 // Gradients extensions
 //
 
-@mixin create-gradient-bg($color-a, $color-b, $alpha) {
+@mixin create-bg-color-filter($color-a, $color-b, $alpha) {
   background: linear-gradient(45deg, rgba($color-a, $alpha), rgba($color-b,$alpha)) repeat-x;
 }
 
-@mixin create-gradient-bg-animated($color-a, $color-b, $alpha) {
+@mixin create-color-filter($color-a, $color-b, $alpha) {
   background: linear-gradient(45deg, rgba($color-a, $alpha), rgba($color-b,$alpha), rgba($color-b,$alpha), rgba($color-a, $alpha)) repeat-x;
   background-position: left center;
   background-size: 200% 100%;
 }
 
-@mixin create-radial-gradient-bg($color-a, $color-b, $alpha-a, $alpha-b) {
+@mixin create-bg-color-filter-radial($color-a, $color-b, $alpha-a, $alpha-b) {
   background: radial-gradient(ellipse at bottom, rgba($color-a,$alpha-a) 0%, rgba($color-b,$alpha-b) 100%);
 }
 

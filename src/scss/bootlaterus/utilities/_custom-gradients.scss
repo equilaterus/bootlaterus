@@ -1,0 +1,39 @@
+.cf:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;  
+  transition: $transition-bg-position;
+}
+
+@each $color, $value in $custom-gradients{
+  .bg-cf-#{$color} {
+    @include create-bg-color-filter(nth($value, 1), nth($value, 2), $gradient-alpha);
+  }
+    .cf-#{$color}:after {
+      @include create-color-filter(nth($value, 1), nth($value, 2), $gradient-after-alpha);
+    }
+    
+    .bg-#{$color}{
+      @include create-linear-gradient(nth($value,1), nth($value,2));
+    }
+}
+
+
+@each $color, $value in $colors {
+  .bg-cf-radial-#{$color} {
+    @include create-bg-color-filter-radial($value, $black, $gradiant-radial-alpha-from, $gradiant-radial-alpha-to);
+  }
+    .cf-radial-#{$color}:after {
+      @include create-bg-color-filter-radial($value, $black, $gradiant-radial-alpha-from-after, $gradiant-radial-alpha-to-after);
+    }
+}
+
+.bg-cf-transparent {
+  @include create-bg-color-filter-radial(transparent, $black, $gradiant-radial-alpha-from, $gradiant-radial-alpha-to);
+}
+  .cf-transparent:after {
+    @include create-bg-color-filter-radial(transparent, $black, $gradiant-radial-alpha-from-after, $gradiant-radial-alpha-to-after);
+  }

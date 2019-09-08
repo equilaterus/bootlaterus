@@ -5,10 +5,14 @@
   background-repeat: no-repeat;
 
   &-fixed {
+    background-attachment: fixed;
+  }
+
+  &-fixed-full {
     top: 0;
     position: fixed;
     width: 100%;
     height: 100vh;
     z-index: -1;
-  } 
+  }
 }
