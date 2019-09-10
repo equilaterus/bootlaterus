@@ -1,6 +1,11 @@
 function getDirectoryContent(path) {
+  try{
     const fs = require('fs');
     return fs.readdirSync(path);
+  }
+  catch{
+    return [];
+  }
 }
 
 function generateExportedFilePath(filePath, theme) {
@@ -80,7 +85,6 @@ module.exports.getThemesMetadata = function getThemesMetadata(distFiles) {
     result
   );
 }
-
 module.exports.getFile = function getFile(basepath, filename) {
   if (basepath.endsWith('/'))
     return getFileContents(`${basepath}${filename}`);
