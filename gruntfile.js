@@ -30,8 +30,14 @@ module.exports = async function (grunt) {
                         );
                   }
                 },
-                src: ['src/html/samples/util.js'],
-                dest: 'dist/samples/util.js'
+                files:[
+                    {
+                      expand: true,
+                      cwd: 'src/html',
+                      src: ['**/*.js'],
+                      dest: 'prebuild/'
+                    }
+                ]
                 
             },
             html: {
@@ -65,6 +71,23 @@ module.exports = async function (grunt) {
             },
         },
 
+        babel: {
+            options: {
+              sourceMap: true,
+              presets: ['@babel/preset-env']
+            },
+            dist: {
+              files:[
+                  {
+                    expand: true,
+                    cwd: 'prebuild/',
+                    src: ['**/*.js'],
+                    dest: 'dist/'
+                    }
+                ]
+            }
+        },
+
         sass: {
             options: {
                 implementation: sass
@@ -89,6 +112,20 @@ module.exports = async function (grunt) {
             }
         },
 
+        uglify: {
+            jsfiles: {
+                files: [{
+                    expand: true,
+                    src: ['dist/**/*.js', '!dist/**/*.min.js'],
+                    dest: '.',
+                    cwd: '.',
+                    rename: function (dst, src) {
+                       return dst + '/' + src.replace('.js', '.min.js');
+                    }
+                }]
+            }
+        },
+
         watch: {
             scss: {
                 files: 'src/scss/**/*.scss',
@@ -100,7 +137,7 @@ module.exports = async function (grunt) {
             },
             js: {
               files: 'src/html/**/*.js',
-              tasks: ['concat']
+              tasks: ['concat', 'babel', 'uglify']
             }
         },
 
@@ -126,8 +163,10 @@ module.exports = async function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-babel');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
-    grunt.registerTask('default', ['clean', 'concat:sass', 'concat:html', 'copy:prebuild', 'copy', 'concat:jsutils', 'sass', 'cssmin', 'browserSync', 'watch']);
-    grunt.registerTask('build', ['clean', 'concat:sass', 'concat:html', 'copy:prebuild', 'copy', 'concat:jsutils', 'sass', 'cssmin']);
+    grunt.registerTask('default', ['clean', 'concat:sass', 'concat:html', 'copy:prebuild', 'copy', 'concat:jsutils', 'sass', 'cssmin', 'babel', 'uglify', 'browserSync', 'watch']);
+    grunt.registerTask('build', ['clean', 'concat:sass', 'concat:html', 'copy:prebuild', 'copy', 'concat:jsutils', 'sass', 'cssmin', 'babel', 'uglify']);
 }
