@@ -14,17 +14,11 @@ h2, h3, h4, h5, h6,
   font-family: $headings-font-family;
 }
 
-.navbar-brand {  
-  display: flex;
-  justify-content: center;
-  img {
-    max-height: 30px;
-  }
-} 
-
 .navbar-left {
   & > .navbar-brand {
     background-color: $black;
+    display: flex;
+    justify-content: center;
   }
 
   .footer-content{ 
