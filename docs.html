@@ -1,0 +1,823 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Bootlaterus Docs</title>
+  <!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Custom built theme - already includes Bootstrap 4 -->
+<link rel="stylesheet" href="css/bootlaterus-docs-cfonts.min.css">
+<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap&text=Bootlaterus" rel="stylesheet">
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/content/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/content/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/content/favicon/favicon-16x16.png">
+<link rel="manifest" href="/content/favicon/site.webmanifest">
+<link rel="mask-icon" href="/content/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/content/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/content/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body  data-spy="scroll" data-target="#sideNavbar" data-offset="20">
+  <!-- Define your side navbar replacer for small screens (lower than -lg in this case) -->  
+<nav class="navbar sticky-top navbar-side-replacer-lg navbar-dark bg-dark-alpha-2 navbar-default-height">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="content/perito.svg" style="max-width: 35px; top: -2px" />
+      <span style="font-family: 'Pacifico'; margin-left: 5px; position: relative; top: 3px;">Bootlaterus</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sideNavbar"
+        aria-controls="sideNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Define your side navbar with a breaking point (-lg in this case) -->
+<nav class="navbar navbar-side navbar-side-left navbar-side-expand-lg navbar-dark bg-dark-alpha-2 collapse" id="sideNavbar">
+  <a class="navbar-brand d-none d-lg-flex d-xl-flex bg-dark-alpha-1" href="index.html">
+    <img src="content/perito.svg" style="max-width: 30px;" />
+    <span style="font-family: 'Pacifico'; margin-left: 10px">Bootlaterus</span>
+  </a>
+  <ul class="navbar-nav">
+    <li><a class="nav-link" href="#quickstart">Quickstart</a></li>
+    <li><a class="nav-link" href="#gradients">Gradients</a></li>
+    <li><a class="nav-link" href="#sidenavbars">Side Navbars</a></li>
+    <li><a class="nav-link" href="#carousel">Extended Carousel</a></li>
+    <li><a class="nav-link" href="#syntax-hl">Syntax HL</a></li>
+    <li><a class="nav-link" href="#misc">Misc</a></li>
+  </ul>
+</nav>
+
+
+  <div class="background background-fixed-full" 
+  style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);">
+  <div class="vh-100 bg-cf-indigo-teal"></div>
+</div>
+
+
+  <!-- Your main container with margin when side bar is visible -->
+  <div class="m-navbar-side-left-lg">
+    <div class="background background-fixed"
+      style="background-image: url(https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);">
+      <div class="bg-cf-pink-blue min-vh-50 ">
+        <div class="hv-center text-white text-center text-shadow">
+          <img class="mb-3" src="content/perito-shadow.svg" style="width: 140px;" />
+          <p class="h1 font-weight-lighter mb-3" style="font-family: 'Pacifico'; font-size: 35px">Bootlaterus</p>
+          <p class="h-font h2-font-size font-weight-lighter">Documentation</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white">
+    <div class="container py-5">
+
+      <h1 id="quickstart" class="mt-5">Quick start</h1>
+
+<p class="lead mb-5">Bootlaterus is based on Bootstrap v4 and doesn't require additional JS scripts, so it is fully compatible with technologies like ReactJS, Angular, VueJS or jQuery (and many others). Bootlaterus is friendly for any Bootstrap developer!</p>
+
+<h3>Easy way All-CDN</h3>
+
+<p>This path is compatible with jQuery implementations. If you want to use Bootlaterus with another JS framework/library, you'll want to see following sections.</p>
+
+<div class="language-xml highlighter-rouge">
+  <div class="highlight">
+    <pre
+      class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/bootlaterus@latest/dist/css/bootlaterus-cfonts.min.css"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span></code></pre>
+  </div>
+</div>
+
+<p>Include additional javascript libraries (JS, Popper, and jQuery):</p>
+
+<div class="language-xml highlighter-rouge">
+  <div class="highlight">
+    <pre
+      class="highlight"><code><span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.3.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre>
+  </div>
+</div>
+
+
+<h3>Only styles with CDN</h3>
+
+<p>This path is compatible with almost any JS framework, you can include the CSS styles on your web-app and use everything else with your normal framework workflow (usually NPM).</p>
+<div class="language-xml highlighter-rouge">
+  <div class="highlight">
+    <pre
+      class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/bootlaterus@latest/dist/css/bootlaterus-cfonts.min.css"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span></code></pre>
+  </div>
+</div>
+
+<p>As you can see in this <a href="https://github.com/pipecaniza/youtify" target="_blank">sample ReactJS project</a>, you'll just need to include the styles under your <a href="https://github.com/pipecaniza/youtify/blob/master/public/index.html" target="_blank">index.html</a>
+
+<h3>Full NPM</h3>
+
+<p>This path can give you more flexibity, but you may need to import the styles or modify your project configuration. You can install bootlaterus using NPM:</p>
+
+<div class="highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight"><code>npm install bootlaterus --save</code></pre>
+  </div>
+</div>
+
+For example if you are using Webpack <a href="https://github.com/dacanizares/bootlaterus-react/blob/master/src/App.js" target="_blank">you'll need to include the files</a> as shown in this <a href="https://github.com/dacanizares/bootlaterus-react" target="_blank">ReactJS example</a>.
+
+
+
+      <h1 id="gradients" class="mt-5">Gradients</h1>
+
+<p class="lead mb-5">Bring your website to life by using this beautiful gradients available as color filters and backgrounds.</p>
+
+<h2>Linear gradients</h2>
+
+<h3>Color filters</h3>
+
+<div class="row mb-5">
+  <div class="col-sm-4">
+    <div class="cf cf-img cf-indigo-teal">
+      <img src="https://camo.githubusercontent.com/e6998950b745c78d8dfdea8d507e1120468777ed/68747470733a2f2f696d616765732e756e73706c6173682e636f6d2f70686f746f2d313532303033383431303233332d3731343162653765366639373f69786c69623d72622d312e322e3126697869643d65794a6863484266615751694f6a45794d446439266175746f3d666f726d6174266669743d63726f7026773d3133353326713d3830"
+        class="img-fluid position-relative" />
+    </div>
+  </div>
+  <div class="col-sm-8">
+      <p>Use them to create color variations for your <strong>img</strong> tags.</p>
+    <pre class="prettyprint"><xmp><div class="cf cf-img cf-indigo-teal">
+  <img src="IMAGE-URL" class="img-fluid position-relative" />
+</div></xmp></pre>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-sm-4">
+    <div class="card h-100">
+      <div class="embed-responsive embed-responsive-16by9">
+        <div class="cf cf-indigo-teal">  
+          <img src="https://camo.githubusercontent.com/e6998950b745c78d8dfdea8d507e1120468777ed/68747470733a2f2f696d616765732e756e73706c6173682e636f6d2f70686f746f2d313532303033383431303233332d3731343162653765366639373f69786c69623d72622d312e322e3126697869643d65794a6863484266615751694f6a45794d446439266175746f3d666f726d6174266669743d63726f7026773d3133353326713d3830"
+              class="card-img embed-responsive-item" style="object-fit: cover;" />
+        </div>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title">Compatible</h5>
+        <p class="card-text">Bootlaterus is cool.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-8">
+      <p>Create awesome <strong>cards</strong> with embeeded images.</p>
+      <pre class="prettyprint"><xmp><div class="card h-100">
+  <div class="embed-responsive embed-responsive-16by9">
+    <div class="cf cf-indigo-teal">  
+      <img src="IMAGE-URL"
+          class="card-img embed-responsive-item" style="object-fit: cover;" />
+    </div>
+  </div>
+  <div class="card-body">
+    <h2 class="card-title">Card title</h5>
+    <p class="card-text">Card text.</p>
+  </div>
+</div></xmp></pre>
+  </div>
+</div>
+
+<h3>Background Color filters</h3>
+
+<div class="mb-3">
+  <div class="background" 
+      style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+    <div class="bg-cf-indigo-teal min-vh-50">      
+      <div class="hv-center text-white text-center text-shadow">
+        <p class="h1 font-weight-lighter">Explore &middot; Design &middot; Create</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p>Create awesome components combining <strong>divs</strong> that are versatile as they can include almost any element inside them.</p>
+<pre class="prettyprint"><xmp><div class="background" style="background-image: url(IMAGE_URL);">
+  <div class="bg-cf-indigo-teal min-vh-50">      
+    <div class="hv-center text-white text-center text-shadow">
+      <p class="h1 font-weight-lighter">Your Message Here!</p>
+    </div>
+  </div>
+</div></xmp></pre>
+
+
+<h3>Available variations</h3>
+
+<h4>Pink to blue</h4>
+
+<div class="row text-center">
+  <div class="col-sm-6">    
+    <div style="height: 50px;" class="bg-cf-pink-blue"></div>
+    <p><strong>.cf-pink-blue</strong>: color filter for images</p>
+    <p><strong>.bg-cf-pink-blue</strong>: color filter as background</p>
+  </div>
+  <div class="col-sm-6">
+    <div style="height: 50px;" class="bg-pink-blue"></div>
+    <p><strong>.bg-pink-blue</strong>: background color without transparency</p>    
+  </div>
+</div>
+
+<h4>Green to Teal</h4>
+
+<div class="row text-center">
+  <div class="col-sm-6">    
+    <div style="height: 50px;" class="bg-cf-green-teal"></div>
+    <p><strong>.cf-green-teal</strong>: color filter for images</p>
+    <p><strong>.bg-cf-green-teal</strong>: color filter as background</p>
+  </div>
+  <div class="col-sm-6">
+    <div style="height: 50px;" class="bg-green-teal"></div>
+    <p><strong>.bg-green-teal</strong>: background color without transparency</p>    
+  </div>
+</div>
+
+<h4>Cyan to Blue</h4>
+
+<div class="row text-center">
+  <div class="col-sm-6">    
+    <div style="height: 50px;" class="bg-cf-cyan-blue"></div>
+    <p><strong>.cf-cyan-blue</strong>: color filter for images</p>
+    <p><strong>.bg-cf-cyan-blue</strong>: color filter as background</p>
+  </div>
+  <div class="col-sm-6">
+    <div style="height: 50px;" class="bg-cyan-blue"></div>
+    <p><strong>.bg-cyan-blue</strong>: background color without transparency</p>    
+  </div>
+</div>
+
+<h4>Red to Orange</h4>
+<div class="row text-center">
+  <div class="col-sm-6">    
+    <div style="height: 50px;" class="bg-cf-red-orange"></div>
+    <p><strong>.cf-red-orange</strong>: color filter for images</p>
+    <p><strong>.bg-cf-red-orange</strong>: color filter as background</p>
+  </div>
+  <div class="col-sm-6">
+    <div style="height: 50px;" class="bg-red-orange"></div>
+    <p><strong>.bg-red-orange</strong>: background color without transparency</p>    
+  </div>
+</div>
+
+<h4>Indigo to Teal</h4>
+<div class="row text-center">
+  <div class="col-sm-6">    
+    <div style="height: 50px;" class="bg-cf-indigo-teal"></div>
+    <p><strong>.cf-indigo-teal</strong>: color filter for images</p>
+    <p><strong>.bg-indigo-teal</strong>: color filter as background</p>
+  </div>
+  <div class="col-sm-6">
+    <div style="height: 50px;" class="bg-indigo-teal"></div>
+    <p><strong>.bg-indigo-teal</strong>: background color without transparency</p>    
+  </div>
+</div>
+
+<h4>Green to Yellow</h4>
+<div class="row text-center">
+  <div class="col-sm-6">    
+    <div style="height: 50px;" class="bg-cf-green-yellow"></div>
+    <p><strong>.cf-green-yellow</strong>: color filter for images</p>
+    <p><strong>.bg-cf-green-yellow</strong>: color filter as background</p>
+  </div>
+  <div class="col-sm-6">
+    <div style="height: 50px;" class="bg-green-yellow"></div>
+    <p><strong>.bg-green-yellow</strong>: background color without transparency</p>    
+  </div>
+</div>
+
+<h2>Radial gradients</h2>
+
+<p>They work exactly as <strong>linear gradients</strong> except that they do NOT have the <strong>.bg-</strong> variant that  shows them as background color without transparency.</p>
+
+<h3>Radial Color Filters</h3>
+
+<div class="row mb-5">
+    <div class="col-sm-4">
+      <div class="cf cf-img cf-radial-green">
+        <img src="https://camo.githubusercontent.com/e6998950b745c78d8dfdea8d507e1120468777ed/68747470733a2f2f696d616765732e756e73706c6173682e636f6d2f70686f746f2d313532303033383431303233332d3731343162653765366639373f69786c69623d72622d312e322e3126697869643d65794a6863484266615751694f6a45794d446439266175746f3d666f726d6174266669743d63726f7026773d3133353326713d3830"
+          class="img-fluid position-relative" />
+      </div>
+    </div>
+    <div class="col-sm-8">
+        <p>Use them to create color variations for your <strong>img</strong> tags.</p>
+      <pre class="prettyprint"><xmp><div class="cf cf-img cf-radial-green">
+  <img src="IMAGE-URL" class="img-fluid position-relative" />
+</div></xmp></pre>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-sm-4">
+      <div class="cf cf-img cf-radial-transparent">
+        <img src="https://camo.githubusercontent.com/e6998950b745c78d8dfdea8d507e1120468777ed/68747470733a2f2f696d616765732e756e73706c6173682e636f6d2f70686f746f2d313532303033383431303233332d3731343162653765366639373f69786c69623d72622d312e322e3126697869643d65794a6863484266615751694f6a45794d446439266175746f3d666f726d6174266669743d63726f7026773d3133353326713d3830"
+          class="img-fluid position-relative" />
+      </div>
+    </div>
+    <div class="col-sm-8">
+        <p>Create nice effects with the transparent variation.</p>
+      <pre class="prettyprint"><xmp><div class="cf cf-img cf-radial-transparent">
+  <img src="IMAGE-URL" class="img-fluid position-relative" />
+</div></xmp></pre>
+    </div>
+</div>
+
+<h3>Radial Background Color Filter</h3>
+<div class="background" 
+  style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+  <div class="bg-cf-radial-teal min-vh-50">      
+    <div class="hv-center text-white text-center text-shadow">
+      <p class="h1 font-weight-lighter">Explore &middot; Design &middot; Create</p>
+    </div>
+  </div>
+</div>
+
+<pre class="prettyprint"><xmp><div class="background" style="background-image: url(IMAGE-URL);">
+  <div class="bg-cf-radial-teal min-vh-50">      
+    <div class="hv-center text-white text-center text-shadow">
+      <p class="h1 font-weight-lighter">YOUR MESSAGE!</p>
+    </div>
+  </div>
+</div></xmp></pre>
+
+<h2>Available Variations</h2>
+
+<p>All variations available for both <strong>.bg-cf</strong> and <strong>.cf</strong> classes.</p>
+
+<div class="row">
+  <div class="col-3 text-center">
+    <div class="background" 
+    style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+      <div style="height: 100px;" class="bg-cf-radial-blue"></div>
+    </div>
+    <p>.bg-cf-radial-blue</p> 
+    <p>.cf-radial-blue</p>
+  </div>
+  <div class="col-3 text-center">
+    <div class="background" 
+    style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+      <div style="height: 100px;" class="bg-cf-radial-indigo"></div>
+    </div>
+    <p>.bg-cf-radial-indigo</p> 
+    <p>.cf-radial-indigo</p>
+  </div>
+  <div class="col-3 text-center">
+      <div class="background" 
+      style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+        <div style="height: 100px;" class="bg-cf-radial-purple"></div>
+      </div>
+    <p>.bg-cf-radial-purple</p> 
+    <p>.cf-radial-purple</p>
+  </div>
+  <div class="col-3 text-center">
+      <div class="background" 
+      style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+        <div style="height: 100px;" class="bg-cf-radial-pink"></div>
+      </div>
+    <p>.bg-cf-radial-pink</p> 
+    <p>.cf-radial-pink</p>
+  </div>
+  <div class="col-3 text-center">
+      <div class="background" 
+      style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+        <div style="height: 100px;" class="bg-cf-radial-red"></div>
+      </div>
+    <p>.bg-cf-radial-red</p> 
+    <p>.cf-radial-red</p>
+  </div>
+  <div class="col-3 text-center">
+      <div class="background" 
+      style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+        <div style="height: 100px;" class="bg-cf-radial-orange"></div>
+      </div>
+    <p>.bg-cf-radial-orange</p> 
+    <p>.cf-radial-orange</p>
+  </div>
+  <div class="col-3 text-center">
+      <div class="background" 
+      style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+        <div style="height: 100px;" class="bg-cf-radial-yellow"></div>
+      </div>
+    <p>.bg-cf-radial-yellow</p> 
+    <p>.cf-radial-yellow</p>
+  </div>
+  <div class="col-3 text-center">
+      <div class="background" 
+      style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+        <div style="height: 100px;" class="bg-cf-radial-green"></div>
+      </div>
+    <p>.bg-cf-radial-green</p> 
+    <p>.cf-radial-green</p>
+  </div>
+  <div class="col-3 text-center">
+      <div class="background" 
+      style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+        <div style="height: 100px;" class="bg-cf-radial-teal"></div>
+      </div>
+    <p>.bg-cf-radial-teal</p> 
+    <p>.cf-radial-teal</p>
+  </div>
+  <div class="col-3 text-center">
+      <div class="background" 
+      style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+        <div style="height: 100px;" class="bg-cf-radial-cyan"></div>
+      </div>
+    <p>.bg-cf-radial-cyan</p> 
+    <p>.cf-radial-cyan</p>
+  </div>
+  <div class="col-3 text-center">
+      <div class="background" 
+      style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+        <div style="height: 100px;" class="bg-cf-radial-white"></div>
+      </div>
+    <p>.bg-cf-radial-white</p> 
+    <p>.cf-radial-white</p>
+  </div>
+  <div class="col-3 text-center">
+      <div class="background" 
+      style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+        <div style="height: 100px;" class="bg-cf-radial-gray"></div>
+      </div>
+    <p>.bg-cf-radial-gray</p> 
+    <p>.cf-radial-gray</p>
+  </div>
+  <div class="col-3 text-center">
+      <div class="background" 
+      style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+        <div style="height: 100px;" class="bg-cf-radial-gray-dark"></div>
+      </div>
+    <p>.bg-cf-radial-gray-dark</p> 
+    <p>.cf-radial-gray-dark</p>
+  </div>
+  <div class="col-3 text-center">
+      <div class="background" 
+      style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+        <div style="height: 100px;" class="bg-cf-radial-transparent"></div>
+      </div>
+    <p>.bg-cf-radial-transparent</p> 
+    <p>.cf-radial-transparent</p>
+  </div>
+</div>
+
+
+      <h1 id="sidenavbars" class="mt-5">Side Navbars</h1>
+
+<p class="lead mb-5">Built-in support for responsive Side Navbars, enables to rapidly prototype different layout styles.</p>
+
+
+<div class="alert alert-info">Side Navbars DO NOT require additional JS code. They're compatible with any implementation of Bootstrap</div>
+
+<h2>Side navbar</h2>
+
+<ul>
+  <li>This is the main component, it always has the following classes: <strong>navbar navbar-side collapse</strong>. </li>
+  <li>According to your desing you'll need to use <strong>navbar-side-left</strong> or <strong>navbar-side-right</strong>, defining a side for your navbar.</li>
+  <li>Finally you should define a breaking point to display or hide your navbar: <strong>navbar-side-expand-{BREAKING-POINT}</strong>, where BREAKING-POINT is <strong>sm, md, lg, xl</strong>.</li>
+</ul>
+
+<h3>Sample Sidenavbar code</h3>
+<pre class="prettyprint"><xmp><nav class="navbar navbar-side navbar-side-left navbar-side-expand-lg navbar-dark bg-dark-alpha-2 collapse" id="sideNavbar">
+  <a class="navbar-brand d-none d-lg-flex d-xl-flex bg-shadow-1" href="#">
+    <span>YOUR_TITLE</span>
+  </a>
+  <ul class="navbar-nav">
+    <li><a class="nav-link" href="#">Nowhere</a></li>
+    <li><a class="nav-link" href="#">Another link(?)</a></li>
+    <li><a class="nav-link" href="#">Stay here</a></li>
+  </ul>
+</nav></xmp></pre>
+
+<h2>Side Navbar Replacer</h2>
+
+<ul>
+  <li>This is a small navbar that appears replacing the main navbar, when the breaking point goes lower than the specified value.</li>
+  <li>It always has the following classes: <strong>navbar navbar-side-replacer-{BREAKING-POINT}</strong>, where BREAKING-POINT is <strong>sm, md, lg, xl</strong>.</li>
+  <li>It should have a <strong>toggler button</strong> for your main side navbar.</li>
+</ul>
+
+<h3>Sample Sidenavbar replacer</h3>
+<pre class="prettyprint"><xmp>
+  <a class="navbar-brand" href="#">
+    <span>YOUR_TITLE</span>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sideNavbar"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav></xmp></pre>
+
+<h2>More info</h2>
+
+<ul>
+  <li>Use the class <strong>m-navbar-side-left-{BREAK-POINT}</strong>, , where BREAKING-POINT is <strong>sm, md, lg, xl</strong>, to define a margin between your main content, while the side navbar is visible.</li>
+  <li>Side navbars are fully compatible with Bootstrap color utilities and base navbars.</li>
+</ul>
+
+<h3>General structure sample</h3>
+<pre class="prettyprint"><xmp><body>
+  <!-- Side navbar -->  
+  <nav class="navbar navbar-side navbar-side-left navbar-side-expand-lg collapse">...</nav>
+
+  <!-- Replacer -->  
+  <nav class="navbar sticky-top navbar-side-replacer-lg">...</nav>
+  
+  <!-- Your main content -->
+  <div class="m-navbar-side-left-lg">
+    <div class="container">
+      ....
+    </div>
+  </div>
+</body></xmp></pre>
+
+<h3>Complete sample</h3>
+
+For a complete sample please <a href="https://jsfiddle.net/dacanizares/vLew478t/22/" target="_blank">check this JSFiddle</a>.
+
+      <h1 id="carousel">Extended Carousel</h1>
+
+<p>Bootlaterus includes extended classes to create carousels that look great with images of different sizes forcing a fixed aspect ratio (see Aspect Ratio Utilities) and using background-images that scale safely.</p>
+
+<ul>
+  <li>
+  <strong>.carousel-{AN_ASPECT_RATIO}</strong>.
+  <ul>
+  <li><strong>.carousel-16-10</strong></li>
+  <li><strong>.carousel-16-9</strong></li>
+  <li><strong>.carousel-4-3</strong></li>
+  <li><strong>.carousel-3-2</strong></li>
+  <li><strong>.carousel-8-5</strong></li>
+  </ul>
+  </li>
+  <li>Instead of adding images to <em>carousel-items</em>, add a div with the class <strong>.carousel-content</strong> and define a background image for it (by using an <em>in-line style</em> -recommended- or by creating additional <em>css classes</em>).</li>
+</ul>
+
+<p>JSFiddle full sample: <a href="https://jsfiddle.net/dacanizares/vLew478t/22/" rel="nofollow">open</a></p>
+
+      <h1 id="syntax-hl" class="mt-5">Syntax HL</h1>
+
+<p class="lead mb-5">By default Bootlaterus supports <strong>Rouge</strong> and <strong>Prettify</strong> as Syntax Highlighters. First one comes by default with <strong>Github Pages</strong> and second one is really easy to use with any website.</p>
+
+<h2>Rouge Example</h2>
+
+<p>Rouge is supported by providing base color styles for pygments and outlinning overrides.</p>
+
+<p>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="k">class</span> <span class="nc">Foo</span> 
+<span class="p">{</span>    
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="k">private</span> <span class="kt">int</span> <span class="n">_counter</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="kt">bool</span> <span class="nf">SomeMethod</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">name</span> <span class="p">==</span> <span class="n">Name</span><span class="p">)</span>
+            <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+        
+        <span class="c1">// Do some advanced stuff with a meaningful comment</span>
+        <span class="c1">// Note that code is separated by an extra line from upper condition.</span>
+        <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">character</span> <span class="k">in</span> <span class="n">name</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">character</span> <span class="p">==</span> <span class="sc">'X'</span><span class="p">)</span>
+                <span class="k">continue</span><span class="p">;</span>
+
+            <span class="c1">// Do more stuff</span>
+            <span class="p">...</span>
+            <span class="p">...</span>
+            <span class="p">...</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="p">...;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+</p>
+    
+
+<h2>Prettify Example</h2>
+
+<p>Bootlaterus overrides Prettify borders and layout styles that are out of Bootlaterus style guides. Syntax colors are not modified.</p>
+
+<pre class="prettyprint">
+public class Foo 
+{    
+    public string Name { get; set; }
+
+    private int _counter;
+
+    public bool SomeMethod(string name)
+    {
+        if (name == Name)
+            return true;
+        
+        // Do some advanced stuff with a meaningful comment
+        // Note that code is separated by an extra line from upper condition.
+        foreach (var character in name)
+        {
+            if (character == 'X')
+                continue;
+
+            // Do more stuff
+            ...
+            ...
+            ...
+        }
+        return ...;
+    }
+}
+</pre>
+
+
+
+      <h1 id="misc">Misc</h1>
+
+<p class="lead mb-5">Utilities for agile development of customized UIs.</p>
+
+<h2>Positioning utils</h2>
+
+<ul>
+  <li>.h-center</li>
+  <li>.v-center</li>
+  <li>.hv-center</li>
+  <li>.to-bottom</li>
+  <li>.to-top</li>
+  <li>.to-left</li>
+  <li>.to-right</li>
+</ul>
+
+<h2>Sizing utils</h2>
+
+<ul>
+  <li>.navbar-default-height</li>
+  <li>.vh-full</li>
+  <li>.min-vh-full</li>
+  <li>.vh-75</li>
+  <li>.vh-50</li>
+  <li>.vh-25</li>
+  <li>.min-vh-75</li>
+  <li>.min-vh-50</li>
+  <li>.min-vh-25</li>
+</ul>
+
+<h2>Aspect Ratio Utilities</h2>
+
+<p>We've added some CSS Classes to define Aspect Ratio (<strong>.ar-</strong> classes) of a given element.</p>
+
+<ul>
+  <li>
+  <strong>.ar-16-10</strong> (16/10 aspect ratio)</li>
+  <li>
+  <strong>.ar-16-9</strong> (16/9 aspect ratio)</li>
+  <li>
+  <strong>.ar-4-3</strong> (4/3 aspect ratio)</li>
+  <li>
+  <strong>.ar-3-2</strong> (3/2 aspect ratio)</li>
+  <li>
+  <strong>.ar-8-5</strong> (8/5 aspect ratio)</li>
+</ul>
+
+<h2>Backgrounds</h2>
+
+<p>Add a beautiful background to your website.</p>
+
+<ul>
+  <li>.background</li>
+  <li>.background .background-fixed</li>
+  <li>.background .background-fixed-full</li>
+</ul>
+
+<h2>Fonts</h2>
+
+<p>Use <strong>.h-font</strong> to use <em>heading's</em> font on your components.</p>
+
+<ul>
+  <li>.h-border-bottom</li>
+  <li>.h1-font-size</li>
+  <li>.h2-font-size</li>
+  <li>.h3-font-size</li>
+  <li>.h4-font-size</li>
+  <li>.h5-font-size</li>
+  <li>.h6-font-size</li>
+  <li>.text-small</li>
+  <li>.text-small-contents</li>
+  <li>.text-shadow</li>
+</ul>
+
+<h2>Interactables</h2>
+
+<p>Cards and other UI components are easier to implement as interactive elements.</p>
+
+<ul>
+  <li>
+  <strong>.interactable</strong> class will add hover shadows and transitions.</li>
+  <li>
+  <strong>.hover-animate-cf</strong> will animate color filter gradients (<em>.cf-</em>).</li>
+  <li>We still recommend:
+  <ul>
+  <li>When cards have a button-link: Use <a href="https://getbootstrap.com/docs/4.3/utilities/stretched-link/" rel="nofollow">Stretched Link</a>
+  </li>
+  <li>When link is for the full card: Use <a href="https://getbootstrap.com/docs/4.3/utilities/text/#reset-color" rel="nofollow">Text-reset</a>
+  </li>
+  </ul>
+  </li>
+</ul>
+
+
+<h2>Shadows</h2>
+
+<p>Use <strong>.shadow</strong> class to add a <em>box-shadow</em> to your components.</p>
+
+
+<h2>Additional colors</h2>
+
+<p>Bootlaterus has additional classes to add shadows and alpha-colors to your components:</p>
+<ul>
+  <li>.bg-light-alpha-1</li>
+  <li>.bg-light-alpha-2</li>
+  <li>.bg-light-alpha-3</li>
+  <li>.bg-dark-alpha-1</li>
+  <li>.bg-dark-alpha-2</li>
+  <li>.bg-dark-alpha-3</li>
+  <li>.bg-shadow-1</li>
+  <li>.bg-shadow-2</li>
+  <li>.bg-shadow-3</li>
+</ul>
+
+<h2>Dark drpdowns</h2>
+
+<p>Add .dropdown-dark to a dropdown.</p>
+<ul>
+<li>.dropdown .dropdown-dark</li>
+</ul>
+<p>JSFiddle full sample: <a href="https://jsfiddle.net/dacanizares/vLew478t/22/" rel="nofollow">open</a></p>
+
+    </div>
+    </div>
+
+    
+    <div class="bg-dark-alpha-3">
+<footer class="container">
+  <div class="row py-5 row-eq-height text-white">
+    <div class="col-sm-3 h-100">
+      <ul class="list-unstyled">
+        <li class="text-muted">Bootlaterus</li>
+        <li><a class="text-reset" href="https://equilaterus.github.io/bootlaterus/" target="_blank"
+            rel="noopener noreferrer">Home page</a></li>
+        
+        <li><a class="text-reset" href="https://github.com/equilaterus/bootlaterus" target="_blank"
+            rel="noopener noreferrer">Repository</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-3 h-100">
+      <ul class="list-unstyled">
+        <li class="text-muted">Downloads</li>
+        <li><a class="text-reset" href="downloads.html" target="_blank"
+            rel="noopener noreferrer">Start now!</a></li>
+        <li><a class="text-reset" href="https://github.com/equilaterus/bootlaterus.gh-pages" target="_blank"
+          rel="noopener noreferrer">Integration with Github Pages</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-3 h-100">
+      <ul class="list-unstyled">
+        <li class="text-muted">Docs</li>
+        <li><a class="text-reset" href="docs.html">Bootlaterus Docs</a></li>
+        <li><a class="text-reset" href="https://getbootstrap.com/docs/4.3/getting-started/introduction/" target="_blank"
+            rel="noopener noreferrer">Bootstrap Official docs</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-3 h-100">
+      <a class="text-reset text-center text-decoration-none d-flex flex-column"
+        href="https://equilaterus.github.io" target="_blank" rel="noopener noreferrer">
+        <img style="max-width: 60px" class="img-fluid mx-auto"
+          src="https://equilaterus.github.io/wikilaterus/assets/img/logo-windmill-alpha-sm.png"
+          alt="logo equilaterus" />
+        <span class="h-font mt-2">Equilaterus</span>
+        <small class="text-muted">(CC) 2018 - 2019</small>
+      </a>
+    </div>
+  </div>
+</footer>
+</div>
+
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+  crossorigin="anonymous"></script>
+<script src="scripts/util.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</body>
+
+</html>

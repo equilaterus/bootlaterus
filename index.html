@@ -9,7 +9,7 @@
 
 <!-- Custom built theme - already includes Bootstrap 4 -->
 <link rel="stylesheet" href="css/bootlaterus-cfonts.min.css">
-<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap&text=Bootlaterus" rel="stylesheet">
 
 <!-- Favicon -->
 <link rel="apple-touch-icon" sizes="180x180" href="/content/favicon/apple-touch-icon.png">
@@ -25,14 +25,12 @@
 </head>
 
 <body>
-  <div class="background background-fixed-full" 
-  style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);">
-    <div class="vh-100 bg-dark-alpha-3"></div>
-  </div>
-
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark-alpha-1 fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark-alpha-2 fixed-top h-font navbar-default-height">
   <div class="container">
-    <a class="navbar-brand" style="font-family: 'Pacifico'" href="index.html">Bootlaterus</a>
+    <a class="navbar-brand" href="index.html">
+      <img src="content/perito.svg" style="max-width: 35px; top: -2px" />
+      <span style="font-family: 'Pacifico'; margin-left: 5px; position: relative; top: 3px;">Bootlaterus</span>
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -63,6 +61,12 @@
 </nav>
 
 
+  <div class="background background-fixed-full" 
+  style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);">
+  <div class="vh-100"></div>
+</div>
+
+
   <div class="background background-fixed"
     style="background-image: url(https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);">
     <div class="bg-cf-indigo-teal vh-100">
@@ -70,10 +74,10 @@
       <div class="hv-center text-white text-center text-shadow">
         <img class="mb-3" src="content/perito-shadow.svg" style="width: 200px;" />
         <p class="h1 font-weight-lighter mb-3" style="font-family: 'Pacifico'; font-size: 45px">Bootlaterus</p>
-        <a target="_blank" rel="noopener noreferrer" class="btn btn-primary-alt btn-lg mr-2"
+        <a target="_blank" rel="noopener noreferrer" class="btn btn-primary-alt btn-lg mr-2 h-font mb-2"
           href="downloads.html">Downloads</a>
-        <a target="_blank" rel="noopener noreferrer" class="btn btn-secondary-alt btn-lg"
-          href="https://github.com/equilaterus/bootlaterus/wiki">Docs</a>
+        <a target="_blank" rel="noopener noreferrer" class="btn btn-secondary-alt btn-lg h-font mb-2"
+          href="docs.html">Docs</a>
       </div>
       <span class="to-bottom h-center display-4 text-white">
         <a href="#start" class="text-light"><i class="fas fa-angle-down"></i></a>
@@ -219,15 +223,15 @@
     </div>
   </div>
 
-  <footer class="container">
+  <div class="bg-dark-alpha-3">
+<footer class="container">
   <div class="row py-5 row-eq-height text-white">
     <div class="col-sm-3 h-100">
       <ul class="list-unstyled">
         <li class="text-muted">Bootlaterus</li>
         <li><a class="text-reset" href="https://equilaterus.github.io/bootlaterus/" target="_blank"
             rel="noopener noreferrer">Home page</a></li>
-        <li><a class="text-reset" href="https://github.com/equilaterus/bootlaterus.gh-pages" target="_blank"
-            rel="noopener noreferrer">Integration with Github Pages</a></li>
+        
         <li><a class="text-reset" href="https://github.com/equilaterus/bootlaterus" target="_blank"
             rel="noopener noreferrer">Repository</a></li>
       </ul>
@@ -235,19 +239,16 @@
     <div class="col-sm-3 h-100">
       <ul class="list-unstyled">
         <li class="text-muted">Downloads</li>
-        <li><a class="text-reset" href="https://www.npmjs.com/package/bootlaterus" target="_blank"
-            rel="noopener noreferrer">NPM</a></li>
-        <li><a class="text-reset" href="https://github.com/equilaterus/bootlaterus/releases" target="_blank"
-            rel="noopener noreferrer">Github Releases</a></li>
-        <li><a class="text-reset" href="https://cdn.jsdelivr.net/npm/bootlaterus@latest/" target="_blank"
-            rel="noopener noreferrer">jsDelivr CDN</a></li>
+        <li><a class="text-reset" href="downloads.html" target="_blank"
+            rel="noopener noreferrer">Start now!</a></li>
+        <li><a class="text-reset" href="https://github.com/equilaterus/bootlaterus.gh-pages" target="_blank"
+          rel="noopener noreferrer">Integration with Github Pages</a></li>
       </ul>
     </div>
     <div class="col-sm-3 h-100">
       <ul class="list-unstyled">
         <li class="text-muted">Docs</li>
-        <li><a class="text-reset" href="https://github.com/equilaterus/bootlaterus/wiki" target="_blank"
-            rel="noopener noreferrer">Wiki</a></li>
+        <li><a class="text-reset" href="docs.html">Bootlaterus Docs</a></li>
         <li><a class="text-reset" href="https://getbootstrap.com/docs/4.3/getting-started/introduction/" target="_blank"
             rel="noopener noreferrer">Bootstrap Official docs</a></li>
       </ul>
@@ -258,13 +259,13 @@
         <img style="max-width: 60px" class="img-fluid mx-auto"
           src="https://equilaterus.github.io/wikilaterus/assets/img/logo-windmill-alpha-sm.png"
           alt="logo equilaterus" />
-        <br />
-        Equilaterus <br />
+        <span class="h-font mt-2">Equilaterus</span>
         <small class="text-muted">(CC) 2018 - 2019</small>
       </a>
     </div>
   </div>
 </footer>
+</div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
