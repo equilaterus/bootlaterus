@@ -35,9 +35,9 @@
     }
 }
 
-.bg-cf-transparent {
+.bg-cf-radial-transparent {
   @include create-bg-color-filter-radial(transparent, $black, $gradiant-radial-alpha-from, $gradiant-radial-alpha-to);
 }
-  .cf-transparent:after {
+  .cf-radial-transparent:after {
     @include create-bg-color-filter-radial(transparent, $black, $gradiant-radial-alpha-from-after, $gradiant-radial-alpha-to-after);
   }
