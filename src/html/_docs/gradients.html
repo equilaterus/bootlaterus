@@ -2,6 +2,8 @@
 
 <p class="lead mb-5">Bring your website to life by using this beautiful gradients available as color filters and backgrounds.</p>
 
+<h2>Linear gradients</h2>
+
 <h3>Color filters</h3>
 
 <div class="row mb-5">
@@ -66,7 +68,7 @@
 </div>
 
 <p>Create awesome components combining <strong>divs</strong> that are versatile as they can include almost any element inside them.</p>
-  <pre class="prettyprint"><xmp><div class="background" style="background-image: url(IMAGE_URL);">
+<pre class="prettyprint"><xmp><div class="background" style="background-image: url(IMAGE_URL);">
   <div class="bg-cf-indigo-teal min-vh-50">      
     <div class="hv-center text-white text-center text-shadow">
       <p class="h1 font-weight-lighter">Your Message Here!</p>
@@ -155,6 +157,179 @@
   <div class="col-sm-6">
     <div style="height: 50px;" class="bg-green-yellow"></div>
     <p><strong>.bg-green-yellow</strong>: background color without transparency</p>    
+  </div>
+</div>
+
+<h2>Radial gradients</h2>
+
+<p>They work exactly as <strong>linear gradients</strong> except that they do NOT have the <strong>.bg-</strong> variant that  shows them as background color without transparency.</p>
+
+<h3>Radial Color Filters</h3>
+
+<div class="row mb-5">
+    <div class="col-sm-4">
+      <div class="cf cf-img cf-radial-green">
+        <img src="https://camo.githubusercontent.com/e6998950b745c78d8dfdea8d507e1120468777ed/68747470733a2f2f696d616765732e756e73706c6173682e636f6d2f70686f746f2d313532303033383431303233332d3731343162653765366639373f69786c69623d72622d312e322e3126697869643d65794a6863484266615751694f6a45794d446439266175746f3d666f726d6174266669743d63726f7026773d3133353326713d3830"
+          class="img-fluid position-relative" />
+      </div>
+    </div>
+    <div class="col-sm-8">
+        <p>Use them to create color variations for your <strong>img</strong> tags.</p>
+      <pre class="prettyprint"><xmp><div class="cf cf-img cf-radial-green">
+  <img src="IMAGE-URL" class="img-fluid position-relative" />
+</div></xmp></pre>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-sm-4">
+      <div class="cf cf-img cf-radial-transparent">
+        <img src="https://camo.githubusercontent.com/e6998950b745c78d8dfdea8d507e1120468777ed/68747470733a2f2f696d616765732e756e73706c6173682e636f6d2f70686f746f2d313532303033383431303233332d3731343162653765366639373f69786c69623d72622d312e322e3126697869643d65794a6863484266615751694f6a45794d446439266175746f3d666f726d6174266669743d63726f7026773d3133353326713d3830"
+          class="img-fluid position-relative" />
+      </div>
+    </div>
+    <div class="col-sm-8">
+        <p>Create nice effects with the transparent variation.</p>
+      <pre class="prettyprint"><xmp><div class="cf cf-img cf-radial-transparent">
+  <img src="IMAGE-URL" class="img-fluid position-relative" />
+</div></xmp></pre>
+    </div>
+</div>
+
+<h3>Radial Background Color Filter</h3>
+<div class="background" 
+  style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+  <div class="bg-cf-radial-teal min-vh-50">      
+    <div class="hv-center text-white text-center text-shadow">
+      <p class="h1 font-weight-lighter">Explore &middot; Design &middot; Create</p>
+    </div>
+  </div>
+</div>
+
+<pre class="prettyprint"><xmp><div class="background" style="background-image: url(IMAGE-URL);">
+  <div class="bg-cf-radial-teal min-vh-50">      
+    <div class="hv-center text-white text-center text-shadow">
+      <p class="h1 font-weight-lighter">YOUR MESSAGE!</p>
+    </div>
+  </div>
+</div></xmp></pre>
+
+<h2>Available Variations</h2>
+
+<p>All variations available for both <strong>.bg-cf</strong> and <strong>.cf</strong> classes.</p>
+
+<div class="row">
+  <div class="col-3 text-center">
+    <div class="background" 
+    style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+      <div style="height: 100px;" class="bg-cf-radial-blue"></div>
+    </div>
+    <p>.bg-cf-radial-blue</p> 
+    <p>.cf-radial-blue</p>
+  </div>
+  <div class="col-3 text-center">
+    <div class="background" 
+    style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+      <div style="height: 100px;" class="bg-cf-radial-indigo"></div>
+    </div>
+    <p>.bg-cf-radial-indigo</p> 
+    <p>.cf-radial-indigo</p>
+  </div>
+  <div class="col-3 text-center">
+      <div class="background" 
+      style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+        <div style="height: 100px;" class="bg-cf-radial-purple"></div>
+      </div>
+    <p>.bg-cf-radial-purple</p> 
+    <p>.cf-radial-purple</p>
+  </div>
+  <div class="col-3 text-center">
+      <div class="background" 
+      style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+        <div style="height: 100px;" class="bg-cf-radial-pink"></div>
+      </div>
+    <p>.bg-cf-radial-pink</p> 
+    <p>.cf-radial-pink</p>
+  </div>
+  <div class="col-3 text-center">
+      <div class="background" 
+      style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+        <div style="height: 100px;" class="bg-cf-radial-red"></div>
+      </div>
+    <p>.bg-cf-radial-red</p> 
+    <p>.cf-radial-red</p>
+  </div>
+  <div class="col-3 text-center">
+      <div class="background" 
+      style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+        <div style="height: 100px;" class="bg-cf-radial-orange"></div>
+      </div>
+    <p>.bg-cf-radial-orange</p> 
+    <p>.cf-radial-orange</p>
+  </div>
+  <div class="col-3 text-center">
+      <div class="background" 
+      style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+        <div style="height: 100px;" class="bg-cf-radial-yellow"></div>
+      </div>
+    <p>.bg-cf-radial-yellow</p> 
+    <p>.cf-radial-yellow</p>
+  </div>
+  <div class="col-3 text-center">
+      <div class="background" 
+      style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+        <div style="height: 100px;" class="bg-cf-radial-green"></div>
+      </div>
+    <p>.bg-cf-radial-green</p> 
+    <p>.cf-radial-green</p>
+  </div>
+  <div class="col-3 text-center">
+      <div class="background" 
+      style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+        <div style="height: 100px;" class="bg-cf-radial-teal"></div>
+      </div>
+    <p>.bg-cf-radial-teal</p> 
+    <p>.cf-radial-teal</p>
+  </div>
+  <div class="col-3 text-center">
+      <div class="background" 
+      style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+        <div style="height: 100px;" class="bg-cf-radial-cyan"></div>
+      </div>
+    <p>.bg-cf-radial-cyan</p> 
+    <p>.cf-radial-cyan</p>
+  </div>
+  <div class="col-3 text-center">
+      <div class="background" 
+      style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+        <div style="height: 100px;" class="bg-cf-radial-white"></div>
+      </div>
+    <p>.bg-cf-radial-white</p> 
+    <p>.cf-radial-white</p>
+  </div>
+  <div class="col-3 text-center">
+      <div class="background" 
+      style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+        <div style="height: 100px;" class="bg-cf-radial-gray"></div>
+      </div>
+    <p>.bg-cf-radial-gray</p> 
+    <p>.cf-radial-gray</p>
+  </div>
+  <div class="col-3 text-center">
+      <div class="background" 
+      style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+        <div style="height: 100px;" class="bg-cf-radial-gray-dark"></div>
+      </div>
+    <p>.bg-cf-radial-gray-dark</p> 
+    <p>.cf-radial-gray-dark</p>
+  </div>
+  <div class="col-3 text-center">
+      <div class="background" 
+      style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+        <div style="height: 100px;" class="bg-cf-radial-transparent"></div>
+      </div>
+    <p>.bg-cf-radial-transparent</p> 
+    <p>.cf-radial-transparent</p>
   </div>
 </div>
 
