@@ -2,12 +2,9 @@
 
 <p class="lead mb-5">Bootlaterus is based on Bootstrap v4 and doesn't require additional JS scripts, so it is fully compatible with technologies like ReactJS, Angular, VueJS or jQuery (and many others). Bootlaterus is friendly for any Bootstrap developer!</p>
 
-<h3>CDN</h3>
+<h3>Easy way All-CDN</h3>
 
-<p>Add <b>Bootlaterus</b> (to see additional themes <a
-    href="https://github.com/equilaterus/bootlaterus/wiki/Theme-variations" target="_blank"
-    rel="noopener noreferrer">go here</a>):
-</p>
+<p>This path is compatible with jQuery implementations. If you want to use Bootlaterus with another JS framework/library, you'll want to see following sections.</p>
 
 <div class="language-xml highlighter-rouge">
   <div class="highlight">
@@ -27,12 +24,29 @@
   </div>
 </div>
 
-<h3>NPM</h3>
 
-<p>You can install bootlaterus using NPM:</p>
+<h3>Only styles with CDN</h3>
+
+<p>This path is compatible with almost any JS framework, you can include the CSS styles on your web-app and use everything else with your normal framework workflow (usually NPM).</p>
+<div class="language-xml highlighter-rouge">
+  <div class="highlight">
+    <pre
+      class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/bootlaterus@latest/dist/css/bootlaterus-cfonts.min.css"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span></code></pre>
+  </div>
+</div>
+
+<p>As you can see in this <a href="https://github.com/pipecaniza/youtify" target="_blank">sample ReactJS project</a>, you'll just need to include the styles under your <a href="https://github.com/pipecaniza/youtify/blob/master/public/index.html" target="_blank">index.html</a>
+
+<h3>Full NPM</h3>
+
+<p>This path can give you more flexibity, but you may need to import the styles or modify your project configuration. You can install bootlaterus using NPM:</p>
 
 <div class="highlighter-rouge">
   <div class="highlight">
     <pre class="highlight"><code>npm install bootlaterus --save</code></pre>
   </div>
 </div>
+
+For example if you are using Webpack <a href="https://github.com/dacanizares/bootlaterus-react/blob/master/src/App.js" target="_blank">you'll need to include the files</a> as shown in this <a href="https://github.com/dacanizares/bootlaterus-react" target="_blank">ReactJS example</a>.
+
+
