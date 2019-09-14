@@ -1,7 +1,7 @@
 @mixin highlight-block() {
     @include box-shadow($default-container-box-shadow); 
     background-color: transparentize($syntaxhl-bg, 0.4);
-    padding: $syntaxhl-padding;    
-    margin: $syntaxhl-margin;
+    padding: $syntaxhl-padding !important;    
+    margin: $syntaxhl-margin !important;
 }
   
