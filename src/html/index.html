@@ -3,16 +3,13 @@
 
 <head>
   <title>Bootlaterus</title>
-  <Render src="fragments/head.html" />
+  <Render src="_layout/head.html" />
 </head>
 
 <body>
-  <div class="background background-fixed-full" 
-  style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);">
-    <div class="vh-100 bg-dark-alpha-3"></div>
-  </div>
+  <Render src="_layout/navbar.html" />
 
-  <Render src="fragments/navbar.html" />
+  <Render src="_layout/fixed-bg.html" />
 
   <div class="background background-fixed"
     style="background-image: url(https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);">
@@ -21,10 +18,10 @@
       <div class="hv-center text-white text-center text-shadow">
         <img class="mb-3" src="content/perito-shadow.svg" style="width: 200px;" />
         <p class="h1 font-weight-lighter mb-3" style="font-family: 'Pacifico'; font-size: 45px">Bootlaterus</p>
-        <a target="_blank" rel="noopener noreferrer" class="btn btn-primary-alt btn-lg mr-2"
+        <a target="_blank" rel="noopener noreferrer" class="btn btn-primary-alt btn-lg mr-2 h-font mb-2"
           href="downloads.html">Downloads</a>
-        <a target="_blank" rel="noopener noreferrer" class="btn btn-secondary-alt btn-lg"
-          href="https://github.com/equilaterus/bootlaterus/wiki">Docs</a>
+        <a target="_blank" rel="noopener noreferrer" class="btn btn-secondary-alt btn-lg h-font mb-2"
+          href="docs.html">Docs</a>
       </div>
       <span class="to-bottom h-center display-4 text-white">
         <a href="#start" class="text-light"><i class="fas fa-angle-down"></i></a>
@@ -170,8 +167,8 @@
     </div>
   </div>
 
-  <Render src="fragments/footer.html" />
-  <Render src="fragments/scripts.html" />
+  <Render src="_layout/footer.html" />
+  <Render src="_layout/scripts.html" />
 </body>
 
 </html>

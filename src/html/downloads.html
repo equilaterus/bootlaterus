@@ -2,17 +2,14 @@
 <html lang="en">
 
 <head>
-  <title>Bootlaterus</title>
-  <Render src="fragments/head.html" />
+  <title>Bootlaterus Downloads</title>
+  <Render src="_layout/head.html" />
 </head>
 
 <body>
-  <Render src="fragments/navbar.html" />
+  <Render src="_layout/navbar.html" />
 
-  <div class="background background-fixed-full" 
-  style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);">
-    <div class="vh-100 bg-dark-alpha-3"></div>
-  </div>
+  <Render src="_layout/fixed-bg.html" />
 
   <div class="py-5 text-white bg-cf-pink-blue min-vh-50 position-relative">
     <div class="hv-center">
@@ -25,7 +22,20 @@
 
     <div class="row">
       <div class="col-md-6">
-        <h2 class="h-border-bottom">Quick start</h2>
+        <h2 class="h-border-bottom">Start now!</h2>
+
+        <div class="alert alert-info">For more details about starting with Bootlaterus, please check our <a href="docs.html">Quick start</a></div>
+
+        <h3 id="npm">NPM</h3>
+
+        <p>You can install bootlaterus using NPM:</p>
+
+        <div class="highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>npm install bootlaterus --save</code></pre>
+          </div>
+        </div>
+
         <h3 id="cdn">CDN</h3>
 
         <p>Add <b>Bootlaterus</b> (to see additional themes <a
@@ -50,63 +60,25 @@
 <span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre>
           </div>
         </div>
-
-        <h3 id="npm">NPM</h3>
-
-        <p>You can install bootlaterus using NPM:</p>
-
-        <div class="highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code>npm install bootlaterus --save</code></pre>
-          </div>
-        </div>
-
-
-        <h3 id="Releases">Releases</h3>
-
-        <p>You can check the Releases Here:</p>
-
-        
-          <a class="btn btn-primary"
-            href="https://github.com/equilaterus/bootlaterus/releases?fbclid=IwAR26Ner5fqac2LE82hbVJpfShD6Flv5c2813Aux8lnaVVP3KfYx9nhQaIXE">Releases
-            Page</a>
         
       </div>
 
       <div class="col-md-6">
+        <h2 class="h-border-bottom">Releases</h2>
+        <ul>
+          <li><a href="https://www.npmjs.com/package/bootlaterus" target="_blank"
+            rel="noopener noreferrer">NPM</a><br/></li>
+          <li><a href="https://github.com/equilaterus/bootlaterus/releases" target="_blank"
+              rel="noopener noreferrer">Github Releases</a><br/></li>
+          <li><a href="https://cdn.jsdelivr.net/npm/bootlaterus@latest/" target="_blank"
+              rel="noopener noreferrer">jsDelivr CDN</a><br/></li>
+        </ul>
+
         <h2 class="h-border-bottom">Docs</h2>
         <ul>
-          <li>
-            <p>
-              <a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/" target="_blank"
-                rel="noopener noreferrer">
-                Official bootstrap docs
-              </a>
-            </p>
-          </li>
-          <li>
-            <p>
-              <a href="https://github.com/equilaterus/bootlaterus/wiki/Custom-components" target="_blank"
-                rel="noopener noreferrer">
-                Custom components
-              </a>
-            </p>
-          </li>
-          <li>
-            <p>
-              <a href="https://github.com/equilaterus/bootlaterus/wiki/Theme-variations" target="_blank"
-                rel="noopener noreferrer">
-                Theme variations
-              </a>
-            </p>
-          </li>
-          <li>
-            <p>
-              <a href="https://github.com/equilaterus/bootlaterus/wiki/" target="_blank" rel="noopener noreferrer">
-                More info in our wiki
-              </a>
-            </p>
-          </li>
+          <li><a href="docs.html">Bootlaterus Docs</a></li>
+          <li><a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/" target="_blank"
+              rel="noopener noreferrer">Bootstrap Official docs</a></li>
         </ul>
       </div>
     </div>
@@ -114,8 +86,8 @@
   </div>
   </div>
   
-  <Render src="fragments/footer.html" />
-  <Render src="fragments/scripts.html" />
+  <Render src="_layout/footer.html" />
+  <Render src="_layout/scripts.html" />
 </body>
 
 </html>
