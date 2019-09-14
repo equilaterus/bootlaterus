@@ -1,12 +1,14 @@
 @import "../bootlaterus/_main";
+@import "prettify";
 
 h1 {
-  margin-bottom: 4.0rem;
+  margin-bottom: 2.0rem;
 }
 
 h2, h3, h4, h5, h6,
 .h2, .h3, .h4, .h5, .h6 {
   border-bottom: $headings-bottom-border;
+  margin-top: 1.0rem;
 }
 
 .navbar {
