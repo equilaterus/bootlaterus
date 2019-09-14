@@ -1,0 +1,73 @@
+<h1 id="syntax-hl" class="mt-5">Syntax HL</h1>
+
+<p class="lead mb-5">By default Bootlaterus supports <strong>Rouge</strong> and <strong>Prettify</strong> as Syntax Highlighters. First one comes by default with <strong>Github Pages</strong> and second one is really easy to use with any website.</p>
+
+<h2>Rouge Example</h2>
+
+<p>Rouge is supported by providing base color styles for pygments and outlinning overrides.</p>
+
+<p>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="k">class</span> <span class="nc">Foo</span> 
+<span class="p">{</span>    
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="k">private</span> <span class="kt">int</span> <span class="n">_counter</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="kt">bool</span> <span class="nf">SomeMethod</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">name</span> <span class="p">==</span> <span class="n">Name</span><span class="p">)</span>
+            <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+        
+        <span class="c1">// Do some advanced stuff with a meaningful comment</span>
+        <span class="c1">// Note that code is separated by an extra line from upper condition.</span>
+        <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">character</span> <span class="k">in</span> <span class="n">name</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">character</span> <span class="p">==</span> <span class="sc">'X'</span><span class="p">)</span>
+                <span class="k">continue</span><span class="p">;</span>
+
+            <span class="c1">// Do more stuff</span>
+            <span class="p">...</span>
+            <span class="p">...</span>
+            <span class="p">...</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="p">...;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+</p>
+    
+
+<h2>Prettify Example</h2>
+
+<p>Bootlaterus overrides Prettify borders and layout styles that are out of Bootlaterus style guides. Syntax colors are not modified.</p>
+
+<pre class="prettyprint">
+public class Foo 
+{    
+    public string Name { get; set; }
+
+    private int _counter;
+
+    public bool SomeMethod(string name)
+    {
+        if (name == Name)
+            return true;
+        
+        // Do some advanced stuff with a meaningful comment
+        // Note that code is separated by an extra line from upper condition.
+        foreach (var character in name)
+        {
+            if (character == 'X')
+                continue;
+
+            // Do more stuff
+            ...
+            ...
+            ...
+        }
+        return ...;
+    }
+}
+</pre>
+
+
