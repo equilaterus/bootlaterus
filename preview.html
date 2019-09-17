@@ -4,36 +4,105 @@
 <head>
   <title>Bootlaterus</title>
   <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Custom built theme - already includes Bootstrap 4 -->
-  <link rel="stylesheet" href="../css/bootlaterus-cfonts.min.css">
+<!-- Custom built theme - already includes Bootstrap 4 -->
+<link rel="stylesheet" href="css/bootlaterus-cfonts.min.css">
+<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap&text=Bootlaterus" rel="stylesheet">
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="content/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="content/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="content/favicon/favicon-16x16.png">
+<link rel="manifest" href="content/favicon/site.webmanifest">
+<link rel="mask-icon" href="content/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="content/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="content/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="../index.html">Bootlaterus</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark-alpha-2 fixed-top h-font navbar-default-height">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="content/perito.svg" style="max-width: 35px; top: -2px" />
+      <span style="font-family: 'Pacifico'; margin-left: 5px; position: relative; top: 3px;">Bootlaterus</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">                
+        <li class="nav-item">
+          <a href="downloads.html" 
+            class="nav-link">
+            Downloads
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="docs.html" 
+            class="nav-link">
+            Docs
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="preview.html" 
+            class="nav-link" ">
+            Preview
+          </a>
+        </li>
+      </ul>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto" >
-            <li class="nav-item active">
-                <a class="nav-link" href="../index.html">Back to home</a>
-            </li>
-        </ul>
+      <ul class="navbar-nav" id="theme-selector" data-is-root="true">
+      </ul>
+    </div>
+  </div>
+</nav>
 
-        <ul class="navbar-nav ml-auto" id="theme-selector">
-        </ul>
+
+  <div class="background background-fixed-full" 
+  style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);">
+  <div class="vh-100"></div>
+</div>
+
+
+  <div class="background background-fixed"
+    style="background-image: url(https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);">
+    <div class="bg-cf-pink-blue min-vh-50 ">
+      <div class="hv-center text-white text-center text-shadow">
+        <img class="mb-3" src="content/perito-shadow.svg" style="width: 140px;" />
+        <p class="h1 font-weight-lighter mb-3" style="font-family: 'Pacifico'; font-size: 35px">Bootlaterus</p>
+        <p class="h-font h2-font-size font-weight-lighter">Preview</p>
       </div>
     </div>
-  </nav>
+  </div>
 
-  <div class="container mt-5">
+  <div class="bg-white py-5">
+
+  <div class="container">
+    <div class="alert alert-info">
+      This is a general preview of the components <strong>look'n'feel</strong>. It may not include every single element. For more information please check our <a href="docs.html">docs</a>.
+    </div>
+
+    <h1>Welcome!</h1>
+
+    <div class="mb-3">
+      <div class="background" 
+          style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+        <div class="bg-cf-indigo-teal min-vh-50">      
+          <div class="hv-center text-white text-center text-shadow">
+            <p class="h1 font-weight-lighter">Explore &middot; Design &middot; Create</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <h1>Input group</h1>
     <h3>Basic example</h3>
     <div class="input-group mb-3">
@@ -2091,15 +2160,67 @@
           </div>
         </div>
       </div>
-
+  </div>
 
   </div>
 
+  <div class="bg-dark-alpha-3">
+<footer class="container">
+  <div class="row py-5 row-eq-height text-white">
+    <div class="col-sm-3 h-100">
+      <ul class="list-unstyled">
+        <li class="text-muted">Bootlaterus</li>
+        <li><a class="text-reset" href="https://equilaterus.github.io/bootlaterus/" target="_blank"
+            rel="noopener noreferrer">Home page</a></li>
+        
+        <li><a class="text-reset" href="https://github.com/equilaterus/bootlaterus" target="_blank"
+            rel="noopener noreferrer">Repository</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-3 h-100">
+      <ul class="list-unstyled">
+        <li class="text-muted">Downloads</li>
+        <li><a class="text-reset" href="downloads.html" target="_blank"
+            rel="noopener noreferrer">Start now!</a></li>
+        <li><a class="text-reset" href="https://github.com/equilaterus/bootlaterus.gh-pages" target="_blank"
+          rel="noopener noreferrer">Integration with Github Pages</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-3 h-100">
+      <ul class="list-unstyled">
+        <li class="text-muted">Docs</li>
+        <li><a class="text-reset" href="docs.html">Bootlaterus Docs</a></li>
+        <li><a class="text-reset" href="https://getbootstrap.com/docs/4.3/getting-started/introduction/" target="_blank"
+            rel="noopener noreferrer">Bootstrap Official docs</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-3 h-100">
+      <a class="text-reset text-center text-decoration-none d-flex flex-column"
+        href="https://equilaterus.github.io" target="_blank" rel="noopener noreferrer">
+        <img style="max-width: 60px" class="img-fluid mx-auto"
+          src="https://equilaterus.github.io/wikilaterus/assets/img/logo-windmill-alpha-sm.png"
+          alt="logo equilaterus" />
+        <span class="h-font mt-2">Equilaterus</span>
+        <small class="text-muted">(CC) 2018 - 2019</small>
+      </a>
+    </div>
+  </div>
+</footer>
+</div>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="util.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+  crossorigin="anonymous"></script>
+<script src="scripts/util.js"></script>
+<script src="https://kit.fontawesome.com/d8e1ad4d89.js"></script>
+<script src="scripts/particles.js"></script>
+
 </body>
 
 </html>
