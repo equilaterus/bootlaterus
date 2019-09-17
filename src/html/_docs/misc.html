@@ -1,49 +1,102 @@
-<h1 id="misc">Misc</h1>
+<h1 id="misc" class="mt-5">Misc</h1>
 
-<p class="lead mb-5">Utilities for agile development of customized UIs.</p>
-
-<h2>Positioning utils</h2>
-
-<ul>
-  <li>.h-center</li>
-  <li>.v-center</li>
-  <li>.hv-center</li>
-  <li>.to-bottom</li>
-  <li>.to-top</li>
-  <li>.to-left</li>
-  <li>.to-right</li>
-</ul>
-
-<h2>Sizing utils</h2>
-
-<ul>
-  <li>.navbar-default-height</li>
-  <li>.vh-full</li>
-  <li>.min-vh-full</li>
-  <li>.vh-75</li>
-  <li>.vh-50</li>
-  <li>.vh-25</li>
-  <li>.min-vh-75</li>
-  <li>.min-vh-50</li>
-  <li>.min-vh-25</li>
-</ul>
+<p class="lead mb-5">Use <strong>Bootlaterus Utilities</strong> and you will be able to create a unique UI writting less CSS than ever.</p>
 
 <h2>Aspect Ratio Utilities</h2>
 
-<p>We've added some CSS Classes to define Aspect Ratio (<strong>.ar-</strong> classes) of a given element.</p>
+<div class="row">
+  <div class="col-sm-8">
+    <p>We've added some CSS Classes to define Aspect Ratio (<strong>.ar-</strong> classes) of a given element.</p>
 
-<ul>
-  <li>
-  <strong>.ar-16-10</strong> (16/10 aspect ratio)</li>
-  <li>
-  <strong>.ar-16-9</strong> (16/9 aspect ratio)</li>
-  <li>
-  <strong>.ar-4-3</strong> (4/3 aspect ratio)</li>
-  <li>
-  <strong>.ar-3-2</strong> (3/2 aspect ratio)</li>
-  <li>
-  <strong>.ar-8-5</strong> (8/5 aspect ratio)</li>
-</ul>
+    <ul>
+      <li>
+      <strong>.ar-16-10</strong> (16/10 aspect ratio)</li>
+      <li>
+      <strong>.ar-16-9</strong> (16/9 aspect ratio)</li>
+      <li>
+      <strong>.ar-4-3</strong> (4/3 aspect ratio)</li>
+      <li>
+      <strong>.ar-3-2</strong> (3/2 aspect ratio)</li>
+      <li>
+      <strong>.ar-8-5</strong> (8/5 aspect ratio)</li>
+    </ul>
+
+    <p><strong>Note:</strong> You call still use Bootstrap <a href="https://getbootstrap.com/docs/4.0/utilities/embed/" target="_blank">Embeds</a>, <strong>.ar</strong> classes are a complement not an override.</p>
+
+    <pre class="prettyprint"><xmp><div class="bg-cf-pink-blue ar-4-3"></div>
+<div class="bg-cf-pink-blue ar-16-10"></div>
+</xmp></pre>
+  </div>
+  <div class="col-sm-4">
+    <div class="bg-cf-pink-blue ar-4-3"></div>
+  </div>
+</div>
+
+<h2>Positioning utils</h2>
+
+<div class="row">
+  <div class="col-sm-8">
+    <p>Safely define the location of your elements using this utilities.</p>
+
+    <ul>
+      <li><strong>.h-center</strong>: absolutely centers an element horizontally to its parent.</li>
+      <li><strong>.v-center</strong>: absolutely centers an element vertically to its parent.</li>
+      <li><strong>.hv-center</strong>: absolutely centers an element to its parent.</li>      
+    </ul>
+
+    <p>Use the following ones in conjunction with <strong>.position-relative</strong> and <strong>.position-absolute</strong> classes.</p>
+    <ul>
+      <li><strong>.to-bottom</strong>: sends an element to bottom.</li>
+      <li><strong>.to-top</strong>: sends an element to top.</li>
+      <li><strong>.to-left</strong>: sends an element to left side.</li>
+      <li><strong>.to-right</strong>: sends an element to right side.</li>
+    </ul>
+
+    <pre class="prettyprint"><xmp><div class="bg-pink-blue ar-4-3 text-white text-shadow position-relative">
+  <p class="hv-center">I'm centered!</p>  
+  <p class="to-bottom to-right position-absolute">Bottom Right!</p>
+</div></xmp></pre>
+  </div>
+  <div class="col-sm-4">
+    <div class="bg-pink-blue ar-4-3 text-white text-shadow position-relative">
+      <p class="hv-center">I'm centered!</p>  
+      <p class="to-bottom to-right position-absolute">Bottom Right! -> &nbsp;</p>
+    </div>
+  </div>
+</div>
+
+
+<h2>Sizing utils</h2>
+
+<div class="row">
+  <div class="col-sm-8">
+      <p>Define the height of your elements, relatively to the viewport height.</p>
+
+      <ul>
+        <li><strong>.vh-100</strong>: height set to 100% of the viewport height.</li>
+        <li><strong>.vh-75</strong>: height set to 75% of the viewport height.</li>
+        <li><strong>.vh-50</strong>: height set to 50% of the viewport height.</li>
+        <li><strong>.vh-25</strong>: height set to 25% of the viewport height.</li>
+        <li><strong>.min-vh-100</strong>: min-height set to 100% of the viewport height.</li>
+        <li><strong>.min-vh-75</strong>: min-height set to 75% of the viewport height.</li>
+        <li><strong>.min-vh-50</strong>: min-height set to 50% of the viewport height.</li>
+        <li><strong>.min-vh-25</strong>: min-height set to 25% of the viewport height.</li>
+      </ul>
+            
+      <pre class="prettyprint"><xmp><div class="bg-green-teal text-white text-shadow min-vh-25">
+    <p class="p-3">I'm at least 25% of you viewport</p>
+  </div></xmp></pre>
+  </div>
+  <div class="col-sm-4">
+    <div class="bg-green-teal text-white text-shadow min-vh-25">
+      <p class="p-3">I'm at least 25% of you viewport</p>
+    </div>
+  </div>
+</div>
+
+
+
+
 
 <h2>Backgrounds</h2>
 

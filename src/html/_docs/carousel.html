@@ -1,19 +1,99 @@
-<h1 id="carousel">Extended Carousel</h1>
+<h1 id="carousel" class="mt-5">Extended Carousel</h1>
 
-<p>Bootlaterus includes extended classes to create carousels that look great with images of different sizes forcing a fixed aspect ratio (see Aspect Ratio Utilities) and using background-images that scale safely.</p>
+<div class="alert alert-info">
+    Easy and Fast! It works great with images of different sizes using a predefined aspect ratio.
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <div id="carouselExtended" class="carousel carousel-16-10 slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExtended" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExtended" data-slide-to="1"></li>
+        <li data-target="#carouselExtended" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="carousel-content"
+                style="background-image: url(https://images.unsplash.com/photo-1533238607503-085e90da04c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2300&q=80)">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-content"
+            style="background-image: url(https://images.unsplash.com/photo-1544612318-bcab56ed6311?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2207&q=80)">
+          </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-content"
+              style="background-image: url(https://images.unsplash.com/photo-1548407260-f8b207183bf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2223&q=80)">
+            </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExtended" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExtended" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <div class="col-sm-6">
+      <p>Bootlaterus includes extended classes to create carousels that look great with images of different sizes forcing a fixed aspect ratio (<a href="#misc">see Aspect Ratio Utilities</a>) and using background-images that scale safely.</p>
 
-<ul>
-  <li>
-  <strong>.carousel-{AN_ASPECT_RATIO}</strong>.
-  <ul>
-  <li><strong>.carousel-16-10</strong></li>
-  <li><strong>.carousel-16-9</strong></li>
-  <li><strong>.carousel-4-3</strong></li>
-  <li><strong>.carousel-3-2</strong></li>
-  <li><strong>.carousel-8-5</strong></li>
-  </ul>
-  </li>
-  <li>Instead of adding images to <em>carousel-items</em>, add a div with the class <strong>.carousel-content</strong> and define a background image for it (by using an <em>in-line style</em> -recommended- or by creating additional <em>css classes</em>).</li>
-</ul>
+      <ul>
+        <li>
+        <strong>.carousel-{AN_ASPECT_RATIO}</strong>.
+        <ul>
+        <li><strong>.carousel-16-10</strong></li>
+        <li><strong>.carousel-16-9</strong></li>
+        <li><strong>.carousel-4-3</strong></li>
+        <li><strong>.carousel-3-2</strong></li>
+        <li><strong>.carousel-8-5</strong></li>
+        </ul>
+        </li>
+        <li>Instead of adding images to <em>carousel-items</em>, add a div with the class <strong>.carousel-content</strong> and define a background image for it (by using an <em>in-line style</em> or by creating additional <em>css classes</em>).</li>
+      </ul>
+  </div>
+</div>
 
-<p>JSFiddle full sample: <a href="https://jsfiddle.net/dacanizares/vLew478t/22/" rel="nofollow">open</a></p>
+
+
+
+<pre class="prettyprint"><xmp><!-- Extended Carousel -->
+<!-- Works like any Bootstrap Carousel -->
+<!-- Just add class to fix the aspect ratio (EX: carousel-16-10, carousel-16-9) -->
+<div id="carouselExtended" class="carousel carousel-16-10 slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExtended" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExtended" data-slide-to="1"></li>
+    <li data-target="#carouselExtended" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <!-- And use divs with background images and .carousel-content class -->
+      <!-- instead of imgs. -->
+      <div class="carousel-content"
+            style="background-image: url(IMAGE_URL)">
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="carousel-content"
+        style="background-image: url(IMAGE_URL)">
+      </div>
+    </div>
+    <div class="carousel-item">
+        <div class="carousel-content"
+          style="background-image: url(IMAGE_URL)">
+        </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExtended" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExtended" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div></xmp></pre>

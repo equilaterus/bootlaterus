@@ -1,16 +1,4 @@
-.navbar-default-height {
-  height: $navbar-default-height;
-  max-height: $navbar-default-height;
-}
-
-.vh-full {
-  height: calc(100vh - #{$navbar-default-height});
-}
-
-.min-vh-full {
-  min-height: calc(100vh - #{$navbar-default-height});
-}
-
+// .vh-100 provided by Bootstrap default implementation
 
 .vh-75 {
   height: 75vh;

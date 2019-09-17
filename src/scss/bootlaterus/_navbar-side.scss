@@ -3,11 +3,10 @@
 // Special side-bar located at the left side of the screen
 
 .navbar-side {
-    height: calc(100vh - #{$navbar-side-replacer-height}) !important;
+    height: 100vh !important;
     width: $navbar-side-max-width;
     padding: 0;  
     position: fixed !important;
-    top: $navbar-side-replacer-height;
     flex-direction: column;
     flex-wrap: nowrap;
     overflow-y: auto;
@@ -26,7 +25,8 @@
     
     & > .navbar-brand {
         width: 100%;
-        padding: $navbar-nav-link-padding-x;
+        padding: $navbar-nav-link-padding-x *1.5 $navbar-nav-link-padding-x $navbar-nav-link-padding-x *1.5 $navbar-nav-link-padding-x;
+        margin-right: 0;
     } 
 
     & > .navbar-nav  {
@@ -67,7 +67,6 @@
         $infix: breakpoint-infix($next, $grid-breakpoints);
     
         &#{$infix} {
-          height: $navbar-side-replacer-height;
           @include media-breakpoint-up($next) {
             display: none;
           }
