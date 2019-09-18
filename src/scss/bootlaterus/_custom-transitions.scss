@@ -38,34 +38,14 @@
   }
 }
 
-.navbar-side-left.collapse {
+.navbar-side.collapse {
     &:not(.show) {
       height: auto;
-      .navbar-nav{
+      .navbar-nav {
         display: none;
-        transform: translateX(-100%);
       }
     }
 }
     .navbar-side-left.collapsing {
       overflow: hidden;
-      .navbar-nav {
-        transform: translateX(-100%);
-      }
-    }
-
-.navbar-side-right.collapse {
-    &:not(.show) {
-      height: auto;
-      .navbar-nav{
-        display: none;
-        transform: translateX(100%);
-      }
-    }
-}
-    .navbar-side-right.collapsing {
-      overflow: hidden;
-      .navbar-nav {
-        transform: translateX(100%);
-      }
     }
