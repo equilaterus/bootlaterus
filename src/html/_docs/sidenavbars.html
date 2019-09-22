@@ -1,4 +1,4 @@
-<h1 id="sidenavbars" class="mt-5">Side Navbars</h1>
+<h1 id="sidenavbars" class="pt-5">Side Navbars</h1>
 
 <p class="lead mb-5">Built-in support for responsive Side Navbars, enables to rapidly prototype different layout styles.</p>
 
@@ -10,55 +10,39 @@
 <ul>
   <li>This is the main component, it always has the following classes: <strong>navbar navbar-side collapse</strong>. </li>
   <li>According to your desing you'll need to use <strong>navbar-side-left</strong> or <strong>navbar-side-right</strong>, defining a side for your navbar.</li>
-  <li>Finally you should define a breaking point to display or hide your navbar: <strong>navbar-side-expand-{BREAKING-POINT}</strong>, where BREAKING-POINT is <strong>sm, md, lg, xl</strong>.</li>
+  <li>You should define a breaking point to display or hide your navbar: <strong>navbar-side-{BREAKING-POINT}</strong>, where BREAKING-POINT is <strong>sm, md, lg, xl</strong>.</li>
+  <li>It is recommended to wrap your navbar-brand inside a <strong>div</strong> with class <strong>navbar-brand-container</strong>, so you can add a background color to it.</li>
+  <li>You must include a <strong>navbar-toggler</strong> to hide/show the menu.</li>
+  <li>For <strong>SPAs</strong> (Single Page Applications) consider adding the attributes <strong>data-toggle="collapse" data-target=".navbar.show"</strong> to your links if you're using the jQuery default implementation, otherwise you'll need to add a code to handle navbar collapsing.</li>
 </ul>
 
 <h3>Sample Sidenavbar code</h3>
-<pre class="prettyprint"><xmp><nav class="navbar navbar-side navbar-side-left navbar-side-expand-lg navbar-dark bg-dark-alpha-2 collapse" id="sideNavbar">
-  <a class="navbar-brand d-none d-lg-flex d-xl-flex bg-shadow-1" href="#">
-    <span>YOUR_TITLE</span>
-  </a>
+<pre class="prettyprint"><xmp><nav class="navbar navbar-side navbar-side-left navbar-side-lg navbar-dark bg-dark-alpha-2 collapse" id="sideNavbar">
+  <div class="navbar-brand-container bg-dark-alpha-1">
+    <a class="navbar-brand" href="#">
+      <span>YOUR_TITLE</span>
+    </a>
+  </div>
   <ul class="navbar-nav">
     <li><a class="nav-link" href="#">Nowhere</a></li>
-    <li><a class="nav-link" href="#">Another link(?)</a></li>
-    <li><a class="nav-link" href="#">Stay here</a></li>
+    <li><a class="nav-link" href="#">Another link</a></li>
+    <li><a class="nav-link" href="#">Your link</a></li>
   </ul>
 </nav></xmp></pre>
 
-<h2>Side Navbar Replacer</h2>
-
-<ul>
-  <li>This is a small navbar that appears replacing the main navbar, when the breaking point goes lower than the specified value.</li>
-  <li>It always has the following classes: <strong>navbar navbar-side-replacer-{BREAKING-POINT}</strong>, where BREAKING-POINT is <strong>sm, md, lg, xl</strong>.</li>
-  <li>It should have a <strong>toggler button</strong> for your main side navbar.</li>
-</ul>
-
-<h3>Sample Sidenavbar replacer</h3>
-<pre class="prettyprint"><xmp>
-  <a class="navbar-brand" href="#">
-    <span>YOUR_TITLE</span>
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sideNavbar"
-    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-</nav></xmp></pre>
 
 <h2>More info</h2>
 
 <ul>
-  <li>Use the class <strong>m-navbar-side-left-{BREAK-POINT}</strong>, , where BREAKING-POINT is <strong>sm, md, lg, xl</strong>, to define a margin between your main content, while the side navbar is visible.</li>
+  <li>Use the class <strong>m-navbar-side-{SIDE}-{BREAK-POINT}</strong>, where <strong>SIDE is left or right</strong> and BREAKING-POINT is <strong>sm, md, lg, xl</strong>, to define a margin between your main content, while the side navbar is visible.</li>
   <li>Side navbars are fully compatible with Bootstrap color utilities and base navbars.</li>
 </ul>
 
 <h3>General structure sample</h3>
 <pre class="prettyprint"><xmp><body>
   <!-- Side navbar -->  
-  <nav class="navbar navbar-side navbar-side-left navbar-side-expand-lg collapse">...</nav>
-
-  <!-- Replacer -->  
-  <nav class="navbar sticky-top navbar-side-replacer-lg">...</nav>
-  
+  <nav class="navbar navbar-side navbar-side-left navbar-side-lg collapse">...</nav>
+    
   <!-- Your main content -->
   <div class="m-navbar-side-left-lg">
     <div class="container">
