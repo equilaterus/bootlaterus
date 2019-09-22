@@ -7741,27 +7741,24 @@ h1, h2, h3, h4, h5, h6,
     .collapsing:not(.navbar-side) {
       transition: none; } }
 
-.navbar-side {
+.navbar-side, .navbar-side .navbar-nav {
   transition: all 0.25s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
-    .navbar-side {
+    .navbar-side, .navbar-side .navbar-nav {
       transition: none; } }
 
-.navbar-side-left.collapse:not(.show) {
-  transform: translateX(-100%); }
+.navbar-side.collapse:not(.show) {
+  height: auto; }
+  .navbar-side.collapse:not(.show) .navbar-nav {
+    display: none; }
 
 .navbar-side-left.collapsing {
-  transform: translateX(-100%); }
-
-.navbar-side-right.collapse:not(.show) {
-  transform: translateX(100%); }
-
-.navbar-side-right.collapsing {
-  transform: translateX(100%); }
+  overflow: hidden; }
 
 .navbar-side {
-  height: 100vh !important;
-  width: 250px;
+  width: 100%;
+  min-height: 50px;
+  max-height: 100vh;
   padding: 0;
   position: fixed !important;
   flex-direction: column;
@@ -7771,14 +7768,21 @@ h1, h2, h3, h4, h5, h6,
   justify-content: flex-start;
   transform: translateX(0);
   z-index: 900; }
+  .navbar-side .navbar-toggler {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem; }
   .navbar-side-left {
     left: 0; }
   .navbar-side-right {
     right: 0; }
-  .navbar-side > .navbar-brand {
+  .navbar-side > .navbar-brand-container {
     width: 100%;
-    padding: 0.75rem 0.5rem 0.75rem 0.5rem;
+    padding: 0.75rem;
     margin-right: 0; }
+    .navbar-side > .navbar-brand-container > .navbar-brand {
+      padding: 0;
+      margin: 0; }
   .navbar-side > .navbar-nav {
     width: 100%;
     display: block; }
@@ -7788,40 +7792,72 @@ h1, h2, h3, h4, h5, h6,
     width: 100%;
     padding: 5px 0 5px 0;
     margin-top: auto; }
+  .navbar-side .responsive-hide {
+    display: none; }
 
 @media (min-width: 576px) {
-  .navbar-side-expand-sm {
+  .navbar-side-sm {
+    width: 250px !important;
     height: 100vh !important;
     transform: translateX(0) !important;
-    display: flex !important;
-    top: 0; } }
+    display: flex !important; }
+    .navbar-side-sm .navbar-nav {
+      display: flex !important;
+      transform: translateX(0) !important; }
+    .navbar-side-sm .responsive-hide {
+      display: flex !important; }
+    .navbar-side-sm .responsive-show {
+      display: none !important; }
+    .navbar-side-sm .navbar-toggler {
+      display: none; } }
 
 @media (min-width: 768px) {
-  .navbar-side-expand-md {
+  .navbar-side-md {
+    width: 250px !important;
     height: 100vh !important;
     transform: translateX(0) !important;
-    display: flex !important;
-    top: 0; } }
+    display: flex !important; }
+    .navbar-side-md .navbar-nav {
+      display: flex !important;
+      transform: translateX(0) !important; }
+    .navbar-side-md .responsive-hide {
+      display: flex !important; }
+    .navbar-side-md .responsive-show {
+      display: none !important; }
+    .navbar-side-md .navbar-toggler {
+      display: none; } }
 
 @media (min-width: 992px) {
-  .navbar-side-expand-lg {
+  .navbar-side-lg {
+    width: 250px !important;
     height: 100vh !important;
     transform: translateX(0) !important;
-    display: flex !important;
-    top: 0; } }
+    display: flex !important; }
+    .navbar-side-lg .navbar-nav {
+      display: flex !important;
+      transform: translateX(0) !important; }
+    .navbar-side-lg .responsive-hide {
+      display: flex !important; }
+    .navbar-side-lg .responsive-show {
+      display: none !important; }
+    .navbar-side-lg .navbar-toggler {
+      display: none; } }
 
 @media (min-width: 1200px) {
-  .navbar-side-expand-xl {
+  .navbar-side-xl {
+    width: 250px !important;
     height: 100vh !important;
     transform: translateX(0) !important;
-    display: flex !important;
-    top: 0; } }
-
-.navbar-side-expand {
-  height: 100vh !important;
-  transform: translateX(0) !important;
-  display: flex !important;
-  top: 0; }
+    display: flex !important; }
+    .navbar-side-xl .navbar-nav {
+      display: flex !important;
+      transform: translateX(0) !important; }
+    .navbar-side-xl .responsive-hide {
+      display: flex !important; }
+    .navbar-side-xl .responsive-show {
+      display: none !important; }
+    .navbar-side-xl .navbar-toggler {
+      display: none; } }
 
 @media (min-width: 576px) {
   .navbar-side-replacer-sm {

@@ -24,34 +24,25 @@
 
 </head>
 
-<body  data-spy="scroll" data-target="#sideNavbar" data-offset="20">
-  <!-- Define your side navbar replacer for small screens (lower than -lg in this case) -->  
-<nav class="navbar sticky-top navbar-side-replacer-lg navbar-dark bg-dark-alpha-2 navbar-default-height">
-  <div class="container">
+<body>
+  <nav class="navbar navbar-side navbar-side-left navbar-side-lg navbar-dark bg-dark-alpha-2 collapse" id="sideNavbar">
+  <div class="navbar-brand-container bg-dark-alpha-1">
     <a class="navbar-brand" href="index.html">
-      <img src="content/perito.svg" style="max-width: 35px; top: -2px" />
-      <span style="font-family: 'Pacifico'; margin-left: 5px; position: relative; top: 3px;">Bootlaterus</span>
+      <img src="content/perito.svg" style="max-width: 30px;" />
+      <span class="position-relative" style="font-family: 'Pacifico'; margin-left: 5px; top: 3px;">Bootlaterus</span>
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sideNavbar"
-        aria-controls="sideNavbar" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
   </div>
-</nav>
-
-<!-- Define your side navbar with a breaking point (-lg in this case) -->
-<nav class="navbar navbar-side navbar-side-left navbar-side-expand-lg navbar-dark bg-dark-alpha-2 collapse" id="sideNavbar">
-  <a class="navbar-brand d-none d-lg-flex d-xl-flex bg-dark-alpha-1" href="index.html">
-    <img src="content/perito.svg" style="max-width: 30px;" />
-    <span style="font-family: 'Pacifico'; margin-left: 10px">Bootlaterus</span>
-  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sideNavbar"
+      aria-controls="sideNavbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
   <ul class="navbar-nav">
-    <li><a class="nav-link" href="#quickstart">Quickstart</a></li>
-    <li><a class="nav-link" href="#gradients">Gradients</a></li>
-    <li><a class="nav-link" href="#sidenavbars">Side Navbars</a></li>
-    <li><a class="nav-link" href="#carousel">Extended Carousel</a></li>
-    <li><a class="nav-link" href="#syntax-hl">Syntax HL</a></li>
-    <li><a class="nav-link" href="#misc">Misc</a></li>
+    <li><a data-toggle="collapse" data-target=".navbar.show" class="nav-link" href="#quickstart">Quickstart</a></li>
+    <li><a data-toggle="collapse" data-target=".navbar.show" class="nav-link" href="#gradients">Gradients</a></li>
+    <li><a data-toggle="collapse" data-target=".navbar.show" class="nav-link" href="#sidenavbars">Side Navbars</a></li>
+    <li><a data-toggle="collapse" data-target=".navbar.show" class="nav-link" href="#carousel">Extended Carousel</a></li>
+    <li><a data-toggle="collapse" data-target=".navbar.show" class="nav-link" href="#syntax-hl">Syntax HL</a></li>
+    <li><a data-toggle="collapse" data-target=".navbar.show" class="nav-link" href="#misc">Misc</a></li>
   </ul>
 </nav>
 
@@ -78,7 +69,7 @@
     <div class="bg-white">
     <div class="container py-5">
 
-      <h1 id="quickstart" class="mt-5">Quick start</h1>
+      <h1 id="quickstart" class="pt-5">Quick start</h1>
 
 <p class="lead mb-5">Bootlaterus is based on Bootstrap v4 and doesn't require additional JS scripts, so it is fully compatible with technologies like ReactJS, Angular, VueJS or jQuery (and many others). Bootlaterus is friendly for any Bootstrap developer!</p>
 
@@ -134,7 +125,7 @@
 
 For example if you are using Webpack <a href="https://github.com/dacanizares/bootlaterus-react/blob/master/src/App.js" target="_blank">you'll need to include the files</a> as shown in this <a href="https://github.com/dacanizares/bootlaterus-react" target="_blank">ReactJS example</a>.
 
-      <h1 id="gradients" class="mt-5">Gradients</h1>
+      <h1 id="gradients" class="pt-5">Gradients</h1>
 
 <p class="lead mb-5">Bring your website to life by using this beautiful gradients available as color filters and backgrounds.</p>
 
@@ -470,7 +461,7 @@ For example if you are using Webpack <a href="https://github.com/dacanizares/boo
 </div>
 
 
-      <h1 id="sidenavbars" class="mt-5">Side Navbars</h1>
+      <h1 id="sidenavbars" class="pt-5">Side Navbars</h1>
 
 <p class="lead mb-5">Built-in support for responsive Side Navbars, enables to rapidly prototype different layout styles.</p>
 
@@ -482,55 +473,39 @@ For example if you are using Webpack <a href="https://github.com/dacanizares/boo
 <ul>
   <li>This is the main component, it always has the following classes: <strong>navbar navbar-side collapse</strong>. </li>
   <li>According to your desing you'll need to use <strong>navbar-side-left</strong> or <strong>navbar-side-right</strong>, defining a side for your navbar.</li>
-  <li>Finally you should define a breaking point to display or hide your navbar: <strong>navbar-side-expand-{BREAKING-POINT}</strong>, where BREAKING-POINT is <strong>sm, md, lg, xl</strong>.</li>
+  <li>You should define a breaking point to display or hide your navbar: <strong>navbar-side-{BREAKING-POINT}</strong>, where BREAKING-POINT is <strong>sm, md, lg, xl</strong>.</li>
+  <li>It is recommended to wrap your navbar-brand inside a <strong>div</strong> with class <strong>navbar-brand-container</strong>, so you can add a background color to it.</li>
+  <li>You must include a <strong>navbar-toggler</strong> to hide/show the menu.</li>
+  <li>For <strong>SPAs</strong> (Single Page Applications) consider adding the attributes <strong>data-toggle="collapse" data-target=".navbar.show"</strong> to your links if you're using the jQuery default implementation, otherwise you'll need to add a code to handle navbar collapsing.</li>
 </ul>
 
 <h3>Sample Sidenavbar code</h3>
-<pre class="prettyprint"><xmp><nav class="navbar navbar-side navbar-side-left navbar-side-expand-lg navbar-dark bg-dark-alpha-2 collapse" id="sideNavbar">
-  <a class="navbar-brand d-none d-lg-flex d-xl-flex bg-shadow-1" href="#">
-    <span>YOUR_TITLE</span>
-  </a>
+<pre class="prettyprint"><xmp><nav class="navbar navbar-side navbar-side-left navbar-side-lg navbar-dark bg-dark-alpha-2 collapse" id="sideNavbar">
+  <div class="navbar-brand-container bg-dark-alpha-1">
+    <a class="navbar-brand" href="#">
+      <span>YOUR_TITLE</span>
+    </a>
+  </div>
   <ul class="navbar-nav">
     <li><a class="nav-link" href="#">Nowhere</a></li>
-    <li><a class="nav-link" href="#">Another link(?)</a></li>
-    <li><a class="nav-link" href="#">Stay here</a></li>
+    <li><a class="nav-link" href="#">Another link</a></li>
+    <li><a class="nav-link" href="#">Your link</a></li>
   </ul>
 </nav></xmp></pre>
 
-<h2>Side Navbar Replacer</h2>
-
-<ul>
-  <li>This is a small navbar that appears replacing the main navbar, when the breaking point goes lower than the specified value.</li>
-  <li>It always has the following classes: <strong>navbar navbar-side-replacer-{BREAKING-POINT}</strong>, where BREAKING-POINT is <strong>sm, md, lg, xl</strong>.</li>
-  <li>It should have a <strong>toggler button</strong> for your main side navbar.</li>
-</ul>
-
-<h3>Sample Sidenavbar replacer</h3>
-<pre class="prettyprint"><xmp>
-  <a class="navbar-brand" href="#">
-    <span>YOUR_TITLE</span>
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sideNavbar"
-    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-</nav></xmp></pre>
 
 <h2>More info</h2>
 
 <ul>
-  <li>Use the class <strong>m-navbar-side-left-{BREAK-POINT}</strong>, , where BREAKING-POINT is <strong>sm, md, lg, xl</strong>, to define a margin between your main content, while the side navbar is visible.</li>
+  <li>Use the class <strong>m-navbar-side-{SIDE}-{BREAK-POINT}</strong>, where <strong>SIDE is left or right</strong> and BREAKING-POINT is <strong>sm, md, lg, xl</strong>, to define a margin between your main content, while the side navbar is visible.</li>
   <li>Side navbars are fully compatible with Bootstrap color utilities and base navbars.</li>
 </ul>
 
 <h3>General structure sample</h3>
 <pre class="prettyprint"><xmp><body>
   <!-- Side navbar -->  
-  <nav class="navbar navbar-side navbar-side-left navbar-side-expand-lg collapse">...</nav>
-
-  <!-- Replacer -->  
-  <nav class="navbar sticky-top navbar-side-replacer-lg">...</nav>
-  
+  <nav class="navbar navbar-side navbar-side-left navbar-side-lg collapse">...</nav>
+    
   <!-- Your main content -->
   <div class="m-navbar-side-left-lg">
     <div class="container">
@@ -543,7 +518,7 @@ For example if you are using Webpack <a href="https://github.com/dacanizares/boo
 
 For a complete sample please <a href="https://jsfiddle.net/dacanizares/vLew478t/22/" target="_blank">check this JSFiddle</a>.
 
-      <h1 id="carousel" class="mt-5">Extended Carousel</h1>
+      <h1 id="carousel" class="pt-5">Extended Carousel</h1>
 
 <div class="alert alert-info">
     Easy and Fast! It works great with images of different sizes using a predefined aspect ratio.
@@ -643,7 +618,7 @@ For a complete sample please <a href="https://jsfiddle.net/dacanizares/vLew478t/
   </a>
 </div></xmp></pre>
 
-      <h1 id="syntax-hl" class="mt-5">Syntax HL</h1>
+      <h1 id="syntax-hl" class="pt-5">Syntax HL</h1>
 
 <p class="lead mb-5">By default Bootlaterus supports <strong>Rouge</strong> and <strong>Prettify</strong> as Syntax Highlighters. First one comes by default with <strong>Github Pages</strong> and second one is really easy to use with any website.</p>
 
@@ -717,7 +692,7 @@ public class Foo
 
 
 
-      <h1 id="misc" class="mt-5">Misc</h1>
+      <h1 id="misc" class="pt-5">Misc</h1>
 
 <p class="lead mb-5">Use <strong>Bootlaterus Utilities</strong> and you will be able to create a unique UI writting less CSS than ever.</p>
 
