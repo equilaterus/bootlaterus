@@ -331,9 +331,11 @@ ASALocalRun/
 
 # Custom ignores
 # do not ignore dist/
-dist/samples/
-dist/index.html
 prebuild/
 .git/
 util/
 package-lock.json
+src/html
+dist/content/
+dist/**/*.html
+dist/scripts
