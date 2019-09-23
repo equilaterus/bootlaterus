@@ -40,6 +40,7 @@
     "equilaterus",
     "themes"
   ],
+  "main": "dist/css/bootlaterus-cfonts.min.css",
   "author": "equilaterus team",
   "license": "MIT",
   "bugs": {
