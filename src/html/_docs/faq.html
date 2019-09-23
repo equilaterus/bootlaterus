@@ -1,0 +1,36 @@
+<h1 id="faq" class="pt-5">FAQ</h1>
+
+<h2>How to build this package from the source code?</h2>
+
+<p>See instructions in <a href="https://github.com/equilaterus/bootlaterus/wiki/How-to-build-this-package%3F" target="_blank">our repo</a>.</p>
+
+<h2>Where is the version change log?</h2>
+
+<p>See instructions <a href="https://github.com/equilaterus/bootlaterus/wiki/Version-change-log" target="_blank">our repo</a>.</p>
+
+<h2>How to customize the fonts?</h2>
+
+To use custom fonts include a  <a href="#themes">Bootlaterus Theme</a> that DOES NOT contain already modified fonts.
+
+<ul>
+  <li>Create your own CSS file.</li>
+  <li>Add the following snippet:
+
+    <pre class="prettyprint">@import url('https://fonts.googleapis.com/css?family=Prompt');
+
+:root {
+  --font-family-sans-serif: "Prompt", "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  --font-family-monospace: "Prompt", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important; 
+}
+
+.navbar, h1, h2, h3, h4, h5, h6, .h-font {
+  font-family: 'Prompt' !important;
+  font-weight: bold;
+  text-transform: uppercase;
+}</pre>
+  </li>
+  <li>Customize with your own fonts and styles (Note: for font families replace "Prompt" and left fallback fonts).</li>
+  <li>Include the CSS file in your website.</li>
+</ul>
+
+
