@@ -17,7 +17,7 @@ Build a great responsive UI with a **Compatible** and **Easy to use** *Bootstrap
 * [Custom CSS components](https://equilaterus.github.io/bootlaterus/docs.html) to create *Side Navbars*, *Extended Carousels*, *Backgrounds*, *Beautiful Gradients* and many *Utilities* that make even easier to use *Bootstrap*. 
 * Bootlaterus doesn't require additional JS files to work, so it is **100% compatible** with *Bootstrap Default jQuery implementation* but also with ports like [React-Bootstrap](https://react-bootstrap.github.io/), [ReactStrap](https://reactstrap.github.io/), [ng-bootstrap](https://ng-bootstrap.github.io/#/home), [bootstrap+vuejs](https://bootstrap-vue.js.org/) and almost any JS implementation of Bootstrap Components.
 * Multiple themes including color and font variations. [See all available variations here](https://equilaterus.github.io/bootlaterus/docs.html#themes)
-* All our build scripts and infrastructure code is open source so you can use it to create your own themes.
+* All our build scripts are open source so you can use them to create your own themes.
 
 
 ## Builds
