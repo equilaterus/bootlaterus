@@ -1,7 +1,7 @@
 {
   "name": "bootlaterus",
   "version": "0.2.0",
-  "description": "A Compatible and Easy to use Bootstrap Superset",
+  "description": "The Compatible and Friendly use Bootstrap Superset",
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.5.5",

@@ -8,7 +8,7 @@
 
 Bootlaterus **includes Bootstrap v4** and has **extended components** that don't require additional Javascript to work.
 
-Build a great responsive UI with a **Compatible** and **Easy to use** *Bootstrap Superset*.
+Build a great responsive UI with **Bootlaterus**, the **Compatible** and **Friendly** *Bootstrap Superset*.
 
 
 ## Features
