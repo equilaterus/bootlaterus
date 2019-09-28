@@ -1,0 +1,4 @@
+pre.prettyprint {
+  @include highlight-block();
+  border: 0px !important;
+}

@@ -1,0 +1,14 @@
+div.highlight {
+  @include highlight-block();
+}
+
+pre.highlight {
+  margin-bottom: 0;
+}
+
+pre, code, xmp {
+  font-family: 'Consolas','Bitstream Vera Sans Mono','Courier', monospace;
+}
+
+@import "rouge";
+@import "prettify";

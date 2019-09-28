@@ -6,6 +6,12 @@ module.exports = async function (grunt) {
     const utilities = require('./utilities');    
     const bootlaterusFiles = utilities.getBootlaterusFiles('./src/scss', './prebuild/scss', '_themes', '_main.scss');
     const distFiles = utilities.getBootlaterusDistFiles('./dist/css',bootlaterusFiles);
+
+    // Create mappings for html files
+    const srcHtmlPath = './src/html';
+    const htmlFiles = utilities.getFilenamesFromDirectory(srcHtmlPath, '.html')
+              .concat(utilities.getFilenamesFromDirectory(`${srcHtmlPath}/samples`, '.html'));
+    const htmlDistFiles = utilities.getHtmlDistFiles(htmlFiles, srcHtmlPath, './dist');    
     
     grunt.initConfig({
 
@@ -24,9 +30,29 @@ module.exports = async function (grunt) {
                         );
                   }
                 },
-                src: ['src/html/samples/util.js'],
-                dest: 'dist/samples/util.js'
+                files:[
+                    {
+                      expand: true,
+                      cwd: 'src/html',
+                      src: ['**/*.js'],
+                      dest: 'prebuild/'
+                    }
+                ]
                 
+            },
+            html: {
+                options: {
+                  process: function(src, filepath) {
+                    const tags = utilities.getRenderTags(src);
+                    tags.forEach(tag => {
+                      const fragmentFile = utilities.getSrcFromTag(tag);
+                      const fragmentHtml = utilities.getFile(srcHtmlPath, fragmentFile);
+                      src = src.replace(new RegExp(tag, 'g'), fragmentHtml);
+                    });
+                    return src;
+                  }
+                },
+                files: htmlDistFiles
             }
         },
 
@@ -37,12 +63,29 @@ module.exports = async function (grunt) {
                 ],
             },
             main: {
-                files: [                   
-                    { expand: true, cwd: 'src/html', src: '**/*.html', dest: 'dist/' },
+                files: [
+                    { expand: true, cwd: 'src/html/content', src: '**/*.*', dest: 'dist/content' },
                     { expand: true, src: 'LICENSE', dest: 'dist/' },
                     { expand: true, cwd: 'node_modules/bootstrap/', src: 'LICENSE', dest: 'dist/', rename: () => ('dist/LICENSE-BOOTSTRAP') }
                 ], 
             },
+        },
+
+        babel: {
+            options: {
+              sourceMap: true,
+              presets: ['@babel/preset-env']
+            },
+            dist: {
+              files:[
+                  {
+                    expand: true,
+                    cwd: 'prebuild/',
+                    src: ['**/*.js'],
+                    dest: 'dist/'
+                    }
+                ]
+            }
         },
 
         sass: {
@@ -69,40 +112,46 @@ module.exports = async function (grunt) {
             }
         },
 
-        watch: {
-            css: {
-                files: 'src/scss/**/*.scss',
-                tasks: ['concat:sass', 'copy:prebuild', 'sass', 'cssmin'],
-                options: {
-                    livereload: true,
-                },
-            },
-            html: {
-                files: 'src/html/**/*.html',
-                tasks: ['copy'],
-                options: {
-                    livereload: true,
-                },
-            },
-            js: {
-              files: 'src/html/**/*.js',
-              tasks: ['concat'],
-              options: {
-                  livereload: true,
-              }
+        uglify: {
+            jsfiles: {
+                files: [{
+                    expand: true,
+                    src: ['dist/**/*.js', '!dist/**/*.min.js'],
+                    dest: '.',
+                    cwd: '.',
+                    rename: function (dst, src) {
+                       return dst + '/' + src.replace('.js', '.min.js');
+                    }
+                }]
             }
         },
 
-        browserSync: {
+        watch: {
+            scss: {
+                files: 'src/scss/**/*.scss',
+                tasks: ['concat:sass', 'copy:prebuild', 'sass', 'cssmin']
+            },
+            html: {
+                files: 'src/html/**/*.html',
+                tasks: ['concat:html', 'copy']
+            },
+            js: {
+              files: 'src/html/**/*.js',
+              tasks: ['concat', 'babel', 'uglify']
+            }
+        },
+
+        browserSync: {          
             bsFiles: {
                 src: [
-                    'dist/**/*.css',
+                    'dist/**/*.min.css',
                     'dist/**/*.html',
                     'dist/**/*.js',
                 ]
             },
             options: {
                 watchTask: true,
+                injectChanges: false,
                 server: {
                     baseDir: "./dist"
                 }
@@ -114,8 +163,10 @@ module.exports = async function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-babel');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
-    grunt.registerTask('default', ['clean', 'concat:sass', 'copy:prebuild', 'copy', 'concat:jsutils', 'sass', 'cssmin', 'browserSync', 'watch']);
-    grunt.registerTask('build', ['clean', 'concat:sass', 'copy:prebuild', 'copy', 'concat:jsutils', 'sass', 'cssmin']);
+    grunt.registerTask('default', ['clean', 'concat:sass', 'concat:html', 'copy:prebuild', 'copy', 'concat:jsutils', 'sass', 'cssmin', 'babel', 'uglify', 'browserSync', 'watch']);
+    grunt.registerTask('build', ['clean', 'concat:sass', 'concat:html', 'copy:prebuild', 'copy', 'concat:jsutils', 'sass', 'cssmin', 'babel', 'uglify']);
 }

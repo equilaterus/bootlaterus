@@ -5,23 +5,21 @@
 @import "bootstrap";
 
 // Mixins
-@import "mixins/code-hl";
-@import "mixins/aspect-ratio";
+@import "mixins";
 
 // Overrides
 @import "overrides";
 
 // Utilities
-@import "utilities/aspect-ratio";
+@import "utilities";
 
 // Custom components
 @import "custom-type";
 @import "custom-transitions";
 @import "navbar-side";
-@import "background";
 @import "interactable";
 @import "carousel-extended";
 @import "dropdown-extended";
 
-// Linguist
-@import "syntax-hl/rouge";
+// Syntax HL
+@import "syntax-hl/syntax-hl";

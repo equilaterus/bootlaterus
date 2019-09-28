@@ -1,0 +1,63 @@
+//
+// Color maps
+//
+
+$colors: (
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+);
+
+// Primary theme colors
+// They're completely usable between all components
+$theme-colors: (
+  "primary":            $primary,
+  "secondary":          $secondary,
+  "success":            $success,
+  "info":               $info,
+  "warning":            $warning,
+  "danger":             $danger,
+  "light":              $light,
+  "dark":               $dark,
+  "primary-alt":        $primary-alt,
+  "secondary-alt":      $secondary-alt
+);
+
+// Other colors
+// They generate additional background and text colors
+// but cannot be used within all components (as buttons).
+// This reduces output file size.
+$other-colors: map-merge(
+  (
+    "light-alpha-1":      $light-alpha-1,
+    "light-alpha-2":      $light-alpha-2,
+    "light-alpha-3":      $light-alpha-3,
+    "dark-alpha-1":       $dark-alpha-1,
+    "dark-alpha-2":       $dark-alpha-2,
+    "dark-alpha-3":       $dark-alpha-3,
+    "shadow-1":           $shadow-1,
+    "shadow-2":           $shadow-2,
+    "shadow-3":           $shadow-3
+  ),
+  $colors
+);
+
+$custom-gradients: (
+  "indigo-teal":          ($indigo, $teal), 
+  "pink-blue":            ($pink, $blue),
+  "red-orange":           ($red, $orange),
+  "cyan-blue":            ($cyan, $blue),
+  "green-yellow":         ($green, $yellow),
+  "green-teal":           ($green, $teal)
+);
+

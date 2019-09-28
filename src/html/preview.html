@@ -3,37 +3,46 @@
 
 <head>
   <title>Bootlaterus</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Custom built theme - already includes Bootstrap 4 -->
-  <link rel="stylesheet" href="../css/bootlaterus-cfonts.min.css">
+  <Render src="_layout/head.html" />
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="../index.html">Bootlaterus</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <Render src="_layout/navbar.html" />
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto" >
-            <li class="nav-item active">
-                <a class="nav-link" href="../index.html">Back to home</a>
-            </li>
-        </ul>
+  <Render src="_layout/fixed-bg.html" />
 
-        <ul class="navbar-nav ml-auto" id="theme-selector">
-          </ul>
+  <div class="background background-fixed"
+    style="background-image: url(https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);">
+    <div class="bg-cf-pink-blue min-vh-75 ">
+      <div class="hv-center text-white text-center text-shadow">
+        <img class="mb-3" src="content/perito-shadow.svg" style="width: 140px;" />
+        <p class="h1 font-weight-lighter mb-3" style="font-family: 'Pacifico'; font-size: 35px">Bootlaterus</p>
+        <p class="h-font h2-font-size font-weight-lighter">Preview</p>
       </div>
     </div>
-  </nav>
+  </div>
 
-  <div class="container mt-5">
+  <div class="bg-white py-5">
+
+  <div class="container">
+    <div class="alert alert-info">
+      This is a general preview of the components <strong>look'n'feel</strong>. It may not include every single element. For more information please check our <a href="docs.html">docs</a>.
+    </div>
+
+    <h1>Welcome!</h1>
+
+    <div class="mb-3">
+      <div class="background" 
+          style="background-position: center 25%; background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+        <div class="bg-cf-indigo-teal min-vh-50">      
+          <div class="hv-center text-white text-center text-shadow">
+            <p class="h1 font-weight-lighter">Explore &middot; Design &middot; Create</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <h1>Input group</h1>
     <h3>Basic example</h3>
     <div class="input-group mb-3">
@@ -2053,7 +2062,7 @@
         <div class="card bg-primary text-white text-center p-3">
           <blockquote class="blockquote mb-0">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-            <footer class="blockquote-footer">
+            <footer class="blockquote-footer text-white">
               <small>
                 Someone famous in <cite title="Source Title">Source Title</cite>
               </small>
@@ -2091,15 +2100,12 @@
           </div>
         </div>
       </div>
-
+  </div>
 
   </div>
 
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="util.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <Render src="_layout/footer.html" />
+  <Render src="_layout/scripts.html" />
 </body>
 
 </html>

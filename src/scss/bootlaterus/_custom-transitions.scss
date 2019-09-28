@@ -33,26 +33,19 @@
 //
 
 .navbar-side {
+  &, & .navbar-nav{
     @include transition($navbar-side-transition);
+  }
 }
 
-.navbar-side-left.collapse {
+.navbar-side.collapse {
     &:not(.show) {
-        transform: translateX(-100%);
+      height: auto;
+      .navbar-nav {
+        display: none;
+      }
     }
 }
-
     .navbar-side-left.collapsing {
-        transform: translateX(-100%);
-    }
-
-    
-.navbar-side-right.collapse {
-    &:not(.show) {
-        transform: translateX(100%);
-    }
-}
-
-    .navbar-side-right.collapsing {
-        transform: translateX(100%);
+      overflow: hidden;
     }

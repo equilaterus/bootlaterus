@@ -1,0 +1,346 @@
+<h1 id="misc" class="pt-5">Misc</h1>
+
+<p class="lead mb-5">Use <strong>Bootlaterus Utilities</strong> and you will be able to create a unique UI writting less CSS than ever.</p>
+
+<h2>Aspect Ratio Utilities</h2>
+
+<div class="row">
+  <div class="col-sm-8">
+    <p>We've added some CSS Classes to define Aspect Ratio (<strong>.ar-</strong> classes) of a given element.</p>
+
+    <ul>
+      <li>
+      <strong>.ar-16-10</strong> (16/10 aspect ratio)</li>
+      <li>
+      <strong>.ar-16-9</strong> (16/9 aspect ratio)</li>
+      <li>
+      <strong>.ar-4-3</strong> (4/3 aspect ratio)</li>
+      <li>
+      <strong>.ar-3-2</strong> (3/2 aspect ratio)</li>
+      <li>
+      <strong>.ar-8-5</strong> (8/5 aspect ratio)</li>
+    </ul>
+
+    <p><strong>Note:</strong> You call still use Bootstrap <a href="https://getbootstrap.com/docs/4.0/utilities/embed/" target="_blank">Embeds</a>, <strong>.ar</strong> classes are a complement not an override.</p>
+
+    <pre class="prettyprint"><xmp><div class="bg-cf-pink-blue ar-4-3"></div>
+<div class="bg-cf-pink-blue ar-16-10"></div>
+</xmp></pre>
+  </div>
+  <div class="col-sm-4">
+    <div class="bg-cf-pink-blue ar-4-3"></div>
+  </div>
+</div>
+
+<h2>Positioning utils</h2>
+
+<div class="row">
+  <div class="col-sm-8">
+    <p>Safely define the location of your elements using this utilities.</p>
+
+    <ul>
+      <li><strong>.h-center</strong>: absolutely centers an element horizontally to its parent.</li>
+      <li><strong>.v-center</strong>: absolutely centers an element vertically to its parent.</li>
+      <li><strong>.hv-center</strong>: absolutely centers an element to its parent.</li>      
+    </ul>
+
+    <p>Use the following ones in conjunction with <strong>.position-relative</strong> and <strong>.position-absolute</strong> classes.</p>
+    <ul>
+      <li><strong>.to-bottom</strong>: sends an element to bottom.</li>
+      <li><strong>.to-top</strong>: sends an element to top.</li>
+      <li><strong>.to-left</strong>: sends an element to left side.</li>
+      <li><strong>.to-right</strong>: sends an element to right side.</li>
+    </ul>
+
+    <pre class="prettyprint"><xmp><div class="bg-pink-blue ar-4-3 text-white text-shadow position-relative">
+  <p class="hv-center">I'm centered!</p>  
+  <p class="to-bottom to-right position-absolute">Bottom Right!</p>
+</div></xmp></pre>
+  </div>
+  <div class="col-sm-4">
+    <div class="bg-pink-blue ar-4-3 text-white text-shadow position-relative">
+      <p class="hv-center">I'm centered!</p>  
+      <p class="to-bottom to-right position-absolute">Bottom Right! -> &nbsp;</p>
+    </div>
+  </div>
+</div>
+
+
+<h2>Sizing utils</h2>
+
+<div class="row">
+  <div class="col-sm-8">
+      <p>Define the height of your elements, relatively to the viewport height.</p>
+
+      <ul>
+        <li><strong>.vh-100</strong>: height set to 100% of the viewport height.</li>
+        <li><strong>.vh-75</strong>: height set to 75% of the viewport height.</li>
+        <li><strong>.vh-50</strong>: height set to 50% of the viewport height.</li>
+        <li><strong>.vh-25</strong>: height set to 25% of the viewport height.</li>
+        <li><strong>.min-vh-100</strong>: min-height set to 100% of the viewport height.</li>
+        <li><strong>.min-vh-75</strong>: min-height set to 75% of the viewport height.</li>
+        <li><strong>.min-vh-50</strong>: min-height set to 50% of the viewport height.</li>
+        <li><strong>.min-vh-25</strong>: min-height set to 25% of the viewport height.</li>
+      </ul>
+            
+      <pre class="prettyprint"><xmp><div class="bg-cf-green-teal text-white text-shadow min-vh-25">
+    <p class="p-3">I'm at least 25% of you viewport</p>
+  </div></xmp></pre>
+  </div>
+  <div class="col-sm-4">
+    <div class="bg-cf-green-teal text-white text-shadow min-vh-25">
+      <p class="p-3">I'm at least 25% of you viewport</p>
+    </div>
+  </div>
+</div>
+
+<h2>Backgrounds</h2>
+
+<p>Add a beautiful background to your website.</p>
+
+<ul>
+  <li><strong>.background</strong>: adding this class to any div that will contain a background-image will set-up basics to get a good look'n'feel within Bootlaterus themes.</li>
+  <li><strong>.background .background-fixed</strong>: this combination will create a background with background image as a fixed attachment.</li>
+  <li><strong>.background .background-fixed-full</strong>: this one will create a full-screen background with fixed position. <i>For example, the Eiffel Tower image that appears at the top and the bottom of this docs is using this configuration.</i></li>
+</ul>
+
+<p><strong>Note:</strong> Fixed backgrounds may look like a normal background due to performance prioritization for mobile web browsers.</p>
+
+<div class="background min-vh-50" style="background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+  <p class="hv-center h-font h3-font-size text-shadow text-white">.background</p>  
+</div>
+
+<pre class="prettyprint"><xmp><div class="background min-vh-50" style="background-image: url(IMAGE_URL);">
+  <p class="hv-center h-font h3-font-size text-shadow text-white">.background</p>  
+</div></xmp></pre>
+
+
+<div class="background background-fixed min-vh-50" style="background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
+  <p class="hv-center h-font h3-font-size text-shadow text-white">.background-fixed</p>  
+</div>
+
+<pre class="prettyprint"><xmp><div class="background background-fixed min-vh-50" style="background-image: url(IMAGE_URL);">
+  <p class="hv-center h-font h3-font-size text-shadow text-white">.background .background-fixed</p>  
+</div></xmp></pre>
+
+<h2>Fonts</h2>
+
+<p>Utilities to customize the fonts used on your components.</p>
+
+<h3>.h-border-bottom</h3>
+<div class="row">  
+  <div class="col-sm-6">
+    Adds a undeline and a margin to any text.
+
+    <br/><br/>
+<pre class="prettyprint"><xmp><p class="h-border-bottom">I'm a <i>p</i></p>
+<span class="h-border-bottom">I'm a <i>span</i></span>
+<h4 class="h-border-bottom">I'm an <i>h4</i></h4></xmp></pre>
+  </div>
+  <div class="col-sm-6">
+      <p class="h-border-bottom">I'm a <i>p</i></p>
+      <span class="h-border-bottom">I'm a <i>span</i></span>
+      <h4 class="h-border-bottom">I'm an <i>h4</i></h4>
+  </div>
+</div>
+
+<h3>.h{#}-font-size</h3>
+<div class="row">
+    <div class="col-sm-6">
+      <i>.h1-font-size, .h2-font-size, .h3-font-size, .h4-font-size, .h5-font-size and .h6-font-size</i> will change your font size to the respective header size.
+
+      <br/><br/>
+<pre class="prettyprint"><xmp><p class="h1-font-size">h1 size</p>
+<p class="h2-font-size">h2 size</p>
+<p class="h3-font-size">h3 size</p>
+<p class="h4-font-size">h4 size</p>
+<p class="h5-font-size">h5 size</p>
+<p class="h6-font-size">h6 size</p></xmp></pre>
+    </div>
+    <div class="col-sm-6">
+      <br>
+      <p class="h1-font-size">h1 size</p>
+      <p class="h2-font-size">h2 size</p>
+      <p class="h3-font-size">h3 size</p>
+      <p class="h4-font-size">h4 size</p>
+      <p class="h5-font-size">h5 size</p>
+      <p class="h6-font-size">h6 size</p>
+    </div>
+  </div>
+
+<h3>.text-small</h3>
+
+<div class="row">
+  <div class="col-sm-6">
+    Make your texts look small with <i>.text-small</i>. You can use <i>.text-small-contents</i> to apply the style for all the childs of a given element.
+
+<pre class="prettyprint"><xmp><p>Normal text.</p>
+<p class="text-small">Text small.</p>
+<div class="text-small-contents">
+  <p>Everything inside this div will be text-small</p>
+  <span>Everything inside this div will be text-small</span>
+  <h1>Even a h1</h1>
+</div></xmp></pre>
+  </div>
+  <div class="col-sm-6">
+    <p>Normal text.</p>
+    <p class="text-small">Text small.</p>
+    <div class="text-small-contents">
+      <p>Everything inside this div will be text-small</p>
+      <span>Everything inside this div will be text-small</span>
+      <h1>Even an h1</h1>
+    </div>
+  </div>
+</div>
+
+<h3>.text-shadow</h3>
+
+<div class="row">
+  <div class="col-sm-6">
+    <p>Add a beautiful shadow to your fonts.</p>
+<pre class="prettyprint"><xmp><p class="text-shadow">Look me!</p>
+<div class="bg-blue text-white">
+  <p class="text-shadow">Look me!</p>
+</div></xmp></pre>
+
+  </div>
+  <div class="col-sm-6 text-center">
+    <p class="text-shadow">Look me!</p>
+    <div class="bg-blue text-white">
+      <p class="text-shadow">Look me!</p>
+    </div>
+  </div>
+</div>
+
+<h2>Interactables</h2>
+
+<div class="row">
+  <div class="col-sm-8">
+    <p>Cards and other UI components are easier to implement as interactive elements.</p>
+
+    <ul>
+      <li>
+      <strong>.interactable</strong> class will add hover shadows and transitions.</li>
+      <li>
+      <strong>.hover-animate-cf</strong> will animate color filter gradients (<em>.cf .cf-{GRADIENT}</em>).</li>
+      <li>We still recommend:
+      <ul>
+      <li>When cards have a button-link: Use <a href="https://getbootstrap.com/docs/4.3/utilities/stretched-link/" rel="nofollow">Stretched Link</a>
+      </li>
+      <li>When link is for the full card: Use <a href="https://getbootstrap.com/docs/4.3/utilities/text/#reset-color" rel="nofollow">Text-reset</a>
+      </li>
+      </ul>
+      </li>
+    </ul>
+
+<pre class="prettyprint"><xmp><div class="card h-100 interactable hover-animate-cf">
+  <a class="text-reset text-decoration-none d-flex flex-column h-100" href="#">
+    <div class="embed-responsive embed-responsive-16by9">
+      <div class="cf cf-red-orange">
+        <img src="YOUR-IMAGE" class="card-img embed-responsive-item" style="object-fit: cover;" />
+      </div>
+    </div>
+    <div class="card-body d-flex flex-column">
+      <p class="card-title h5">Multiple themes</p>
+      <p class="card-text">Bootlaterus includes different theme variations.</p>  
+      <p class="card-text mt-auto"><small class="text-muted">See more...</small></p>
+    </div>
+  </a>
+</div></xmp></pre>
+  </div>
+
+  <div class="col-sm-4">
+
+    <div class="card interactable hover-animate-cf">
+      <a class="text-reset text-decoration-none d-flex flex-column h-100" href="#">
+        <div class="embed-responsive embed-responsive-16by9">
+          <div class="cf cf-red-orange">
+            <img
+              src="https://images.unsplash.com/photo-1564594022418-86b5ede646d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+              class="card-img embed-responsive-item" style="object-fit: cover;" />
+          </div>
+        </div>
+        <div class="card-body d-flex flex-column">
+          <p class="card-title h5">Multiple themes</p>
+          <p class="card-text">Bootlaterus includes different theme variations.</p>  
+          <p class="card-text mt-auto"><small class="text-muted">See more...</small></p>
+        </div>              
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
+<h2>Shadows</h2>
+
+<div class="row">
+  <div class="col-sm-6">
+    <p>Use <strong>.shadow</strong> class to add a <em>box-shadow</em> to your components.</p>
+
+<pre class="prettyprint"><xmp><div class="bg-cf-pink-blue shadow min-vh-25 text-white">
+  <p class="hv-center h-font h2-font-size">I have a shadow</p>
+</div></xmp></pre>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="bg-cf-pink-blue shadow min-vh-25 text-white">
+      <p class="hv-center h-font h2-font-size">I have a shadow</p>
+    </div>
+  </div>
+</div>
+
+<h2>Dark dropdowns</h2>
+
+<p>Add the class <strong>.dropdown-dark</strong> to a dropdown and it will become dark. Compatible with <i>navbar dropdowns</i>.</p>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Normal dropdown
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </div>
+
+    <br/>
+<pre class="prettyprint"><xmp><div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Normal dropdown
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div></xmp></pre>
+  </div>
+  <div class="col-sm-6">
+    <div class="dropdown dropdown-dark">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dark dropdown
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </div>
+
+    <br/>
+<pre class="prettyprint"><xmp><div class="dropdown dropdown-dark">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Normal dropdown
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div></xmp></pre>
+  </div>
+</div>

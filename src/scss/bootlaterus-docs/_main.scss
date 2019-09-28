@@ -1,29 +1,24 @@
 @import "../bootlaterus/_main";
 
 h1 {
-  margin-bottom: 4.0rem;
+  margin-bottom: 2.0rem;
 }
 
 h2, h3, h4, h5, h6,
 .h2, .h3, .h4, .h5, .h6 {
   border-bottom: $headings-bottom-border;
+  margin-top: 1.0rem;
 }
 
 .navbar {
   font-family: $headings-font-family;
 }
 
-.navbar-brand {  
-  display: flex;
-  justify-content: center;
-  img {
-    max-height: 30px;
-  }
-} 
-
 .navbar-left {
   & > .navbar-brand {
     background-color: $black;
+    display: flex;
+    justify-content: center;
   }
 
   .footer-content{ 

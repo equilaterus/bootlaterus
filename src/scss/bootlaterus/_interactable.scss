@@ -2,3 +2,9 @@
   @include box-shadow($interactable-box-shadow);
   @include transition($transition-base);
 }
+
+.hover-animate-cf:hover {
+  .cf:after {
+    background-position: right center;
+  }
+}

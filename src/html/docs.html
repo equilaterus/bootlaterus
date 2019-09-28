@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Bootlaterus Docs</title>
+  <Render src="_layout-docs/docs-head.html" />
+</head>
+
+<body>
+  <Render src="_layout-docs/docs-navbar.html" />
+
+  <Render src="_layout-docs/docs-fixed-bg.html" />
+
+  <!-- Your main container with margin when side bar is visible -->
+  <div class="m-navbar-side-left-lg">
+    <div class="background background-fixed"
+      style="background-image: url(https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);">
+      <div class="bg-cf-pink-blue min-vh-75 ">
+        <div class="hv-center text-white text-center text-shadow">
+          <img class="mb-3" src="content/perito-shadow.svg" style="width: 140px;" />
+          <p class="h1 font-weight-lighter mb-3" style="font-family: 'Pacifico'; font-size: 35px">Bootlaterus</p>
+          <p class="h-font h2-font-size font-weight-lighter">Documentation</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white">
+    <div class="container py-5">
+
+      <Render src="_docs/quickstart.html" />
+      <Render src="_docs/themes.html" />
+      <Render src="_docs/gradients.html" />
+      <Render src="_docs/additional-colors.html" />
+      <Render src="_docs/sidenavbars.html" />
+      <Render src="_docs/carousel.html" />
+      <Render src="_docs/syntax-hl.html" />
+      <Render src="_docs/misc.html" />
+      <Render src="_docs/faq.html" />
+    </div>
+    </div>
+
+    
+    <Render src="_layout/footer.html" />
+  </div>
+  
+  <Render src="_layout-docs/docs-scripts.html" />
+</body>
+
+</html>

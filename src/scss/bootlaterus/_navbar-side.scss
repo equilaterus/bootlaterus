@@ -3,11 +3,11 @@
 // Special side-bar located at the left side of the screen
 
 .navbar-side {
-    height: calc(100vh - #{$navbar-side-replacer-height}) !important;
-    width: $navbar-side-max-width;
+    width: 100%;
+    min-height: 50px;
+    max-height: 100vh;
     padding: 0;  
     position: fixed !important;
-    top: $navbar-side-replacer-height;
     flex-direction: column;
     flex-wrap: nowrap;
     overflow-y: auto;
@@ -15,6 +15,12 @@
     justify-content: flex-start;
     transform: translateX(0);
     z-index: $zindex-sidenavbar;
+
+    .navbar-toggler {
+      position: absolute;
+      top: $navbar-nav-link-padding-x;
+      right: $navbar-nav-link-padding-x;
+    }
 
     &-left {
       left: 0;
@@ -24,10 +30,16 @@
       right: 0;
     }
     
-    & > .navbar-brand {
-        width: 100%;
-        padding: $navbar-nav-link-padding-x;
-    } 
+    & > .navbar-brand-container {
+      width: 100%;
+      padding: $navbar-nav-link-padding-x *1.5;
+      margin-right: 0;
+
+      & > .navbar-brand  {
+        padding: 0;
+        margin: 0;
+      }
+    }
 
     & > .navbar-nav  {
         width: 100%;
@@ -43,27 +55,48 @@
         padding: $footer-padding;
         margin-top: auto;
     }
-}
 
-.navbar-side-expand {
-    @each $breakpoint in map-keys($grid-breakpoints) {
-      $next: breakpoint-next($breakpoint, $grid-breakpoints);
-      $infix: breakpoint-infix($next, $grid-breakpoints);
-  
-      &#{$infix} {  
-        @include media-breakpoint-up($next) {
-            height: 100vh !important;
-            transform: translateX(0) !important;
-            display: flex !important;
-            top: 0;
-        }
-      }
+    .responsive-hide {
+      display: none; 
     }
 }
 
-.navbar-side-replacer {
-    height: $navbar-side-replacer-height;
+.navbar-side {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($next, $grid-breakpoints);
 
+    @if $infix != '' {
+      &#{$infix} {  
+        @include media-breakpoint-up($next) {
+          width: $navbar-side-max-width !important;
+          height: 100vh !important;
+          transform: translateX(0) !important;
+          display: flex !important;
+        
+          .navbar-nav {
+            display: flex !important;
+            transform: translateX(0) !important;
+          }
+
+          .responsive-hide {
+            display: flex !important; 
+          }
+
+          .responsive-show {
+            display: none !important; 
+          }
+
+          .navbar-toggler {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.navbar-side-replacer {
     @each $breakpoint in map-keys($grid-breakpoints) {
         $next: breakpoint-next($breakpoint, $grid-breakpoints);
         $infix: breakpoint-infix($next, $grid-breakpoints);
