@@ -634,7 +634,7 @@ For example if you are using Webpack <a href="https://github.com/dacanizares/boo
 <ul>
   <li>This is the main component, it always has the following classes: <strong>navbar navbar-side collapse</strong>. </li>
   <li>According to your desing you'll need to use <strong>navbar-side-left</strong> or <strong>navbar-side-right</strong>, defining a side for your navbar.</li>
-  <li>You should define a breaking point to display or hide your navbar: <strong>navbar-side-{BREAKING-POINT}</strong>, where BREAKING-POINT is <strong>sm, md, lg, xl</strong>.</li>
+  <li>You should define a breaking point to display or hide your navbar: <strong>navbar-side-{BREAKING-POINT}</strong>, where <strong>BREAKING-POINT is sm, md, lg, xl</strong>.</li>
   <li>It is recommended to wrap your navbar-brand inside a <strong>div</strong> with class <strong>navbar-brand-container</strong>, so you can add a background color to it.</li>
   <li>You must include a <strong>navbar-toggler</strong> to hide/show the menu.</li>
   <li>For <strong>SPAs</strong> (Single Page Applications) consider adding the attributes <strong>data-toggle="collapse" data-target=".navbar.show"</strong> to your links if you're using the jQuery default implementation, otherwise you'll need to add a code to handle navbar collapsing.</li>
@@ -658,7 +658,7 @@ For example if you are using Webpack <a href="https://github.com/dacanizares/boo
 <h2>More info</h2>
 
 <ul>
-  <li>Use the class <strong>m-navbar-side-{SIDE}-{BREAK-POINT}</strong>, where <strong>SIDE is left or right</strong> and BREAKING-POINT is <strong>sm, md, lg, xl</strong>, to define a margin between your main content, while the side navbar is visible.</li>
+  <li>Use the class <strong>m-navbar-side-{SIDE}-{BREAK-POINT}</strong>, where <strong>SIDE is left or right</strong> and <strong>BREAKING-POINT is sm, md, lg, xl</strong>, to define a margin between your main content, while the side navbar is visible.</li>
   <li>Side navbars are fully compatible with Bootstrap color utilities and base navbars.</li>
 </ul>
 
@@ -951,9 +951,11 @@ public class Foo
 
 <ul>
   <li><strong>.background</strong>: adding this class to any div that will contain a background-image will set-up basics to get a good look'n'feel within Bootlaterus themes.</li>
-  <li><strong>.background .background-fixed</strong>: this combination will create a background with background image as a fixxed attachment.</li>
+  <li><strong>.background .background-fixed</strong>: this combination will create a background with background image as a fixed attachment.</li>
   <li><strong>.background .background-fixed-full</strong>: this one will create a full-screen background with fixed position. <i>For example, the Eiffel Tower image that appears at the top and the bottom of this docs is using this configuration.</i></li>
 </ul>
+
+<p><strong>Note:</strong> Fixed backgrounds may look like a normal background due to performance prioritization for mobile web browsers.</p>
 
 <div class="background min-vh-50" style="background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80);">
   <p class="hv-center h-font h3-font-size text-shadow text-white">.background</p>  
