@@ -2,7 +2,7 @@
 
 # Bootlaterus
 
-[![](https://data.jsdelivr.com/v1/package/npm/bootlaterus/badge)](https://www.jsdelivr.com/package/npm/bootlaterus) [![npm version](https://badge.fury.io/js/bootlaterus.svg)](https://badge.fury.io/js/bootlaterus)
+[![CodeFactor](https://www.codefactor.io/repository/github/equilaterus/bootlaterus/badge)](https://www.codefactor.io/repository/github/equilaterus/bootlaterus) [![](https://data.jsdelivr.com/v1/package/npm/bootlaterus/badge)](https://www.jsdelivr.com/package/npm/bootlaterus) [![npm version](https://badge.fury.io/js/bootlaterus.svg)](https://badge.fury.io/js/bootlaterus)
 
 > Find Bootlaterus showcase and starter guide at the [**Official Site**](https://equilaterus.github.io/bootlaterus/)
 
