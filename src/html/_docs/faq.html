@@ -20,16 +20,25 @@ To use custom fonts include a  <a href="#themes">Bootlaterus Theme</a> that DOES
 
 :root {
   --font-family-sans-serif: "Prompt", "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
-  --font-family-monospace: "Prompt", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important; 
+  --font-family-headings: "Prompt", "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  --font-family-monospace: "Consolas", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important; 
+}
+
+body {
+    font-family: var(--font-family-sans-serif);
 }
 
 .navbar, h1, h2, h3, h4, h5, h6, .h-font {
-  font-family: 'Prompt' !important;
+  font-family: var(--font-family-headings);
   font-weight: bold;
   text-transform: uppercase;
+}
+
+pre {
+  font-family: var(--font-family-monospace);
 }</pre>
   </li>
-  <li>Customize with your own fonts and styles (Note: for font families replace "Prompt" and left fallback fonts).</li>
+  <li>Customize with your own fonts and styles (Note: for font families replace "Prompt" and "Consolas" and left fallback fonts).</li>
   <li>Include the CSS file in your website.</li>
 </ul>
 
