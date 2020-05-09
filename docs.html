@@ -627,7 +627,7 @@ For example if you are using Webpack <a href="https://github.com/dacanizares/boo
 <p class="lead mb-5">Built-in support for responsive Side Navbars, enables to rapidly prototype different layout styles.</p>
 
 
-<div class="alert alert-info">Side Navbars DO NOT require additional JS code. They're compatible with any implementation of Bootstrap</div>
+<div class="alert alert-info">Side Navbars DO NOT require additional JS code. They're compatible with any implementation of Bootstrap. Anyway, it's still recommended to use your custom handlers as sometimes libraries can overwrite some styles.</div>
 
 <h2>Side navbar</h2>
 
@@ -638,10 +638,11 @@ For example if you are using Webpack <a href="https://github.com/dacanizares/boo
   <li>It is recommended to wrap your navbar-brand inside a <strong>div</strong> with class <strong>navbar-brand-container</strong>, so you can add a background color to it.</li>
   <li>You must include a <strong>navbar-toggler</strong> to hide/show the menu.</li>
   <li>For <strong>SPAs</strong> (Single Page Applications) consider adding the attributes <strong>data-toggle="collapse" data-target=".navbar.show"</strong> to your links if you're using the jQuery default implementation, otherwise you'll need to add a code to handle navbar collapsing.</li>
+
 </ul>
 
 <h3>Sample Sidenavbar code</h3>
-<pre class="prettyprint"><xmp><nav class="navbar navbar-side navbar-side-left navbar-side-lg navbar-dark bg-dark-alpha-2 collapse" id="sideNavbar">
+<pre class="prettyprint"><xmp><nav class="navbar navbar-side navbar-side-left navbar-side-lg navbar-dark bg-dark-alpha-2 h-font collapse" id="sideNavbar">
   <div class="navbar-brand-container bg-dark-alpha-1">
     <a class="navbar-brand" href="#">
       <span>YOUR_TITLE</span>
@@ -657,6 +658,41 @@ For example if you are using Webpack <a href="https://github.com/dacanizares/boo
   </ul>
 </nav></xmp></pre>
 
+
+<h3>Sample React implementation</h3>
+
+<p>This example shows how to implement custom handlers for a React implementation with React Router.</p>
+<pre class="prettyprint"><xmp>import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+const Header = () => {
+  const [collapsed, setCollapsed] = useState('collapse');
+  const onCollapse = () => {
+    setCollapsed(collapsed === '' ? 'collapse' : '')
+  }
+  const onHide = () => {
+    setCollapsed('collapse');
+  }
+  return (
+    <nav className={`navbar navbar-side navbar-side-left navbar-side-sm navbar-dark bg-dark-alpha-2 h-font ${collapsed}`}  id="sideNavbar">
+      <div className="navbar-brand-container bg-dark-alpha-1">
+        <Link onClick={onHide} className="navbar-brand" to="/">
+          <span>Bootlaterus React</span>
+        </Link>
+      </div>
+      <button className="navbar-toggler" type="button" onClick={onCollapse} aria-controls="sideNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <ul className="navbar-nav">
+        <li><Link onClick={onHide} className="nav-link" to="/ConditionEvaluators">Option 1</Link></li>
+        <li><Link onClick={onHide} className="nav-link" to="/Decisions">Option 2</Link></li>
+        <li><Link onClick={onHide} className="nav-link" to="/DecisionSets">Option 3</Link></li>
+      </ul>
+    </nav>
+  )
+}  
+export default Header;
+</xmp></pre>
 
 <h2>More info</h2>
 
@@ -1234,16 +1270,25 @@ To use custom fonts include a  <a href="#themes">Bootlaterus Theme</a> that DOES
 
 :root {
   --font-family-sans-serif: "Prompt", "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
-  --font-family-monospace: "Prompt", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important; 
+  --font-family-headings: "Prompt", "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  --font-family-monospace: "Consolas", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important; 
+}
+
+body {
+    font-family: var(--font-family-sans-serif);
 }
 
 .navbar, h1, h2, h3, h4, h5, h6, .h-font {
-  font-family: 'Prompt' !important;
+  font-family: var(--font-family-headings);
   font-weight: bold;
   text-transform: uppercase;
+}
+
+pre {
+  font-family: var(--font-family-monospace);
 }</pre>
   </li>
-  <li>Customize with your own fonts and styles (Note: for font families replace "Prompt" and left fallback fonts).</li>
+  <li>Customize with your own fonts and styles (Note: for font families replace "Prompt" and "Consolas" and left fallback fonts).</li>
   <li>Include the CSS file in your website.</li>
 </ul>
 
