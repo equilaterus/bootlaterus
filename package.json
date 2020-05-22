@@ -1,12 +1,12 @@
 {
   "name": "bootlaterus",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The Compatible and Friendly Bootstrap Superset",
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
-    "bootstrap": "^4.4.1",
+    "bootstrap": "^4.5.0",
     "chai": "^4.2.0",
     "grunt": "^1.0.4",
     "grunt-babel": "^8.0.0",
