@@ -31,7 +31,9 @@ bootlaterusUtils.GetUI = function (isRootPath) {
     "bootlaterus default bootstrap": "../css/bootlaterus-default-bootstrap.css",
     "bootlaterus docs": "../css/bootlaterus-docs.css",
     "bootlaterus docs + fonts": "../css/bootlaterus-docs-cfonts.css",
-    "bootlaterus docs default bootstrap": "../css/bootlaterus-docs-default-bootstrap.css"
+    "bootlaterus docs default bootstrap": "../css/bootlaterus-docs-default-bootstrap.css",
+    "bootlaterus docs gs": "../css/bootlaterus-docs-gs.css",
+    "bootlaterus gs": "../css/bootlaterus-gs.css"
   };
   var themesHtml = Object.entries(themes).reduce(function (str, current) {
     var _current = _slicedToArray(current, 2),
