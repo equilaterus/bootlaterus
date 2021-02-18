@@ -1,0 +1,80 @@
+//
+// Color system
+//
+$white:            #fff;
+$gray-100:         #f2f2f2;
+$gray-200:         #e7e6e6;
+$gray-300:         #dad8d8;
+$gray-400:         #c4c4c4;
+$gray-500:         #a8a8a8;
+$gray-600:         #817e7e;
+$gray-700:         #494949;
+$gray-800:         #383838;
+$gray-900:         #222222;
+$black:            #141414ff;
+
+$blue:             #41a0eb;
+$indigo:           #8e69ca;
+$purple:           #634d8b;
+$pink:             #b85684;
+$red:              #ff4935ff;
+$orange:           #f18934;
+$yellow:           #e7a32a;
+$green:            #72c217;
+$teal:             #66caac;
+$cyan:             #26a3b6;
+
+$primary:            $red !default;
+$secondary:          $gray-600 !default;
+$success:            $green !default;
+$info:               $blue !default;
+$warning:            $yellow !default;
+$danger:             $red !default;
+$light:              $gray-100 !default;
+$dark:               $gray-800 !default;
+
+// Custom colors
+
+$primary-alt:        $orange !default;
+$secondary-alt:      $blue !default;
+$shadow-color:       $black !default;
+
+$light-alpha-1:      rgba($white, 0.7);
+$light-alpha-2:      rgba($white, 0.85);
+$light-alpha-3:      rgba($white, 0.9);
+$dark-alpha-1:       rgba($black, 0.7);
+$dark-alpha-2:       rgba($black, 0.85);
+$dark-alpha-3:       rgba($black, 0.9);
+$shadow-1:           rgba($black, .1);
+$shadow-2:           rgba($black, .15);
+$shadow-3:           rgba($black, .2);
+
+
+//
+// Custom Layout colors
+//
+
+$body-bg:         $gray-100;
+$body-color:      $gray-800;
+$breadcrumb-bg:   $white;
+
+//
+// Custom Input colors
+//
+
+$input-color:                             $gray-700;
+$input-placeholder-color:                 $gray-400;
+$input-border-color:                      $gray-300;
+$custom-control-indicator-border-color:   $input-border-color;
+
+
+// Links
+//
+// Style anchor elements.
+
+$link-color:                              darken($primary, 15%) !default;
+$link-decoration:                         none !default;
+$link-hover-color:                        darken($link-color, 10%) !default;
+$link-hover-decoration:                   underline !default;
+// Darken percentage for links with `.text-*` class (e.g. `.text-success`)
+$emphasized-link-hover-darken-percentage: 15% !default;
